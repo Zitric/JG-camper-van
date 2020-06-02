@@ -1,16 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import github from '../img/github-icon.svg';
 import logo from '../img/logo.svg';
 
 class Navbar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false,
-      navBarActiveClass: '',
-    };
-  }
+  state = {
+    active: false,
+    navBarActiveClass: '',
+  };
 
   toggleHamburger = () => {
     // toggle the active boolean in the state
@@ -35,7 +31,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar is-transparent is-fixed-top"
         role="navigation"
         aria-label="main-navigation"
       >
@@ -62,7 +58,7 @@ class Navbar extends React.Component {
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-start has-text-centered">
+            <div className="navbar-end has-text-centered">
               <Link className="navbar-item" to="/about">
                 About
               </Link>
@@ -78,18 +74,6 @@ class Navbar extends React.Component {
               <Link className="navbar-item" to="/contact/examples">
                 Form Examples
               </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
             </div>
           </div>
         </div>
