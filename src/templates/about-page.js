@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
+
 import Content, { HTMLContent } from '../components/Content';
+import Layout from '../components/Layout';
+import useAboutPage from '../hooks/UseAboutPage';
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
@@ -32,7 +34,11 @@ AboutPageTemplate.propTypes = {
 };
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = useAboutPage();
+
+  const dataOfMyQuery = useAboutPage();
+  console.log('data from about page', dataOfMyQuery);
+  console.log('data like the template', data);
 
   return (
     <Layout>
@@ -46,7 +52,7 @@ const AboutPage = ({ data }) => {
 };
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object,
 };
 
 export default AboutPage;
