@@ -6,7 +6,6 @@ import Navbar from '../components/Navbar';
 import useSiteMetadata from '../hooks/UseSiteMetadata';
 import { withPrefix } from 'gatsby';
 
-import '../styles/normalize.css';
 import '../styles/global.scss';
 
 const TemplateWrapper = ({ children }) => {
