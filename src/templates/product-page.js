@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+
 import Layout from '../components/Layout';
 import Features from '../components/Features';
 import Testimonials from '../components/Testimonials';
 import Pricing from '../components/Pricing';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
+import Hero from '../components/Hero';
 
 export const ProductPageTemplate = ({
   image,
@@ -19,7 +21,7 @@ export const ProductPageTemplate = ({
   pricing,
 }) => (
   <div className="content">
-    <div
+    {/* <div
       className="full-width-image-container margin-top-0"
       style={{
         backgroundImage: `url(${
@@ -38,7 +40,8 @@ export const ProductPageTemplate = ({
       >
         {title}
       </h2>
-    </div>
+    </div> */}
+    <Hero title={title} image={image} />
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
