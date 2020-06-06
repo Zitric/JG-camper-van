@@ -60,20 +60,29 @@ class Navbar extends React.Component {
           >
             <div className="navbar-end has-text-centered">
               <Link className="navbar-item" to="/about">
-                About
+                Sobre nosotros
               </Link>
               <Link className="navbar-item" to="/products">
-                Products
+                Productos
+              </Link>
+              <Link className="navbar-item" to="/camper-vans">
+                Camper vans
+              </Link>
+              <Link className="navbar-item" to="/">
+                Precios
               </Link>
               <Link className="navbar-item" to="/blog">
                 Blog
               </Link>
+              <Link className="navbar-item" to="/">
+                FAQ
+              </Link>
               <Link className="navbar-item" to="/contact">
-                Contact
+                Contacto
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
+              {/* <Link className="navbar-item" to="/contact/examples">
                 Form Examples
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

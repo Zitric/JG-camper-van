@@ -2,8 +2,8 @@
 
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #d64000;
-$kaldi-red-invert: #fff;
+$kaldi-red: #15b7b9;
+$kaldi-red-invert: #f5f5f5;
 
 $primary: $kaldi-red;
 $primary-invert: $kaldi-red-invert;
@@ -63,14 +63,14 @@ $black: #2b2523;
   font-size: 18px;
   font-size: 1rem;
   line-height: 1.25;
-  background-color: #fff;
+  background-color: #f5f5f5;
   border-radius: 0.25rem;
   text-decoration: none;
   font-weight: 700;
-  color: #cc3700;
+  color: #15b7b9;
   text-align: center;
-  -webkit-box-shadow: inset 0 0 0 2px #cc3700;
-  box-shadow: inset 0 0 0 2px #f40;
+  -webkit-box-shadow: inset 0 0 0 2px #15b7b9;
+  box-shadow: inset 0 0 0 2px #10ddc2;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
