@@ -54,7 +54,7 @@ CamperVansPage.propTypes = {
 
 export default CamperVansPage;
 
-export const aboutPageQuery = graphql`
+export const camperVansPageQuery = graphql`
   query CamperVansPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
