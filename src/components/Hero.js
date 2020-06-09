@@ -1,12 +1,20 @@
+/** @jsx jsx */
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import { jsx } from '@emotion/core';
 import BackgroundImage from 'gatsby-background-image';
 
 const ImageBackground = styled(BackgroundImage)`
   background-size: cover;
   background-attachment: fixed;
   background-position: center top;
+  width: 100vw;
+  height: 400px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 `;
 
 const TextBox = styled('div')`
@@ -15,13 +23,14 @@ const TextBox = styled('div')`
   justify-content: 'space-around';
   align-items: 'left';
   flex-direction: column;
-  h1 {
-    text-shadow: 1px 1px 3px #eeddff66;
-    font-size: 2.25rem;
-    box-shadow: '#15b7b9 0.5rem 0px 0px, #15b7b9 -0.5rem 0px 0px';
-    background-color: '#15b7b9';
-    color: '#f5f5f5';
-    padding: '1rem';
+  margin: 0 15% 2rem;
+
+  h1,
+  h2 {
+    box-shadow: #15b7b9 0.5rem 0px 0px, #15b7b9 -0.5rem 0px 0px;
+    background-color: #15b7b9;
+    color: #f5f5f5;
+    padding: 1rem;
   }
 `;
 
@@ -33,21 +42,7 @@ const Hero = ({
   // secondBackgroundPosition,
 }) => {
   return (
-    <ImageBackground
-      Tag="section"
-      fluid={image.sharp.fluid}
-      fadeIn="soft"
-      className="full-width-image margin-top-0"
-      // style={{
-      //   backgroundImage: `url(${
-      //     image.childImageSharp ? image.childImageSharp.fluid.src : image
-      //   })`,
-      //   backgroundPosition: `${
-      //     firstBackgroundPosition ? firstBackgroundPosition : 'center'
-      //   } ${secondBackgroundPosition ? secondBackgroundPosition : ''}`,
-      //   backgroundAttachment: `fixed`,
-      // }}
-    >
+    <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft">
       <TextBox>
         {heading && (
           <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen">

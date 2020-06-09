@@ -1,7 +1,9 @@
+/** @jsx jsx */
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
-import { Global, css } from '@emotion/core';
+import { Global, css, jsx } from '@emotion/core';
 // import { withPrefix } from 'gatsby';
 
 import Footer from '../components/Footer';
@@ -93,7 +95,15 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
         `}
       />
       <Navbar />
-      <main>{children}</main>
+      <main
+      // css={css`
+      //   margin: 2rem auto 4rem;
+      //   max-width: 90vw;
+      //   width: 550px;
+      // `}
+      >
+        {children}
+      </main>
       <Footer />
     </>
   );

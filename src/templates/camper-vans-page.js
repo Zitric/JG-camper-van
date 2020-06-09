@@ -10,12 +10,13 @@ export const CamperVansPageTemplate = ({
   title,
   content,
   contentComponent,
+  image,
 }) => {
   const PageContent = contentComponent || Content;
 
   return (
     <Layout>
-      <Hero image={'/img/camper-vans.jpg'} heading={'Nuestras Camper Vans'} />
+      <Hero image={image} heading={'Nuestras Camper Vans'} />
       <section className="section section--gradient">
         <div className="container">
           <div className="columns">
@@ -38,17 +39,19 @@ CamperVansPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  image: PropTypes.objectOf(),
 };
 
 const CamperVansPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  const { markdownRemark, image } = data;
 
   return (
     <Layout>
       <CamperVansPageTemplate
         contentComponent={HTMLContent}
-        title={frontmatter.title}
-        content={frontmatter.html}
+        title={markdownRemark.frontmatter.title}
+        content={markdownRemark.frontmatter.html}
+        image={image}
       />
     </Layout>
   );
@@ -66,6 +69,13 @@ export const camperVansPageQuery = graphql`
       html
       frontmatter {
         title
+      }
+    }
+    image: file(relativePath: { eq: "camper-vans.jpg" }) {
+      sharp: childImageSharp {
+        fluid(maxWidth: 2048, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
       }
     }
   }

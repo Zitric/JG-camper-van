@@ -6,12 +6,17 @@ import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 
-export const FAQPageTemplate = ({ title, content, contentComponent }) => {
+export const FAQPageTemplate = ({
+  title,
+  content,
+  contentComponent,
+  image,
+}) => {
   const PageContent = contentComponent || Content;
 
   return (
     <Layout>
-      <Hero image={'/img/FAQ.jpg'} heading={'Preguntas frecuentes'} />
+      <Hero image={image} heading={'Preguntas frecuentes'} />
       <section className="section section--gradient">
         <div className="container">
           <div className="columns">
@@ -34,17 +39,19 @@ FAQPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  image: PropTypes.objectOf(),
 };
 
 const FAQPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  const { markdownRemark, image } = data;
 
   return (
     <Layout>
       <FAQPageTemplate
         contentComponent={HTMLContent}
-        title={frontmatter.title}
-        content={frontmatter.html}
+        title={markdownRemark.frontmatter.title}
+        content={markdownRemark.frontmatter.html}
+        image={image}
       />
     </Layout>
   );
@@ -62,6 +69,13 @@ export const FAQPageQuery = graphql`
       html
       frontmatter {
         title
+      }
+    }
+    image: file(relativePath: { eq: "FAQ.jpg" }) {
+      sharp: childImageSharp {
+        fluid(maxWidth: 2048, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
       }
     }
   }

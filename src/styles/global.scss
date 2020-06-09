@@ -2,12 +2,11 @@
 
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #15b7b9;
-$kaldi-red-invert: #f5f5f5;
 
-$primary: $kaldi-red;
-$primary-invert: $kaldi-red-invert;
-$body-color: #333;
+$primary: #15b7b9;
+$primary-invert: #10ddc2;
+$body-color: #f5f5f5;
+$red: #f57170;
 $black: #2b2523;
 
 .navbar .navbar-menu {
@@ -50,8 +49,6 @@ $black: #2b2523;
 .full-width-image {
   width: 100vw;
   height: 400px;
-  background-size: cover;
-  background-position: center bottom;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,13 +97,13 @@ footer.footer {
 }
 
 //Menu overrides
-$menu-item-color: $white-ter;
-$menu-item-hover-color: $black !important;
-$menu-item-hover-background-color: $black;
-$menu-item-active-color: $kaldi-red-invert;
-$menu-item-active-background-color: $kaldi-red-invert;
-$menu-list-border-left: 1px solid $kaldi-red-invert;
-$menu-label-color: $white-ter;
+// $menu-item-color: $white-ter;
+// $menu-item-hover-color: $black !important;
+// $menu-item-hover-background-color: $black;
+// $menu-item-active-color: $kaldi-red-invert;
+// $menu-item-active-background-color: $kaldi-red-invert;
+// $menu-list-border-left: 1px solid $kaldi-red-invert;
+// $menu-label-color: $white-ter;
 
 .menu-label {
   font-size: 1em !important;
@@ -125,7 +122,7 @@ $menu-label-color: $white-ter;
 .social a {
   padding: 0.5em 0.5em 0.3em 0.5em;
   border-radius: 1em;
-  background-color: $white-ter;
+  background-color: $body-color;
   margin: 0.5em;
   width: 1em;
   height: 1em;

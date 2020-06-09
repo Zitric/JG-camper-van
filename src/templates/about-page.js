@@ -6,12 +6,17 @@ import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({
+  title,
+  content,
+  contentComponent,
+  image,
+}) => {
   const PageContent = contentComponent || Content;
 
   return (
     <Layout>
-      <Hero heading={'Quienes somos'} image={'/img/about-us.jpg'} />
+      <Hero heading={'Quienes somos'} image={image} />
       <section className="section section--gradient">
         <div className="container">
           <div className="columns">
@@ -34,17 +39,19 @@ AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  image: PropTypes.objectOf(),
 };
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark, image } = data;
 
   return (
     <Layout>
       <AboutPageTemplate
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        title={markdownRemark.frontmatter.title}
+        content={markdownRemark.html}
+        image={image}
       />
     </Layout>
   );
@@ -62,6 +69,13 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+      }
+    }
+    image: file(relativePath: { eq: "about-us.jpg" }) {
+      sharp: childImageSharp {
+        fluid(maxWidth: 2048, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
       }
     }
   }

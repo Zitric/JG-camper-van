@@ -1,6 +1,15 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import styled from '@emotion/styled';
+
 import logo from '../img/logo.svg';
+
+const NavbarLink = styled(Link)`
+  color: #15b7b9;
+  :hover {
+    color: #10ddc2 !important;
+  }
+`;
 
 class Navbar extends React.Component {
   state = {
@@ -8,25 +17,12 @@ class Navbar extends React.Component {
     navBarActiveClass: '',
   };
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            });
-      },
-    );
-  };
+  toggleHamburger = () =>
+    this.setState({ active: !this.state.active }, () => {
+      this.state.active
+        ? this.setState({ navBarActiveClass: 'is-active' })
+        : this.setState({ navBarActiveClass: '' });
+    });
 
   render() {
     return (
@@ -59,24 +55,39 @@ class Navbar extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-end has-text-centered">
-              <Link className="navbar-item" to="/about">
+              <NavbarLink
+                className="navbar-item has-text-weight-bold"
+                to="/about"
+              >
                 Quienes somos
-              </Link>
-              <Link className="navbar-item" to="/camper-vans">
+              </NavbarLink>
+              <NavbarLink
+                className="navbar-item has-text-weight-bold"
+                to="/camper-vans"
+              >
                 Camper vans
-              </Link>
-              <Link className="navbar-item" to="/">
+              </NavbarLink>
+              <NavbarLink className="navbar-item has-text-weight-bold" to="/">
                 Precios
-              </Link>
-              <Link className="navbar-item" to="/blog">
+              </NavbarLink>
+              <NavbarLink
+                className="navbar-item has-text-weight-bold"
+                to="/blog"
+              >
                 Blog
-              </Link>
-              <Link className="navbar-item" to="/FAQ">
+              </NavbarLink>
+              <NavbarLink
+                className="navbar-item has-text-weight-bold"
+                to="/FAQ"
+              >
                 FAQ
-              </Link>
-              <Link className="navbar-item" to="/contact">
+              </NavbarLink>
+              <NavbarLink
+                className="navbar-item has-text-weight-bold"
+                to="/contact"
+              >
                 Contacto
-              </Link>
+              </NavbarLink>
             </div>
           </div>
         </div>
