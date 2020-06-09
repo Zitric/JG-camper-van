@@ -1,24 +1,29 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import PropTypes from 'prop-types';
+// import { withPrefix } from 'gatsby';
 
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import useSiteMetadata from '../hooks/UseSiteMetadata';
-import { withPrefix } from 'gatsby';
+import SEO from './SEO';
+import JsonLd from './JsonLd';
 
 import '../styles/global.scss';
 
-const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata();
-
+const Layout = ({ children, title, description, image, article, keywords }) => {
   return (
     <>
+      <SEO
+        title={title}
+        description={description}
+        image={image}
+        article={article}
+        keywords={keywords}
+      />
+      <JsonLd></JsonLd>
       <Helmet>
-        <html lang="en" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
-
-        <link
+        <meta name="theme-color" content="#fff" />
+        {/* <link
           rel="apple-touch-icon"
           sizes="180x180"
           href={`${withPrefix('/')}img/apple-touch-icon.png`}
@@ -41,15 +46,10 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
-        <meta name="theme-color" content="#fff" />
-
-        <meta property="og:type" content="business.business" />
-        <meta property="og:title" content={title} />
-        <meta property="og:url" content="/" />
         <meta
           property="og:image"
           content={`${withPrefix('/')}img/og-image.jpg`}
-        />
+        /> */}
         <body className="has-navbar-fixed-top" />
       </Helmet>
       <Navbar />
@@ -59,4 +59,21 @@ const TemplateWrapper = ({ children }) => {
   );
 };
 
-export default TemplateWrapper;
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  article: PropTypes.bool,
+  keywords: PropTypes.string,
+};
+
+Layout.defaultProps = {
+  titleFromProps: null,
+  description: null,
+  image: null,
+  article: false,
+  keywords: null,
+};
+
+export default Layout;

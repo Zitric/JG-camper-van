@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'JG Camper',
+    titleTemplate: 'JG Camper Van template',
+    title: 'JG Camper Van',
     description: 'Alquiler de campervans y caravanas en Sevilla.',
     url: 'https://jgcamper.com',
+    image: '',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

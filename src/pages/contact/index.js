@@ -1,6 +1,8 @@
 import React from 'react';
 import { navigate } from 'gatsby-link';
+
 import Layout from '../../components/Layout';
+import Hero from '../../components/Hero';
 
 function encode(data) {
   return Object.keys(data)
@@ -36,6 +38,7 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
+        <Hero heading={'Contacto'} image={'/img/contacto.jpg'} />
         <section className="section">
           <div className="container">
             <div className="content">

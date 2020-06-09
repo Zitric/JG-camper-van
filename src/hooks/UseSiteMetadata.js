@@ -6,13 +6,17 @@ const useSiteMetadata = () => {
       query SITE_METADATA_QUERY {
         site {
           siteMetadata {
-            title
-            description
+            titleTemplate
+            defaultTitle: title
+            defaultDescription: description
+            siteUrl: url
+            defaultImage: image
           }
         }
       }
     `,
   );
+
   return site.siteMetadata;
 };
 

@@ -4,26 +4,29 @@ import { graphql } from 'gatsby';
 
 import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
-// import useAboutPage from '../hooks/UseAboutPage';
+import Hero from '../components/Hero';
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
+    <Layout>
+      <Hero heading={'Quienes somos'} image={'/img/about-us.jpg'} />
+      <section className="section section--gradient">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <div className="section">
+                <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                  {title}
+                </h2>
+                <PageContent className="content" content={content} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Layout>
   );
 };
 
@@ -34,12 +37,7 @@ AboutPageTemplate.propTypes = {
 };
 
 const AboutPage = ({ data }) => {
-  // const { markdownRemark: post } = useAboutPage();
   const { markdownRemark: post } = data;
-
-  // const dataOfMyQuery = useAboutPage();
-  // console.log('data from about page', dataOfMyQuery);
-  // console.log('data like the template', data);
 
   return (
     <Layout>

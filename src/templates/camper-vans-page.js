@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 
 import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
+import Hero from '../components/Hero';
 
 export const CamperVansPageTemplate = ({
   title,
@@ -13,20 +14,23 @@ export const CamperVansPageTemplate = ({
   const PageContent = contentComponent || Content;
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
+    <Layout>
+      <Hero image={'/img/camper-vans.jpg'} heading={'Nuestras Camper Vans'} />
+      <section className="section section--gradient">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <div className="section">
+                <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                  {title}
+                </h2>
+                <PageContent className="content" content={content} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Layout>
   );
 };
 
@@ -37,13 +41,15 @@ CamperVansPageTemplate.propTypes = {
 };
 
 const CamperVansPage = ({ data }) => {
-  const { markdownRemark } = data;
-
-  console.log('data', markdownRemark);
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
-      <CamperVansPageTemplate></CamperVansPageTemplate>
+      <CamperVansPageTemplate
+        contentComponent={HTMLContent}
+        title={frontmatter.title}
+        content={frontmatter.html}
+      />
     </Layout>
   );
 };

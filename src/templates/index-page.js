@@ -8,7 +8,6 @@ import BlogRoll from '../components/BlogRoll';
 import Hero from '../components/Hero';
 
 export const IndexPageTemplate = ({
-  image,
   title,
   heading,
   subheading,
@@ -17,7 +16,7 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
-    <Hero image={image} title={title} subheading={subheading} />
+    <Hero image={'/img/index.jpg'} heading={title} subheading={subheading} />
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -84,7 +83,7 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>
+    <Layout keywords={['Aquiler', 'Camper-van', 'Sevilla']}>
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}

@@ -1,6 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Hero = ({ image, title, subheading }) => {
+const Hero = ({
+  image,
+  heading,
+  subheading,
+  firstBackgroundPosition,
+  secondBackgroundPosition,
+}) => {
   return (
     <div
       className="full-width-image margin-top-0"
@@ -8,7 +15,9 @@ const Hero = ({ image, title, subheading }) => {
         backgroundImage: `url(${
           image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `top left`,
+        backgroundPosition: `${
+          firstBackgroundPosition ? firstBackgroundPosition : 'center'
+        } ${secondBackgroundPosition ? secondBackgroundPosition : ''}`,
         backgroundAttachment: `fixed`,
       }}
     >
@@ -21,7 +30,7 @@ const Hero = ({ image, title, subheading }) => {
           flexDirection: 'column',
         }}
       >
-        {title && (
+        {heading && (
           <h1
             className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
             style={{
@@ -31,7 +40,7 @@ const Hero = ({ image, title, subheading }) => {
               padding: '1rem',
             }}
           >
-            {title}
+            {heading}
           </h1>
         )}
         {subheading && (
@@ -51,6 +60,22 @@ const Hero = ({ image, title, subheading }) => {
       </div>
     </div>
   );
+};
+
+Hero.propTypes = {
+  image: PropTypes.string,
+  heading: PropTypes.string,
+  subheading: PropTypes.string,
+  firstBackgroundPosition: PropTypes.string,
+  secondBackgroundPosition: PropTypes.string,
+};
+
+Hero.defaultProp = {
+  image: null,
+  heading: null,
+  subheading: null,
+  firstBackgroundPosition: null,
+  secondBackgroundPosition: null,
 };
 
 export default Hero;

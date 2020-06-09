@@ -2,59 +2,67 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
-import { useStaticQuery, graphql } from 'gatsby';
 
-const SEO = ({ title, description, image, article }) => {
-  const { pathname } = useLocation();
-  const { site } = useStaticQuery(query);
+import useSiteMetadata from '../hooks/UseSiteMetadata';
 
+const SEO = ({ title, description, image, article, keywords }) => {
   const {
-    defaultTitle,
     titleTemplate,
+    defaultTitle,
     defaultDescription,
     siteUrl,
     defaultImage,
-    twitterUsername,
-  } = site.siteMetadata;
-
+  } = useSiteMetadata();
+  const { pathname } = useLocation();
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
+    keywords: `${keywords}`,
   };
 
+  const canonical = pathname ? `${seo.url}` : null;
+
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
-      <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
-      {seo.url && <meta property="og:url" content={seo.url} />}
+    <Helmet
+      htmlAttributes={{
+        lang: 'es',
+      }}
+      title={seo.title}
+      titleTemplate={titleTemplate}
+      link={
+        canonical
+          ? [
+              {
+                rel: 'canonical',
+                href: canonical,
+              },
+            ]
+          : []
+      }
+      meta={[
+        { name: 'description', content: seo.description },
+        { name: 'image', content: seo.image },
+        { property: `og:title`, content: seo.title },
+        { property: `og:description`, content: seo.description },
+        { property: `og:type`, content: `website` },
+        { property: `og:url`, content: seo.url },
+        { property: `og:image`, content: seo.image },
+      ]}
+    >
+      {keywords && <meta name="keywords" content={keywords.join(',')} />}
       {(article ? true : null) && <meta property="og:type" content="article" />}
-      {seo.title && <meta property="og:title" content={seo.title} />}
-      {seo.description && (
-        <meta property="og:description" content={seo.description} />
-      )}
-      {seo.image && <meta property="og:image" content={seo.image} />}
-      <meta name="twitter:card" content="summary_large_image" />
-      {twitterUsername && (
-        <meta name="twitter:creator" content={twitterUsername} />
-      )}
-      {seo.title && <meta name="twitter:title" content={seo.title} />}
-      {seo.description && (
-        <meta name="twitter:description" content={seo.description} />
-      )}
-      {seo.image && <meta name="twitter:image" content={seo.image} />}
     </Helmet>
   );
 };
-
-export default SEO;
 
 SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
   article: PropTypes.bool,
+  keywords: PropTypes.string,
 };
 
 SEO.defaultProps = {
@@ -62,15 +70,7 @@ SEO.defaultProps = {
   description: null,
   image: null,
   article: false,
+  keywords: null,
 };
 
-const query = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`;
+export default SEO;
