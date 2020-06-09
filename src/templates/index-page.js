@@ -8,6 +8,7 @@ import BlogRoll from '../components/BlogRoll';
 import Hero from '../components/Hero';
 
 export const IndexPageTemplate = ({
+  image,
   title,
   heading,
   subheading,
@@ -16,7 +17,7 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
-    <Hero image={'/img/index.jpg'} heading={title} subheading={subheading} />
+    <Hero image={image} heading={title} subheading={subheading} />
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -80,12 +81,13 @@ IndexPageTemplate.propTypes = {
 };
 
 const IndexPage = ({ data }) => {
+  console.log('data', data);
   const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout keywords={['Aquiler', 'Camper-van', 'Sevilla']}>
       <IndexPageTemplate
-        image={frontmatter.image}
+        image={data.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
@@ -112,13 +114,6 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         heading
         subheading
         mainpitch {
@@ -128,17 +123,17 @@ export const pageQuery = graphql`
         description
         intro {
           blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
             text
           }
           heading
           description
+        }
+      }
+    }
+    image: file(relativePath: { eq: "home.jpg" }) {
+      sharp: childImageSharp {
+        fluid(maxWidth: 2048, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
+import { Global, css } from '@emotion/core';
 // import { withPrefix } from 'gatsby';
 
 import Footer from '../components/Footer';
@@ -52,6 +53,45 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
         /> */}
         <body className="has-navbar-fixed-top" />
       </Helmet>
+      <Global
+        styles={css`
+          * {
+            box-sizing: border-box;
+            margin: 0;
+          }
+
+          html,
+          body {
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.4;
+            /* Remove margin for the main div that Gatsby mounts into */
+            > div {
+              margin-top: 0;
+            }
+          }
+
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            line-height: 1.1;
+
+            + * {
+              margin-top: 0.5rem;
+            }
+          }
+          strong {
+            color: #10ddc2;
+          }
+
+          li {
+            margin-top: 0.25rem;
+          }
+        `}
+      />
       <Navbar />
       <main>{children}</main>
       <Footer />

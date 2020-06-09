@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FAQPageTemplate } from '../../templates/FAQ';
 
-const FAQPagePreview = ({ entry, getAsset }) => {
+const FAQPagePreview = ({ entry, getAsset, widgetFor }) => {
   const data = entry.getIn(['data']).toJS();
 
   return data ? (
@@ -11,6 +11,7 @@ const FAQPagePreview = ({ entry, getAsset }) => {
       title={data.title}
       heading={data.heading}
       description={data.description}
+      content={widgetFor('body')}
     />
   ) : (
     <div>Loading...</div>
@@ -21,6 +22,7 @@ FAQPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
+  widgetFor: PropTypes.func,
   getAsset: PropTypes.func,
 };
 

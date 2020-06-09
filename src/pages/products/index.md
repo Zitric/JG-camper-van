@@ -2,7 +2,7 @@
 templateKey: 'product-page'
 path: /products
 title: Our Coffee
-image: /img/jumbotron.jpg
+image: /img/products.jpg
 heading: Great coffee with a conscience
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
@@ -69,7 +69,7 @@ testimonials:
     quote: >-
       Kaldi is the place to go if you want the best quality coffee. I love their
       stance on empowering farmers and transparency.
-full_image: /img/products-full-width.jpg
+full_image: /img/chemex.jpg
 pricing:
   heading: Monthly subscriptions
   description: >-
