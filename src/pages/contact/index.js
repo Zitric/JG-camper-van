@@ -1,5 +1,6 @@
 import React from 'react';
 import { navigate } from 'gatsby-link';
+import { graphql } from 'gatsby';
 
 import Layout from '../../components/Layout';
 import Hero from '../../components/Hero';
@@ -10,22 +11,19 @@ function encode(data) {
     .join('&');
 }
 
-export default class Index extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { isValidated: false };
-  }
+export default class ContactPage extends React.Component {
+  state = { isValidated: false };
 
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
+  handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
       body: encode({
         'form-name': form.getAttribute('name'),
         ...this.state,
@@ -36,9 +34,10 @@ export default class Index extends React.Component {
   };
 
   render() {
+    console.log('props', this.props);
     return (
       <Layout>
-        <Hero heading={'Contacto'} image={'/img/contacto.jpg'} />
+        <Hero heading={'Contacto'} image={this.props.data.heroImage} />
         <section className="section">
           <div className="container">
             <div className="content">
@@ -116,3 +115,15 @@ export default class Index extends React.Component {
     );
   }
 }
+
+export const ContactPageQuery = graphql`
+  query ContactPage {
+    heroImage: file(relativePath: { eq: "contact.jpg" }) {
+      sharp: childImageSharp {
+        fluid(maxWidth: 2048, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`;

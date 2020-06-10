@@ -8,16 +8,12 @@ import BlogRoll from '../components/BlogRoll';
 import Hero from '../components/Hero';
 
 export const IndexPageTemplate = ({
-  image,
-  title,
   heading,
-  subheading,
   mainpitch,
   description,
   intro,
 }) => (
   <div>
-    <Hero image={image} heading={title} subheading={subheading} />
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -81,13 +77,16 @@ IndexPageTemplate.propTypes = {
 };
 
 const IndexPage = ({ data }) => {
-  console.log('data', data);
   const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout keywords={['Aquiler', 'Camper-van', 'Sevilla']}>
+      <Hero
+        image={data.heroImage}
+        heading={frontmatter.title}
+        subheading={frontmatter.subheading}
+      />
       <IndexPageTemplate
-        image={data.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
@@ -104,6 +103,7 @@ IndexPage.propTypes = {
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
     }),
+    heroImage: PropTypes.objectOf(),
   }),
 };
 
@@ -130,9 +130,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    image: file(relativePath: { eq: "home.jpg" }) {
+    heroImage: file(relativePath: { eq: "home.jpg" }) {
       sharp: childImageSharp {
-        fluid(maxWidth: 2048, quality: 100) {
+        fluid(maxWidth: 1024, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
