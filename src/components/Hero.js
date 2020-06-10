@@ -7,11 +7,11 @@ import { jsx } from '@emotion/core';
 import BackgroundImage from 'gatsby-background-image';
 
 const ImageBackground = styled(BackgroundImage)`
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
-  background-position: center top;
+  background-position: top;
   width: 100vw;
-  height: 400px;
+  height: 30vw;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -42,20 +42,22 @@ const Hero = ({
   // secondBackgroundPosition,
 }) => {
   return (
-    <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft">
-      <TextBox>
-        {heading && (
-          <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
-            {heading}
-          </h1>
-        )}
-        {subheading && (
-          <h2 className="has-text-weight-bold is-size-1 is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
-            {subheading}
-          </h2>
-        )}
-      </TextBox>
-    </ImageBackground>
+    <header>
+      <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft">
+        <TextBox>
+          {heading && (
+            <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
+              {heading}
+            </h1>
+          )}
+          {subheading && (
+            <h2 className="has-text-weight-bold is-size-1 is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+              {subheading}
+            </h2>
+          )}
+        </TextBox>
+      </ImageBackground>
+    </header>
   );
 };
 
