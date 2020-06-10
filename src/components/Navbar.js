@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 import logo from '../img/logo.svg';
 
 const NavbarLink = styled(Link)`
+  font-weight: 500;
   color: #15b7b9;
   :hover {
     color: #10ddc2 !important;
@@ -55,37 +56,22 @@ class Navbar extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-end has-text-centered">
-              <NavbarLink
-                className="navbar-item has-text-weight-bold"
-                to="/about"
-              >
+              <NavbarLink className="navbar-item" to="/about">
                 Quienes somos
               </NavbarLink>
-              <NavbarLink
-                className="navbar-item has-text-weight-bold"
-                to="/camper-vans"
-              >
+              <NavbarLink className="navbar-item" to="/camper-vans">
                 Camper vans
               </NavbarLink>
-              <NavbarLink className="navbar-item has-text-weight-bold" to="/">
+              <NavbarLink className="navbar-item" to="/">
                 Precios
               </NavbarLink>
-              <NavbarLink
-                className="navbar-item has-text-weight-bold"
-                to="/blog"
-              >
+              <NavbarLink className="navbar-item" to="/blog">
                 Blog
               </NavbarLink>
-              <NavbarLink
-                className="navbar-item has-text-weight-bold"
-                to="/FAQ"
-              >
+              <NavbarLink className="navbar-item" to="/FAQ">
                 FAQ
               </NavbarLink>
-              <NavbarLink
-                className="navbar-item has-text-weight-bold"
-                to="/contact"
-              >
+              <NavbarLink className="navbar-item" to="/contact">
                 Contacto
               </NavbarLink>
             </div>
