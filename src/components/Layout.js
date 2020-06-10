@@ -64,6 +64,7 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
 
           html,
           body {
+            background-color: #f5f5f5;
             margin: 0;
             font-size: 18px;
             line-height: 1.4;
@@ -103,8 +104,8 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
       // `}
       >
         {children}
+        <Footer />
       </main>
-      <Footer />
     </>
   );
 };

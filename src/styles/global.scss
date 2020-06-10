@@ -5,9 +5,14 @@
 
 $primary: #15b7b9;
 $primary-invert: #10ddc2;
-$body-color: #f5f5f5;
+$body-color: #2b2523;
+$body-background-color: #f5f5f5;
 $red: #f57170;
 $black: #2b2523;
+
+.navbar {
+  background-color: $body-background-color !important;
+}
 
 .navbar .navbar-menu {
   box-shadow: none !important;
@@ -60,7 +65,7 @@ $black: #2b2523;
   font-size: 18px;
   font-size: 1rem;
   line-height: 1.25;
-  background-color: #f5f5f5;
+  background-color: $body-background-color;
   border-radius: 0.25rem;
   text-decoration: none;
   font-weight: 700;
@@ -122,7 +127,7 @@ footer.footer {
 .social a {
   padding: 0.5em 0.5em 0.3em 0.5em;
   border-radius: 1em;
-  background-color: $body-color;
+  background-color: $body-background-color;
   margin: 0.5em;
   width: 1em;
   height: 1em;
