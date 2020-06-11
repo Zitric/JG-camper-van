@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: I love Isable
+title: JG Camper Van
 image: /img/home.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
