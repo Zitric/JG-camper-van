@@ -6,12 +6,8 @@ import Layout from '../components/Layout';
 import Features from '../components/Features';
 import Testimonials from '../components/Testimonials';
 import Pricing from '../components/Pricing';
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
-import Hero from '../components/Hero';
 
 export const ProductPageTemplate = ({
-  image,
-  title,
   heading,
   description,
   intro,
@@ -20,7 +16,6 @@ export const ProductPageTemplate = ({
   pricing,
 }) => (
   <div className="content">
-    <Hero heading={title} image={image} />
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -45,20 +40,14 @@ export const ProductPageTemplate = ({
                 <div className="tile is-vertical">
                   <div className="tile">
                     <div className="tile is-parent is-vertical">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image1} />
-                      </article>
+                      <article className="tile is-child"></article>
                     </div>
                     <div className="tile is-parent">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image2} />
-                      </article>
+                      <article className="tile is-child"></article>
                     </div>
                   </div>
                   <div className="tile is-parent">
-                    <article className="tile is-child">
-                      <PreviewCompatibleImage imageInfo={main.image3} />
-                    </article>
+                    <article className="tile is-child"></article>
                   </div>
                 </div>
               </div>
@@ -107,14 +96,12 @@ const ProductPage = ({ data }) => {
   return (
     <Layout>
       <ProductPageTemplate
-        image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
         description={frontmatter.description}
         intro={frontmatter.intro}
         main={frontmatter.main}
         testimonials={frontmatter.testimonials}
-        fullImage={frontmatter.full_image}
         pricing={frontmatter.pricing}
       />
     </Layout>
@@ -148,36 +135,6 @@ export const productPageQuery = graphql`
         main {
           heading
           description
-          image1 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image2 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
         }
         testimonials {
           author
