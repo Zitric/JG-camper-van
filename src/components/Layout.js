@@ -86,6 +86,7 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
               margin-top: 0.5rem;
             }
           }
+
           strong {
             color: #10ddc2;
           }
@@ -93,16 +94,31 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
           li {
             margin-top: 0.25rem;
           }
+
+          .grid {
+            display: grid;
+            grid-template-columns:
+              [xl-start] 1fr 1.5rem [md-start] minmax(0, 624px)
+              [md-end] 1.5rem 1fr [xl-end];
+          }
+
+          .grid * {
+            grid-column: md;
+          }
+
+          .grid-xl {
+            grid-column: xl;
+          }
+
+          @media (max-width: 672px) {
+            :root {
+              font-size: 90%;
+            }
+          }
         `}
       />
       <Navbar />
-      <main
-      // css={css`
-      //   margin: 2rem auto 4rem;
-      //   max-width: 90vw;
-      //   width: 550px;
-      // `}
-      >
+      <main className={''} css={css``}>
         {children}
         <Footer />
       </main>
