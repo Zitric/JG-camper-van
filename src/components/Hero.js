@@ -23,7 +23,7 @@ const TextBox = styled('div')`
   justify-content: 'space-around';
   align-items: 'left';
   flex-direction: column;
-  margin: 0 15% 2rem;
+  margin: 2rem 15%;
 
   h1,
   h2 {
@@ -31,6 +31,10 @@ const TextBox = styled('div')`
     background-color: #15b7b9;
     color: #f5f5f5;
     padding: 1rem;
+  }
+  h2 {
+    margin-top: 1.5rem;
+    padding: 0.5rem;
   }
 `;
 
@@ -42,16 +46,21 @@ const Hero = ({
   // secondBackgroundPosition,
 }) => {
   return (
-    <header>
-      <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft">
+    <header className="hero">
+      <ImageBackground
+        className="hero-body"
+        Tag="section"
+        fluid={image.sharp.fluid}
+        fadeIn="soft"
+      >
         <TextBox>
           {heading && (
-            <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
+            <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen title">
               {heading}
             </h1>
           )}
           {subheading && (
-            <h2 className="has-text-weight-bold is-size-1 is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+            <h2 className="has-text-weight-bold is-size-1 is-size-5-mobile is-size-5-tablet is-size-4-widescreen subtitle">
               {subheading}
             </h2>
           )}
