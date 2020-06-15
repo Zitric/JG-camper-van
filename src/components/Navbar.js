@@ -1,16 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import styled from '@emotion/styled';
+import NavbarLink from './NavbarLink';
 
 import logo from '../img/logo.svg';
-
-const NavbarLink = styled(Link)`
-  font-weight: 500;
-  color: #15b7b9;
-  :hover {
-    color: #10ddc2 !important;
-  }
-`;
 
 class Navbar extends React.Component {
   state = {
@@ -35,7 +27,9 @@ class Navbar extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+              <figure className="navbar-item image">
+                <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+              </figure>
             </Link>
             {/* Hamburger menu */}
             <div
@@ -56,24 +50,13 @@ class Navbar extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-end has-text-centered">
-              <NavbarLink className="navbar-item" to="/about">
-                Quienes somos
-              </NavbarLink>
-              <NavbarLink className="navbar-item" to="/camper-vans">
-                Camper vans
-              </NavbarLink>
-              <NavbarLink className="navbar-item" to="/">
-                Precios
-              </NavbarLink>
-              <NavbarLink className="navbar-item" to="/blog">
-                Blog
-              </NavbarLink>
-              <NavbarLink className="navbar-item" to="/FAQ">
-                FAQ
-              </NavbarLink>
-              <NavbarLink className="navbar-item" to="/contact">
-                Contacto
-              </NavbarLink>
+              <NavbarLink to="/about">Quienes somos</NavbarLink>
+              <NavbarLink to="/camper-vans">Camper vans</NavbarLink>
+              <NavbarLink to="/">Precios</NavbarLink>
+              <NavbarLink to="/">Condiciones</NavbarLink>
+              <NavbarLink to="/FAQ">FAQ</NavbarLink>
+              <NavbarLink to="/blog">Blog</NavbarLink>
+              <NavbarLink to="/contact">Contacto</NavbarLink>
             </div>
           </div>
         </div>
