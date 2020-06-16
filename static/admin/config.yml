@@ -63,7 +63,8 @@ collections:
       - file: "src/pages/conditions/index.md"
         label: "Página de condiciones"
         name: "conditions"
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "conditions"}
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "condition-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
