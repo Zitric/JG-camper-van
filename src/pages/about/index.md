@@ -33,3 +33,5 @@ Fácil de aparcar
 Su consumo y ruido durante la conducción es muy bajo
 
 Dispone de bola de enganche si quieres llevar carro
+
+Dispone de todas las comodidades necesarias para una magnífica escapada
