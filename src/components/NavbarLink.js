@@ -16,7 +16,10 @@ const NavLink = styled(Link)`
 `;
 
 const NavbarLink = ({ children, to }) => {
-  const className = window.location.pathname === to ? 'isActive' : '';
+  const className =
+    typeof window !== 'undefined' && window.location.pathname === to
+      ? 'isActive'
+      : '';
   return (
     <NavLink to={to} className={`navbar-item ${className}`}>
       {children}
