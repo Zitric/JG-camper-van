@@ -79,11 +79,13 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout keywords={['Aquiler', 'Camper-van', 'Sevilla']}>
-      <Hero
-        image={data.heroImage}
-        heading={frontmatter.title}
-        subheading={frontmatter.subheading}
-      />
+      {data.heroImage && (
+        <Hero
+          image={data.heroImage}
+          heading={frontmatter.title}
+          subheading={frontmatter.subheading}
+        />
+      )}
       <IndexPageTemplate
         title={frontmatter.title}
         heading={frontmatter.heading}

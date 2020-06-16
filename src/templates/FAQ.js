@@ -38,7 +38,7 @@ const FAQPage = ({ data }) => {
 
   return (
     <Layout>
-      <Hero image={heroImage} heading={'Preguntas frecuentes'} />
+      {heroImage && <Hero image={heroImage} heading={'Preguntas frecuentes'} />}
       <FAQPageTemplate
         contentComponent={HTMLContent}
         title={markdownRemark.frontmatter.title}

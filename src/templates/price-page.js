@@ -6,7 +6,7 @@ import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const PricePageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
@@ -27,20 +27,19 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   );
 };
 
-AboutPageTemplate.propTypes = {
+PricePageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 };
 
-const AboutPage = ({ data }) => {
+const PricePage = ({ data }) => {
   const { markdownRemark, heroImage } = data;
 
   return (
     <Layout>
       {heroImage && <Hero heading={'Quienes somos'} image={heroImage} />}
-
-      <AboutPageTemplate
+      <PricePageTemplate
         contentComponent={HTMLContent}
         title={markdownRemark.frontmatter.title}
         content={markdownRemark.html}
@@ -49,22 +48,22 @@ const AboutPage = ({ data }) => {
   );
 };
 
-AboutPage.propTypes = {
+PricePage.propTypes = {
   data: PropTypes.object,
   image: PropTypes.objectOf(),
 };
 
-export default AboutPage;
+export default PricePage;
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const pricePageQuery = graphql`
+  query PricePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
       }
     }
-    heroImage: file(relativePath: { eq: "about-us.jpg" }) {
+    heroImage: file(relativePath: { eq: "precies.jpg" }) {
       sharp: childImageSharp {
         fluid(maxWidth: 2048, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp

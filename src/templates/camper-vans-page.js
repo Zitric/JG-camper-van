@@ -42,7 +42,7 @@ const CamperVansPage = ({ data }) => {
 
   return (
     <Layout>
-      <Hero image={heroImage} heading={'Nuestras Camper Vans'} />
+      {heroImage && <Hero image={heroImage} heading={'Nuestras Camper Vans'} />}
       <CamperVansPageTemplate
         contentComponent={HTMLContent}
         title={markdownRemark.frontmatter.title}
