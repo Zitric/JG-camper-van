@@ -18,7 +18,7 @@ Siempre hemos intentado explicar a nuestros amigos y familiares la sensación qu
 
 Es cierto que hoy día existen muchas empresas dedicadas al alquiler de furgonetas, pero JG CAMPER ofrece algo más que un sencillo alquiler: convertir cada escapada en una aventura, unas vacaciones divertidas, un recuerdo inolvidable, y en definitiva una EXPERIENCIA diferente y única.
 
-### ¿Porqué una camper?
+### ¿Porqué nuestras camper?
 
 Las ventajas de elegir nuestras camper son muchas: 
 
