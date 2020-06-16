@@ -63,7 +63,7 @@ export const pricePageQuery = graphql`
         title
       }
     }
-    heroImage: file(relativePath: { eq: "precies.jpg" }) {
+    heroImage: file(relativePath: { eq: "prices.jpg" }) {
       sharp: childImageSharp {
         fluid(maxWidth: 2048, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp

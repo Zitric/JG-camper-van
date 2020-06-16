@@ -49,11 +49,11 @@ collections:
           - {label: Description, name: description, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
 
-      - file: "src/pages/pricies/index.md"
+      - file: "src/pages/prices/index.md"
         label: "Página de precios"
-        name: "precies"
+        name: "prices"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "precies"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "price-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}

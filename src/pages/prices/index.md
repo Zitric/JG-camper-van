@@ -1,5 +1,5 @@
 ---
 templateKey: 'price-page'
-path: /precies
+path: /prices
 title: Precios
 ---
