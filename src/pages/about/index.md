@@ -22,7 +22,7 @@ Es cierto que hoy día existen muchas empresas dedicadas al alquiler de furgonet
 
 Las ventajas de elegir nuestras camper son muchas: 
 
-Para empezar, la conducción es prácticamente a la de un coche utilitario, fácil y cómoda
+Para empezar, la conducción es prácticamente a la de un coche utilitario, fácil y confortable
 
 Legalmente puede pernoctar en cualquier lugar dónde le esté permitido hacerlo un vehículo convencional
 
