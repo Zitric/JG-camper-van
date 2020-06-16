@@ -1,26 +1,35 @@
 ---
-templateKey: 'about-page'
+templateKey: about-page
 path: /about
-title: About our values
+title: QUIENES SOMOS
 image: /img/about-us.jpg
 ---
+### Comienzos
 
-### Shade-grown coffee
+JG CAMPER surgió por la necesidad de dos hermanos a viajar movidos por su afición al surf y kite surf, puesto que la condiciones meteorológicas necesarias para estos deportes son muy caprichosas y cambiantes. Ambos hermanos siempre tuvimos furgoneta para desplazarnos allí donde estuvieran las olas o el viento, con nuestras cometas y tablas, provistos de una cama, cocina y ducha con las que afrontar los viajes. No necesitábamos nada más para disfrutar de nuestras aficiones. 
 
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+Ambos hermanos siempre trabajamos felizmente en diferentes empresas, aunque nunca nos llenó del todo, así que con nuestra experiencia, conocimiento y aficiones, nos preguntamos, ¿Y porqué no hacer de nuestro hobby nuestra profesión?.
 
-### Single origin
+### Filosofía
 
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+Siempre hemos intentado explicar a nuestros amigos y familiares la sensación que tiene dormir en lugares espectaculares, únicos, escondidos, solitarios.. despertar frente al mar o en un valle entre montañas, rodeado de naturaleza, respirando aire puro, sin bullicio, escuchando tan solo el rugir de las olas o el canto de de los pájaros amaneciendo
 
-### Sustainable farming
+### ¿Qué ofrecemos?
 
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+Es cierto que hoy día existen muchas empresas dedicadas al alquiler de furgonetas, pero JG CAMPER ofrece algo más que un sencillo alquiler: convertir cada escapada en una aventura, unas vacaciones divertidas, un recuerdo inolvidable, y en definitiva una EXPERIENCIA diferente.
 
-### Direct sourcing
+### ¿Porqué una camper?
 
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+Las ventajas de elegir nuestras camper son muchas: 
 
-### Reinvest profits
+Para empezar, la conducción es prácticamente a la de un coche utilitario, fácil y cómoda
 
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+Legalmente puede pernoctar en cualquier lugar dónde le esté permitido hacerlo un vehículo convencional
+
+Gracias a sus dimensiones, tiene acceso a muchos lugares inaccesibles para grandes furgonetas o caravanas/autocaravanas , y tiene cabida en la mayoría de parkings privados ó garajes de hipermercados.
+
+Fácil de aparcar
+
+Su consumo y ruido durante la conducción es muy bajo
+
+Dispone de bola de enganche si quieres llevar carro
