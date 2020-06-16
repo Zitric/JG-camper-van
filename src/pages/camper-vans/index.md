@@ -3,7 +3,7 @@ templateKey: camper-vans-page
 path: /camper-vans
 title: Nuestras campers
 image: /img/camper-vans.jpg
-heading: Great coffee with a conscience
+heading: CARACTERÍSTICAS Y EQUIPAMIENTO
 description: EQUIPAMIENTO
 ---
 **CARIBEAN:**
