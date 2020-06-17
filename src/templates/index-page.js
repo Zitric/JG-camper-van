@@ -75,13 +75,14 @@ IndexPageTemplate.propTypes = {
 };
 
 const IndexPage = ({ data }) => {
+  const { heroImage } = data;
   const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout keywords={['Aquiler', 'Camper-van', 'Sevilla']}>
-      {data.heroImage && (
+      {heroImage && (
         <Hero
-          image={data.heroImage}
+          image={heroImage}
           heading={frontmatter.title}
           subheading={frontmatter.subheading}
         />
@@ -103,7 +104,7 @@ IndexPage.propTypes = {
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
     }),
-    heroImage: PropTypes.objectOf(),
+    heroImage: PropTypes.object,
   }),
 };
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+
 import Layout from '../components/Layout';
 
 class TagRoute extends React.Component {
@@ -43,6 +45,11 @@ class TagRoute extends React.Component {
     );
   }
 }
+
+TagRoute.propTypes = {
+  data: PropTypes.object,
+  pageContext: PropTypes.object,
+};
 
 export default TagRoute;
 

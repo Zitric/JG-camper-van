@@ -2,6 +2,8 @@ import React from 'react';
 import { kebabCase } from 'lodash';
 import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+
 import Layout from '../../components/Layout';
 
 const TagsPage = ({
@@ -37,6 +39,10 @@ const TagsPage = ({
     </section>
   </Layout>
 );
+
+TagsPage.propTypes = {
+  data: PropTypes.object,
+};
 
 export default TagsPage;
 

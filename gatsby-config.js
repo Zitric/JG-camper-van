@@ -7,8 +7,8 @@ module.exports = {
     image: '',
   },
   plugins: [
+    'gatsby-plugin-eslint',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -29,6 +29,20 @@ module.exports = {
       options: {
         path: `${__dirname}/src/img`,
         name: 'images',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages/blog`,
+        name: 'blog-posts',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages/camper-vans`,
+        name: 'camper-van-posts',
       },
     },
     'gatsby-plugin-sharp',
@@ -58,6 +72,7 @@ module.exports = {
               destinationDir: 'static',
             },
           },
+          'gatsby-remark-smartypants',
         ],
       },
     },
@@ -67,15 +82,27 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    'gatsby-plugin-sass',
     {
-      // TODO update all.scss
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
-        purgeOnly: ['/global.scss'], // applies purging only on the bulma css file
+        purgeOnly: ['/styles/global.scss'], // applies purging only on the bulma css file
+        options: {
+          printRejected: true,
+        },
       },
     }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array
     'gatsby-plugin-emotion',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        // defaultLayouts: {
+        //   default: require.resolve('./src/components/layout.js'),
+        // },
+      },
+    },
+    `gatsby-plugin-react-helmet-async`,
   ],
 };

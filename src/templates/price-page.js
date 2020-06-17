@@ -50,7 +50,6 @@ const PricePage = ({ data }) => {
 
 PricePage.propTypes = {
   data: PropTypes.object,
-  image: PropTypes.objectOf(),
 };
 
 export default PricePage;
