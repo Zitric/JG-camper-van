@@ -7,8 +7,6 @@ import PreviewCompatibleImage from './PreviewCompatibleImage';
 const BlogRoll = () => {
   const posts = UseBlogPosts();
 
-  console.log('posts', posts);
-
   return posts ? (
     <div className="columns is-multiline">
       {posts.map((post) => (
