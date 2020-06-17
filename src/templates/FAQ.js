@@ -50,6 +50,12 @@ const FAQPage = ({ data }) => {
 
 FAQPage.propTypes = {
   data: PropTypes.object,
+  heroImage: PropTypes.object,
+};
+
+FAQPage.defaultProps = {
+  data: null,
+  heroImage: null,
 };
 
 export default FAQPage;

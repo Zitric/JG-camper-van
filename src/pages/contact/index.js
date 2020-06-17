@@ -1,7 +1,6 @@
 import React from 'react';
 import { navigate } from 'gatsby-link';
 import { graphql } from 'gatsby';
-import PropTypes from 'prop-types';
 
 import Layout from '../../components/Layout';
 import Hero from '../../components/Hero';
@@ -35,11 +34,10 @@ export default class ContactPage extends React.Component {
   };
 
   render() {
-    const { heroImage } = this.props.data;
-
+    console.log('props', this.props);
     return (
       <Layout>
-        <Hero heading={'Contacto'} image={heroImage} />
+        <Hero heading={'Contacto'} image={this.props.data.heroImage} />
         <section className="section">
           <div className="container">
             <div className="content">
@@ -117,10 +115,6 @@ export default class ContactPage extends React.Component {
     );
   }
 }
-
-ContactPage.propTypes = {
-  data: PropTypes.object,
-};
 
 export const ContactPageQuery = graphql`
   query ContactPage {

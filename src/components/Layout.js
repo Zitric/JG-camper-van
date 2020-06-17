@@ -132,7 +132,7 @@ Layout.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
   article: PropTypes.bool,
-  keywords: PropTypes.arrayOf(PropTypes.string),
+  keywords: PropTypes.string,
 };
 
 Layout.defaultProps = {

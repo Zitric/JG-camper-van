@@ -50,6 +50,7 @@ const ConditionPage = ({ data }) => {
 
 ConditionPage.propTypes = {
   data: PropTypes.object,
+  image: PropTypes.objectOf(),
 };
 
 export default ConditionPage;

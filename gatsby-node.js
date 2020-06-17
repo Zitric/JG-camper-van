@@ -3,10 +3,10 @@ const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
+exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  return await graphql(`
+  return graphql(`
     {
       allMarkdownRemark(limit: 1000) {
         edges {
@@ -25,7 +25,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `).then((result) => {
     if (result.errors) {
-      reporter.panic('Failed to create page', result.errors);
       result.errors.forEach((e) => console.error(e.toString()));
       return Promise.reject(result.errors);
     }

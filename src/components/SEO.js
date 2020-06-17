@@ -19,7 +19,7 @@ const SEO = ({ title, description, image, article, keywords }) => {
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
-    keywords: null,
+    keywords: `${keywords}`,
   };
 
   const canonical = pathname ? `${seo.url}` : null;
@@ -62,7 +62,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
   article: PropTypes.bool,
-  keywords: PropTypes.arrayOf(PropTypes.string),
+  keywords: PropTypes.string,
 };
 
 SEO.defaultProps = {

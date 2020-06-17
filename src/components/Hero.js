@@ -71,7 +71,7 @@ const Hero = ({
 };
 
 Hero.propTypes = {
-  image: PropTypes.object,
+  image: PropTypes.objectOf(),
   heading: PropTypes.string,
   subheading: PropTypes.string,
   firstBackgroundPosition: PropTypes.string,

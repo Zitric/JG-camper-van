@@ -52,7 +52,6 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
-  tags: PropTypes.arrayOf(),
 };
 
 const BlogPost = ({ data }) => {
