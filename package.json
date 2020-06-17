@@ -9,8 +9,6 @@
     "@mdx-js/mdx": "^1.6.5",
     "@mdx-js/react": "^1.6.5",
     "bulma": "^0.9.0",
-    "child_process": "^1.0.2",
-    "fs": "^0.0.1-security",
     "gatsby": "^2.20.35",
     "gatsby-background-image": "^1.1.1",
     "gatsby-image": "^2.3.5",
