@@ -51,7 +51,6 @@ const AboutPage = ({ data }) => {
 
 AboutPage.propTypes = {
   data: PropTypes.object,
-  image: PropTypes.objectOf(),
 };
 
 export default AboutPage;

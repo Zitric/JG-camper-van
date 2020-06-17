@@ -54,12 +54,6 @@ const CamperVansPage = ({ data }) => {
 
 CamperVansPage.propTypes = {
   data: PropTypes.object,
-  heroImage: PropTypes.object,
-};
-
-CamperVansPage.defaultProps = {
-  data: null,
-  heroImage: null,
 };
 
 export default CamperVansPage;
