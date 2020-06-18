@@ -33,7 +33,9 @@ const useBlogPosts = () => {
     }
   `);
 
-  return data.allMarkdownRemark.edges.map((post) => ({
+  const edges = data.allMarkdownRemark.edges;
+
+  return edges.map((post) => ({
     id: post.node.id,
     templateKey: post.node.frontmatter.templateKey,
     title: post.node.frontmatter.title,
