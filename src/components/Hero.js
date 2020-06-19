@@ -10,20 +10,15 @@ const ImageBackground = styled(BackgroundImage)`
   background-size: contain;
   background-attachment: fixed;
   background-position: top;
-  width: 100vw;
-  height: 30vw;
-  display: flex;
-  justify-content: start;
-  align-items: center;
 `;
 
 const TextBox = styled('div')`
-  display: flex;
   height: 150px;
   justify-content: 'space-around';
+  display: flex;
   align-items: 'left';
   flex-direction: column;
-  margin: 2rem 15%;
+  margin: auto auto auto 0;
 
   h1,
   h2 {
@@ -38,22 +33,16 @@ const TextBox = styled('div')`
   }
 `;
 
-const Hero = ({
-  image,
-  heading,
-  subheading,
-  // firstBackgroundPosition,
-  // secondBackgroundPosition,
-}) => {
+const Hero = ({ image, heading, subheading }) => {
   return (
-    <header className="hero">
+    <header className="hero grid-xl">
       <ImageBackground
-        className="hero-body"
+        className="hero-body grid height-40vh"
         Tag="section"
         fluid={image.sharp.fluid}
         fadeIn="soft"
       >
-        <TextBox>
+        <TextBox className="grid">
           {heading && (
             <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen title">
               {heading}
