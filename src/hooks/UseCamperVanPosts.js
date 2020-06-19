@@ -1,11 +1,11 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-const useBlogPosts = () => {
+const useCamperVanPosts = () => {
   const posts = useStaticQuery(graphql`
-    query BlogRollQuery {
+    query CamperVanRollQuery {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+        filter: { frontmatter: { templateKey: { eq: "camper-van-post" } } }
       ) {
         edges {
           node {
@@ -35,6 +35,8 @@ const useBlogPosts = () => {
 
   const edges = posts.allMarkdownRemark.edges;
 
+  console.log('camper-van edges', edges);
+
   return edges.map((post) => ({
     id: post.node.id,
     templateKey: post.node.frontmatter.templateKey,
@@ -48,4 +50,4 @@ const useBlogPosts = () => {
   }));
 };
 
-export default useBlogPosts;
+export default useCamperVanPosts;
