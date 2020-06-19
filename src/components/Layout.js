@@ -98,7 +98,8 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
           .grid {
             display: grid;
             grid-template-columns:
-              [xl-start] 1fr 1.5rem [md-start] minmax(0, 624px)
+              [xl-start] 1fr 1.5rem [md-start]
+              minmax(0, 1024px)
               [md-end] 1.5rem 1fr [xl-end];
           }
 
@@ -108,6 +109,22 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
 
           .grid-xl {
             grid-column: xl;
+          }
+
+          .section {
+            padding: 5rem 0;
+          }
+
+          .full-height {
+            height: calc(100vh - 3.25rem);
+          }
+
+          .height-30vh {
+            height: 30vh;
+          }
+
+          .height-40vh {
+            height: 40vh;
           }
 
           @media (max-width: 672px) {

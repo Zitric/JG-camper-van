@@ -1,7 +1,9 @@
 ---
 templateKey: index-page
-title: "JG Camper "
-image: /img/home.jpg
+title: 'JG Camper'
+heroImage: /img/home.jpg
+heroHeading: JG Camper
+heroSubHeading: Alquiler de camper vans en Sevilla
 heading: Vive una aventura diferente
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
