@@ -125,13 +125,6 @@ export const productPageQuery = graphql`
         title
         heading
         description
-        intro {
-          blurbs {
-            text
-          }
-          heading
-          description
-        }
         main {
           heading
           description

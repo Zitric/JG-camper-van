@@ -3,80 +3,93 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
+import Hero from '../components/Hero';
+import TestimoniesCarousel from '../components/TestimoniesCarousel';
+import ImageCarousel from '../components/ImageCarousel';
 import Features from '../components/Features';
 import BlogRoll from '../components/BlogRoll';
-import Hero from '../components/Hero';
+
+import 'antd/dist/antd.css';
 
 export const IndexPageTemplate = ({
   heading,
   mainpitch,
   description,
-  intro,
   heroImage,
   heroHeading,
   heroSubHeading,
-}) => (
-  <>
-    <div className="full-height">
-      {heroImage && (
-        <Hero
-          image={heroImage}
-          heading={heroHeading}
-          subheading={heroSubHeading}
-        />
-      )}
-      <section className="section grid">
-        <div className="columns">
-          <div className="column">
-            <div className="content">
-              <div className="tile">
-                <h1 className="title">{mainpitch.title}</h1>
+  testimonials,
+  carouselImages,
+}) => {
+  return (
+    <>
+      <div className="full-height">
+        {heroImage && (
+          <Hero
+            image={heroImage}
+            heading={heroHeading}
+            subheading={heroSubHeading}
+          />
+        )}
+        <section className="section grid">
+          <div className="columns">
+            <div className="column">
+              <div className="content">
+                <div className="tile">
+                  <h1 className="title">{mainpitch.title}</h1>
+                </div>
+                <div className="tile">
+                  <h3 className="subtitle">{mainpitch.description}</h3>
+                </div>
               </div>
-              <div className="tile">
-                <h3 className="subtitle">{mainpitch.description}</h3>
-              </div>
-            </div>
-            <div className="columns">
-              <div className="column is-12">
-                <h3 className="has-text-weight-semibold is-size-2">
-                  {heading}
-                </h3>
-                <p>{description}</p>
+              <div className="columns">
+                <div className="column is-12">
+                  <h3 className="has-text-weight-semibold is-size-2">
+                    {heading}
+                  </h3>
+                  <p>{description}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+      </div>
+      <section className="section grid-xl height-40vh imageCarousel">
+        <ImageCarousel images={carouselImages} />
       </section>
-    </div>
-  </>
-  // <section className="section section--gradient">
-  //   <div className="container">
-  //     <div className="section">
-  //           <div className="content">
-  //             <Features gridItems={intro.blurbs} />
-  //             <div className="columns">
-  //               <div className="column is-12 has-text-centered">
-  //                 <Link className="btn" to="/products">
-  //                   See all products
-  //                 </Link>
-  //               </div>
-  //             </div>
-  //             <div className="column is-12">
-  //               <h3 className="has-text-weight-semibold is-size-2">
-  //                 Latest stories
-  //               </h3>
-  //               <BlogRoll />
-  //               <div className="column is-12 has-text-centered">
-  //                 <Link className="btn" to="/blog">
-  //                   Read more
-  //                 </Link>
-  //               </div>
-  //             </div>
-  //           </div>
-  //         </div>
-  //   </div>
-  // </section>
-);
+      <section className="section grid testimoniesCarousel">
+        <TestimoniesCarousel testimonials={testimonials} />
+      </section>
+    </>
+    // <section className="section section--gradient">
+    //   <div className="container">
+    //     <div className="section">
+    //           <div className="content">
+    //             <Features gridItems={intro.blurbs} />
+    //             <div className="columns">
+    //               <div className="column is-12 has-text-centered">
+    //                 <Link className="btn" to="/products">
+    //                   See all products
+    //                 </Link>
+    //               </div>
+    //             </div>
+    //             <div className="column is-12">
+    //               <h3 className="has-text-weight-semibold is-size-2">
+    //                 Latest stories
+    //               </h3>
+    //               <BlogRoll />
+    //               <div className="column is-12 has-text-centered">
+    //                 <Link className="btn" to="/blog">
+    //                   Read more
+    //                 </Link>
+    //               </div>
+    //             </div>
+    //           </div>
+    //         </div>
+    //   </div>
+    // </section>
+  );
+};
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -85,9 +98,7 @@ IndexPageTemplate.propTypes = {
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+
   heroImage: PropTypes.object,
   heroHeading: PropTypes.string,
   heroSubHeading: PropTypes.string,
@@ -104,10 +115,11 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
         heroImage={frontmatter.heroImage}
         heroHeading={frontmatter.heroHeading}
         heroSubHeading={frontmatter.heroSubHeading}
+        testimonials={frontmatter.testimonials}
+        carouselImages={frontmatter.carouselImages}
       />
     </Layout>
   );
@@ -145,12 +157,18 @@ export const pageQuery = graphql`
           description
         }
         description
-        intro {
-          blurbs {
-            text
+        testimonials {
+          author
+          quote
+        }
+        carouselImages {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1024, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
           }
-          heading
-          description
         }
       }
     }
