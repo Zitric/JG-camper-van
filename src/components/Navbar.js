@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import NavbarLink from './NavbarLink';
 
-import logo from '../img/logo.svg';
+import logo from '../img/logo-name.png';
 
 class Navbar extends React.Component {
   state = {
@@ -26,9 +26,21 @@ class Navbar extends React.Component {
       >
         <div className="container">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <figure className="navbar-item image">
-                <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+            <Link
+              to="/"
+              className="navbar-item"
+              title="Logo"
+              style={{ padding: 0 }}
+            >
+              <figure
+                className="navbar-item image"
+                style={{ padding: 0, margin: 0, height: '100%' }}
+              >
+                <img
+                  src={logo}
+                  alt="JG Camper"
+                  style={{ width: '230px', minHeight: '100%' }}
+                />
               </figure>
             </Link>
             {/* Hamburger menu */}

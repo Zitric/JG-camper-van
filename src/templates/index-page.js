@@ -54,7 +54,7 @@ export const IndexPageTemplate = ({
           </div>
         </section>
       </div>
-      <section className="section grid-xl height-40vh imageCarousel">
+      <section className="section grid-xl height-50vh imageCarousel">
         <ImageCarousel images={carouselImages} />
       </section>
       <section className="section grid testimoniesCarousel">

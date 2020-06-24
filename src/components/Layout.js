@@ -127,6 +127,10 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
             height: 40vh;
           }
 
+          .height-50vh {
+            height: 50vh;
+          }
+
           .testimoniesCarousel .ant-carousel .slick-slide {
             text-align: center;
             height: calc(100% + 0.5rem);
@@ -139,7 +143,7 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
 
           .imageCarousel .ant-carousel .slick-slide {
             text-align: center;
-            height: 40vh;
+            height: 50vh;
             overflow: hidden;
           }
 
