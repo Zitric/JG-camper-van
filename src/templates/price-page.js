@@ -38,7 +38,7 @@ const PricePage = ({ data }) => {
 
   return (
     <Layout>
-      {heroImage && <Hero heading={'Quienes somos'} image={heroImage} />}
+      {heroImage && <Hero heading={'Precios'} image={heroImage} />}
       <PricePageTemplate
         contentComponent={HTMLContent}
         title={markdownRemark.frontmatter.title}
