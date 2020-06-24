@@ -127,6 +127,26 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
             height: 40vh;
           }
 
+          .height-50vh {
+            height: 50vh;
+          }
+
+          .testimoniesCarousel .ant-carousel .slick-slide {
+            text-align: center;
+            height: calc(100% + 0.5rem);
+            overflow: hidden;
+          }
+
+          .testimoniesCarousel .ant-carousel .slick-slide h3 {
+            color: #10ddc2;
+          }
+
+          .imageCarousel .ant-carousel .slick-slide {
+            text-align: center;
+            height: 50vh;
+            overflow: hidden;
+          }
+
           @media (max-width: 672px) {
             :root {
               font-size: 90%;
@@ -149,7 +169,7 @@ Layout.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
   article: PropTypes.bool,
-  keywords: PropTypes.string,
+  keywords: PropTypes.arrayOf(PropTypes.string),
 };
 
 Layout.defaultProps = {

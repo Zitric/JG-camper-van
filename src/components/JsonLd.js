@@ -11,7 +11,7 @@ const JsonLd = ({ children }) => {
 };
 
 JsonLd.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 export default JsonLd;
