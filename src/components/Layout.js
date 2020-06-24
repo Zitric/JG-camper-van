@@ -127,14 +127,20 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
             height: 40vh;
           }
 
-          .ant-carousel .slick-slide {
+          .testimoniesCarousel .ant-carousel .slick-slide {
             text-align: center;
             height: calc(100% + 0.5rem);
             overflow: hidden;
           }
 
-          .ant-carousel .slick-slide h3 {
+          .testimoniesCarousel .ant-carousel .slick-slide h3 {
             color: #10ddc2;
+          }
+
+          .imageCarousel .ant-carousel .slick-slide {
+            text-align: center;
+            height: 40vh;
+            overflow: hidden;
           }
 
           @media (max-width: 672px) {

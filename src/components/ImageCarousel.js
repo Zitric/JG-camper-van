@@ -2,16 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 import { Carousel } from 'antd';
-import styled from '@emotion/styled';
-
-const Testimony = styled('article')`
-  width: 99% !important;
-  margin: 0.3rem;
-`;
-
-const Container = styled('div')`
-  border-color: #10ddc2;
-`;
+import Img from 'gatsby-image';
 
 const settings = {
   infinite: true,
@@ -19,28 +10,27 @@ const settings = {
   autoplaySpeed: 6000,
 };
 
-const TestimoniesCarousel = ({ testimonials }) => (
-  <Carousel autoplay dots={false} {...settings} draggable={true}>
-    {testimonials &&
-      testimonials.map((testimonial) => (
-        <Testimony key={v4()} className="message">
-          <Container className="message-body">
-            {testimonial.quote}
-            <br />
-            <cite> – {testimonial.author}</cite>
-          </Container>
-        </Testimony>
-      ))}
-  </Carousel>
-);
-
-TestimoniesCarousel.propTypes = {
-  testimonials: PropTypes.arrayOf(
-    PropTypes.shape({
-      quote: PropTypes.string,
-      author: PropTypes.string,
-    }),
-  ),
+const ImageCarousel = ({ images }) => {
+  return (
+    <Carousel autoplay {...settings} draggable={true}>
+      {images &&
+        images.map(({ image }) => {
+          return (
+            <figure key={v4()}>
+              <Img
+                class="image"
+                fluid={image.childImageSharp.fluid}
+                alt="Gatsby Docs are awesome"
+              />
+            </figure>
+          );
+        })}
+    </Carousel>
+  );
 };
 
-export default TestimoniesCarousel;
+ImageCarousel.propTypes = {
+  images: PropTypes.object,
+};
+
+export default ImageCarousel;
