@@ -6,7 +6,6 @@ import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import TestimoniesCarousel from '../components/TestimoniesCarousel';
 import ImageCarousel from '../components/ImageCarousel';
-import Features from '../components/Features';
 import BlogRoll from '../components/BlogRoll';
 
 import 'antd/dist/antd.css';
