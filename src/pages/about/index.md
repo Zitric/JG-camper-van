@@ -1,5 +1,5 @@
 ---
-heroImage: /img/home.jpg
+heroImage: /img/about-us.jpg
 heading: Quienes somos
 path: /about
 templateKey: about-page
