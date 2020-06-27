@@ -107,9 +107,9 @@ collections:
 
   - name: "camper-vans"
     label: "Camper vans"
-    folder: "src/pages/camper-vans/{{year}}-{{month}}-{{day}}-{{slug}}"
+    folder: "src/pages/camper-vans"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}/{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "camper-van-post"}
       - {label: "Title", name: "title", widget: "string"}
