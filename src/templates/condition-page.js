@@ -38,7 +38,7 @@ const ConditionPage = ({ data }) => {
 
   return (
     <Layout>
-      {heroImage && <Hero heading={'Quienes somos'} image={heroImage} />}
+      {heroImage && <Hero heading={'Condiciones'} image={heroImage} />}
       <ConditionPageTemplate
         contentComponent={HTMLContent}
         title={markdownRemark.frontmatter.title}
@@ -63,7 +63,7 @@ export const conditionPageQuery = graphql`
         title
       }
     }
-    heroImage: file(relativePath: { eq: "conditions.jpg" }) {
+    heroImage: file(relativePath: { eq: "terms.jpg" }) {
       sharp: childImageSharp {
         fluid(maxWidth: 2048, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp

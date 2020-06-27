@@ -33,6 +33,8 @@ const useBlogPosts = () => {
     }
   `);
 
+  console.log('posts', posts);
+
   const edges = posts.allMarkdownRemark.edges;
 
   return edges.map((post) => ({

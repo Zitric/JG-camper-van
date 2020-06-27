@@ -38,6 +38,10 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: Description, name: description, widget: string}
+          - {label: HeroImage, name: heroImage, widget: image}
+          - {label: HeroHeading, name: heroHeading, widget: string}
+          - {label: Heading, name: heading, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
 
       - file: "src/pages/camper-vans/index.md"
@@ -46,9 +50,10 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "camper-vans-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
           - {label: Description, name: description, widget: string}
+          - {label: HeroImage, name: heroImage, widget: image}
+          - {label: HeroHeading, name: heroHeading, widget: string}
+          - {label: Heading, name: heading, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
 
       - file: "src/pages/prices/index.md"
@@ -57,9 +62,10 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "price-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
           - {label: Description, name: description, widget: string}
+          - {label: HeroImage, name: heroImage, widget: image}
+          - {label: HeroHeading, name: heroHeading, widget: string}
+          - {label: Heading, name: heading, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
 
       - file: "src/pages/conditions/index.md"
@@ -68,9 +74,10 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "condition-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
           - {label: Description, name: description, widget: string}
+          - {label: HeroImage, name: heroImage, widget: image}
+          - {label: HeroHeading, name: heroHeading, widget: string}
+          - {label: Heading, name: heading, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
 
       - file: "src/pages/FAQ/index.md"
@@ -79,10 +86,13 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "FAQ"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
           - {label: Description, name: description, widget: string}
+          - {label: HeroImage, name: heroImage, widget: image}
+          - {label: HeroHeading, name: heroHeading, widget: string}
+          - {label: Heading, name: heading, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
+          - {label: Questions, name: question, widget: list, fields: [{label: Question, name: question, widget: string}, {label: Answer, name: answer, widget: string}]}
+
 
       - file: "src/pages/contact/index.md"
         label: "Página de Contacto"
@@ -99,17 +109,20 @@ collections:
     label: "Camper vans"
     folder: "src/pages/camper-vans"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}/{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "camper-van-post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Equipment", name: "equipment", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Images", name: "images", widget: list, fields: [{label: Image, name: image, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
 
   - name: "blog"
     label: "Blog"
-    folder: "src/pages/blog"
+    folder: "src/pages/blog/{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -117,7 +130,6 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}

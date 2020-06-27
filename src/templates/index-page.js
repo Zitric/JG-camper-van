@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import TestimoniesCarousel from '../components/TestimoniesCarousel';
 import ImageCarousel from '../components/ImageCarousel';
-import BlogRoll from '../components/BlogRoll';
+// import BlogRoll from '../components/BlogRoll';
 
 import 'antd/dist/antd.css';
 
