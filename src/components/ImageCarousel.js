@@ -30,7 +30,7 @@ const ImageCarousel = ({ images }) => {
 };
 
 ImageCarousel.propTypes = {
-  images: PropTypes.object,
+  images: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default ImageCarousel;
