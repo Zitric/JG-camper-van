@@ -8,6 +8,13 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dypxaqdgb
+    api_key: 339985235411373
+    multiple: true
+
 media_folder: static/img
 public_folder: /img
 
@@ -102,7 +109,9 @@ collections:
     label: "Camper vans"
     folder: "src/pages/camper-vans"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}/{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: '/images'
+    public_folder: '/images'
+    path: "{{year}}-{{month}}-{{day}}-{{slug}}/index"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "camper-van-post"}
       - {label: "Title", name: "title", widget: "string"}
@@ -111,13 +120,15 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Equipment", name: "equipment", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Images", name: "images", widget: list, fields: [{label: Image, name: image, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+      - {label: "Images", name: "images", widget: list, fields: [{label: Image, name: image, widget: image}]}
 
   - name: "blog"
     label: "Blog"
-    folder: "src/pages/blog/{{year}}-{{month}}-{{day}}-{{slug}}"
+    folder: "src/pages/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: '/images'
+    public_folder: '/images'
+    path: "{{year}}-{{month}}-{{day}}-{{slug}}/index"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
