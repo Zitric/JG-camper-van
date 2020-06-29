@@ -6,6 +6,8 @@ import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import TestimoniesCarousel from '../components/TestimoniesCarousel';
 import ImageCarousel from '../components/ImageCarousel';
+import CamperVansRoll from '../components/CamperVanRoll';
+
 // import BlogRoll from '../components/BlogRoll';
 
 import 'antd/dist/antd.css';
@@ -53,8 +55,11 @@ export const IndexPageTemplate = ({
           </div>
         </section>
       </div>
-      <section className="section grid-xl height-50vh imageCarousel">
+      <section className="section grid-xl height-50vh imageCarousel padding-less">
         <ImageCarousel images={carouselImages} />
+      </section>
+      <section className="section grid">
+        <CamperVansRoll />
       </section>
       <section className="section grid testimoniesCarousel">
         <TestimoniesCarousel testimonials={testimonials} />
