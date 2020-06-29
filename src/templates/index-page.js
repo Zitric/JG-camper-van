@@ -97,7 +97,6 @@ IndexPageTemplate.propTypes = {
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
-
   heroImage: PropTypes.object,
   heroHeading: PropTypes.string,
   heroSubHeading: PropTypes.string,

@@ -23,37 +23,33 @@ export const FAQPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-              <Collapse onChange={callback}>
-                <Panel header="This is panel header 1" key="1">
-                  <p>{text}</p>
-                </Panel>
-                <Panel header="This is panel header 2" key="2">
-                  <p>{text}</p>
-                </Panel>
-                <Panel header="This is panel header 3" key="3">
-                  <p>{text}</p>
-                </Panel>
-                <Panel header="This is panel header 4" key="4">
-                  <p>{text}</p>
-                </Panel>
-                <Panel header="This is panel header 5" key="5">
-                  <p>{text}</p>
-                </Panel>
-                <Panel header="This is panel header 6" key="6">
-                  <p>{text}</p>
-                </Panel>
-              </Collapse>
-            </div>
-          </div>
+    <section className="section section--gradient grid">
+      <div className="columns">
+        <div className="column">
+          <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+            {title}
+          </h2>
+          <PageContent className="content" content={content} />
+          <Collapse onChange={callback}>
+            <Panel header="This is panel header 1" key="1">
+              <p>{text}</p>
+            </Panel>
+            <Panel header="This is panel header 2" key="2">
+              <p>{text}</p>
+            </Panel>
+            <Panel header="This is panel header 3" key="3">
+              <p>{text}</p>
+            </Panel>
+            <Panel header="This is panel header 4" key="4">
+              <p>{text}</p>
+            </Panel>
+            <Panel header="This is panel header 5" key="5">
+              <p>{text}</p>
+            </Panel>
+            <Panel header="This is panel header 6" key="6">
+              <p>{text}</p>
+            </Panel>
+          </Collapse>
         </div>
       </div>
     </section>
