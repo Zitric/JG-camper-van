@@ -4,8 +4,8 @@ path: /camper-vans
 title: Nuestras campers
 image: /img/camper-vans.jpg
 heading: CARACTERÍSTICAS Y EQUIPAMIENTO
-description: EQUIPAMIENTO
 ---
+
 **CARIBEAN:**
 
 Aire acondicionado
@@ -30,7 +30,7 @@ Cocina
 
 Depósito de aguas limpias 65 l de capacidad con toma de llenado exterior
 
-Barras luz led  
+Barras luz led
 
 Ventanas con oscurecedores/mosquitera
 
@@ -50,15 +50,11 @@ Sillón amplio convertible en cama de 115x190
 
 Bola de enganche
 
-
-
-
-
 **OCEAN**
 
 Aire acondicionado
 
-Radio Cd 
+Radio Cd
 
 Instalación doble batería con relé automático
 
@@ -93,8 +89,6 @@ Amplio maletero
 Sillón amplio convertible en cama de 115x190
 
 Bola de enganche
-
-
 
 **AUSTRALIA**
 

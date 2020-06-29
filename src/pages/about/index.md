@@ -4,13 +4,13 @@ heading: Quienes somos
 path: /about
 templateKey: about-page
 title: Quienes somos
-description: Página para explicar quienes somos
 heroHeading: Quienes somos
 image: /img/about-us.jpg
 ---
+
 ### Historia
 
-JG CAMPER surgió por la necesidad de dos hermanos a viajar movidos por su afición al surf y kite surf, puesto que la condiciones meteorológicas necesarias para estos deportes son muy caprichosas y cambiantes. Ambos hermanos siempre tuvimos furgoneta para desplazarnos allí donde estuvieran las olas o el viento, con nuestras cometas y tablas, provistos de una cama, cocina y ducha con las que afrontar los viajes. No necesitábamos nada más para disfrutar de nuestras aficiones. 
+JG CAMPER surgió por la necesidad de dos hermanos a viajar movidos por su afición al surf y kite surf, puesto que la condiciones meteorológicas necesarias para estos deportes son muy caprichosas y cambiantes. Ambos hermanos siempre tuvimos furgoneta para desplazarnos allí donde estuvieran las olas o el viento, con nuestras cometas y tablas, provistos de una cama, cocina y ducha con las que afrontar los viajes. No necesitábamos nada más para disfrutar de nuestras aficiones.
 
 Ambos hermanos siempre trabajamos felizmente en diferentes empresas, aunque nunca nos llenó del todo, así que con nuestra experiencia, conocimiento y aficiones, nos preguntamos, ¿Y porqué no hacer de nuestro hobby nuestra profesión?.
 
@@ -24,7 +24,7 @@ Es cierto que hoy día existen muchas empresas dedicadas al alquiler de furgonet
 
 ### ¿Porqué nuestras camper?
 
-Las ventajas de elegir nuestras camper son muchas: 
+Las ventajas de elegir nuestras camper son muchas:
 
 Para empezar, la conducción es prácticamente a la de un coche utilitario, fácil y confortable
 

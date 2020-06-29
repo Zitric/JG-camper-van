@@ -10,7 +10,6 @@ const FAQPagePreview = ({ entry, getAsset, widgetFor }) => {
       image={getAsset(data.image)}
       title={data.title}
       heading={data.heading}
-      description={data.description}
       content={widgetFor('body')}
     />
   ) : (
