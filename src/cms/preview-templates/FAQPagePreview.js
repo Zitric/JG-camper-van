@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FAQPageTemplate } from '../../templates/FAQ';
+import { FAQPageTemplate } from '../../templates/FAQ-page';
 
 const FAQPagePreview = ({ entry, getAsset, widgetFor }) => {
   const data = entry.getIn(['data']).toJS();
