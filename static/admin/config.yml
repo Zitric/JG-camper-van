@@ -33,8 +33,6 @@ collections:
           - {label: HeroSubheading, name: heroSubheading, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: string}
-          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-          - {label: Description, name: description, widget: string}
           - {label: CaroueselImages, name: carouselImages, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}
           - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image4, name: image4 , widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image5, name: image5, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image6, name: image6, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image7, name: image7, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
@@ -45,7 +43,6 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: Description, name: description, widget: string}
           - {label: HeroImage, name: heroImage, widget: image}
           - {label: HeroHeading, name: heroHeading, widget: string}
           - {label: Heading, name: heading, widget: string}
@@ -57,7 +54,6 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "camper-vans-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: Description, name: description, widget: string}
           - {label: HeroImage, name: heroImage, widget: image}
           - {label: HeroHeading, name: heroHeading, widget: string}
           - {label: Heading, name: heading, widget: string}
@@ -69,7 +65,6 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "price-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: Description, name: description, widget: string}
           - {label: HeroImage, name: heroImage, widget: image}
           - {label: HeroHeading, name: heroHeading, widget: string}
           - {label: Heading, name: heading, widget: string}
@@ -81,7 +76,6 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "condition-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: Description, name: description, widget: string}
           - {label: HeroImage, name: heroImage, widget: image}
           - {label: HeroHeading, name: heroHeading, widget: string}
           - {label: Heading, name: heading, widget: string}
@@ -93,7 +87,6 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "FAQ"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: Description, name: description, widget: string}
           - {label: HeroImage, name: heroImage, widget: image}
           - {label: HeroHeading, name: heroHeading, widget: string}
           - {label: Heading, name: heading, widget: string}

@@ -42,7 +42,6 @@ const useCamperVanPosts = () => {
     templateKey: post.node.frontmatter.templateKey,
     title: post.node.frontmatter.title,
     date: post.node.frontmatter.date,
-    author: post.node.frontmatter.author,
     slug: post.node.fields.slug,
     image: post.node.frontmatter.featuredimage,
     excerpt: post.node.excerpt,
