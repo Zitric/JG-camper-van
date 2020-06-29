@@ -147,6 +147,10 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
             overflow: hidden;
           }
 
+          .padding-less {
+            padding: 0 !important;
+          }
+
           @media (max-width: 672px) {
             :root {
               font-size: 90%;

@@ -16,11 +16,6 @@ const Footer = () => {
               <section className="menu">
                 <ul className="menu-list">
                   <li>
-                    <Link to="/" className="navbar-item">
-                      Home
-                    </Link>
-                  </li>
-                  <li>
                     <Link className="navbar-item" to="/about">
                       Quienes somos
                     </Link>
@@ -31,14 +26,9 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <a
-                      className="navbar-item"
-                      href="/admin/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Admin
-                    </a>
+                    <Link to="/prices" className="navbar-item">
+                      Precios
+                    </Link>
                   </li>
                 </ul>
               </section>
@@ -46,9 +36,14 @@ const Footer = () => {
             <div className="column is-4">
               <section>
                 <ul className="menu-list">
-                  <li>
+                  {/* <li>
                     <Link className="navbar-item" to="/blog">
                       Blog
+                    </Link>
+                  </li> */}
+                  <li>
+                    <Link className="navbar-item" to="/conditions">
+                      Condiciones
                     </Link>
                   </li>
                   <li>
