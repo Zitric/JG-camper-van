@@ -58,6 +58,8 @@ CamperVanPostTemplate.propTypes = {
 const CamperVanPost = ({ data }) => {
   const { markdownRemark: post } = data;
 
+  console.log('Post', post);
+
   return (
     <Layout>
       <CamperVanPostTemplate
@@ -98,6 +100,17 @@ export const pageQuery = graphql`
         title
         description
         tags
+        name
+        equipment
+        images {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1024, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
       }
     }
   }
