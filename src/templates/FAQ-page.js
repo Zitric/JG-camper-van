@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Collapse } from 'antd';
+import { v4 } from 'uuid';
 
+import { CaretRightOutlined } from '@ant-design/icons';
 import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
@@ -19,7 +21,12 @@ const text = `
   it can be found as a welcome guest in many households across the world.
 `;
 
-export const FAQPageTemplate = ({ title, content, contentComponent }) => {
+export const FAQPageTemplate = ({
+  title,
+  content,
+  contentComponent,
+  questions,
+}) => {
   const PageContent = contentComponent || Content;
 
   return (
@@ -30,25 +37,17 @@ export const FAQPageTemplate = ({ title, content, contentComponent }) => {
             {title}
           </h2>
           <PageContent className="content" content={content} />
-          <Collapse onChange={callback}>
-            <Panel header="This is panel header 1" key="1">
-              <p>{text}</p>
-            </Panel>
-            <Panel header="This is panel header 2" key="2">
-              <p>{text}</p>
-            </Panel>
-            <Panel header="This is panel header 3" key="3">
-              <p>{text}</p>
-            </Panel>
-            <Panel header="This is panel header 4" key="4">
-              <p>{text}</p>
-            </Panel>
-            <Panel header="This is panel header 5" key="5">
-              <p>{text}</p>
-            </Panel>
-            <Panel header="This is panel header 6" key="6">
-              <p>{text}</p>
-            </Panel>
+          <Collapse
+            className="card"
+            expandIcon={({ isActive }) => (
+              <CaretRightOutlined rotate={isActive ? 90 : 0} />
+            )}
+          >
+            {questions.map((question) => (
+              <Panel header={question.question} key={v4()}>
+                <p>{question.answer}</p>
+              </Panel>
+            ))}
           </Collapse>
         </div>
       </div>
@@ -63,15 +62,16 @@ FAQPageTemplate.propTypes = {
 };
 
 const FAQPage = ({ data }) => {
-  const { markdownRemark, heroImage } = data;
+  const { title, heroImage, html, questions } = data.markdownRemark.frontmatter;
 
   return (
     <Layout>
       {heroImage && <Hero image={heroImage} heading={'Preguntas frecuentes'} />}
       <FAQPageTemplate
         contentComponent={HTMLContent}
-        title={markdownRemark.frontmatter.title}
-        content={markdownRemark.frontmatter.html}
+        title={title}
+        content={html}
+        questions={questions}
       />
     </Layout>
   );
@@ -79,12 +79,10 @@ const FAQPage = ({ data }) => {
 
 FAQPage.propTypes = {
   data: PropTypes.object,
-  heroImage: PropTypes.object,
 };
 
 FAQPage.defaultProps = {
   data: null,
-  heroImage: null,
 };
 
 export default FAQPage;
@@ -95,6 +93,19 @@ export const FAQPageQuery = graphql`
       html
       frontmatter {
         title
+        heroHeading
+        heading
+        heroImage {
+          sharp: childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        questions {
+          question
+          answer
+        }
       }
     }
     heroImage: file(relativePath: { eq: "FAQ.jpg" }) {

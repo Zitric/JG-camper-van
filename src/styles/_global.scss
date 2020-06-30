@@ -1,14 +1,7 @@
 @import '~bulma/sass/utilities/initial-variables';
 
-// Config vars
-// Kaldi logo brand color: #FD461E
-
-$primary: #15b7b9;
-$primary-invert: #10ddc2;
-$body-color: #2b2523;
-$body-background-color: #f5f5f5;
-$red: #f57170;
-$black: #2b2523;
+@import 'breakpoints';
+@import 'mixins';
 
 .navbar {
   background-color: $body-background-color !important;
@@ -69,10 +62,10 @@ $black: #2b2523;
   border-radius: 0.25rem;
   text-decoration: none;
   font-weight: 700;
-  color: #15b7b9;
+  color: $primary-color;
   text-align: center;
-  -webkit-box-shadow: inset 0 0 0 2px #15b7b9;
-  box-shadow: inset 0 0 0 2px #10ddc2;
+  -webkit-box-shadow: inset 0 0 0 2px $primary-color;
+  box-shadow: inset 0 0 0 2px $alternate-color;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
@@ -82,7 +75,7 @@ $black: #2b2523;
 }
 
 .navbar-item .icon {
-  color: $primary;
+  color: $primary-color;
 }
 
 // Override for use of svg's from https://simpleicons.org/
@@ -100,15 +93,6 @@ footer.footer {
   padding: 3rem 0rem 0rem;
   background-color: transparent;
 }
-
-//Menu overrides
-// $menu-item-color: $white-ter;
-// $menu-item-hover-color: $black !important;
-// $menu-item-hover-background-color: $black;
-// $menu-item-active-color: $kaldi-red-invert;
-// $menu-item-active-background-color: $kaldi-red-invert;
-// $menu-list-border-left: 1px solid $kaldi-red-invert;
-// $menu-label-color: $white-ter;
 
 .menu-label {
   font-size: 1em !important;
