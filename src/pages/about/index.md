@@ -1,11 +1,10 @@
 ---
-heroImage: /img/about-us.jpg
-heading: Quienes somos
+templateKey: 'about-page'
 path: /about
-templateKey: about-page
 title: Quienes somos
+heroImage: /img/about-us.jpg
 heroHeading: Quienes somos
-image: /img/about-us.jpg
+heading: Quienes somos
 ---
 
 ### Historia
