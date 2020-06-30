@@ -120,7 +120,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Equipment", name: "equipment", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Images", name: "images", widget: list, fields: [{label: Image, name: image, widget: image}]}
+      - {lagel: Images, name: images, widget: image}
 
   - name: "blog"
     label: "Blog"
