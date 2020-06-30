@@ -11,7 +11,7 @@ import Navbar from '../components/Navbar';
 import SEO from './SEO';
 import JsonLd from './JsonLd';
 
-import '../styles/global.scss';
+import '../styles/base.scss';
 
 const Layout = ({ children, title, description, image, article, keywords }) => {
   return (

@@ -1,0 +1,17 @@
+@import 'theme';
+
+@mixin anchor-style {
+  color: $text-black;
+
+  &:hover {
+    color: $color-alternate;
+  }
+}
+
+@mixin font-size-reset {
+  font-size: 15px;
+
+  @include breakpoint-large-up {
+    font-size: 17px;
+  }
+}
