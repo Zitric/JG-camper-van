@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import { Collapse } from 'antd';
 import { v4 } from 'uuid';
 
+import { CaretRightOutlined } from '@ant-design/icons';
 import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
@@ -36,7 +37,12 @@ export const FAQPageTemplate = ({
             {title}
           </h2>
           <PageContent className="content" content={content} />
-          <Collapse onChange={callback}>
+          <Collapse
+            className="card"
+            expandIcon={({ isActive }) => (
+              <CaretRightOutlined rotate={isActive ? 90 : 0} />
+            )}
+          >
             {questions.map((question) => (
               <Panel header={question.question} key={v4()}>
                 <p>{question.answer}</p>

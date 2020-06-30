@@ -87,8 +87,9 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
             }
           }
 
-          strong {
-            color: #10ddc2;
+          strong,
+          span.anticon.anticon-caret-right.ant-collapse-arrow {
+            color: #10ddc2 !important;
           }
 
           li {
@@ -135,10 +136,9 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
             text-align: center;
             height: calc(100% + 0.5rem);
             overflow: hidden;
-          }
-
-          .testimoniesCarousel .ant-carousel .slick-slide h3 {
-            color: #10ddc2;
+            h3 {
+              /* color: $color-primary; */
+            }
           }
 
           .imageCarousel .ant-carousel .slick-slide {
