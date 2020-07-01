@@ -1,18 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { kebabCase } from 'lodash';
 import { Helmet } from 'react-helmet';
-import { graphql, Link } from 'gatsby';
-import Layout from '../components/Layout';
+import { graphql } from 'gatsby';
+import { v4 } from 'uuid';
+
 import Content, { HTMLContent } from '../components/Content';
+
+import Layout from '../components/Layout';
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
 export const CamperVanPostTemplate = ({
   content,
   contentComponent,
   description,
-  tags,
   title,
   helmet,
+  images,
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -26,19 +29,16 @@ export const CamperVanPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
+            {images.map((image) => {
+              return (
+                <PreviewCompatibleImage
+                  key={v4()}
+                  imageInfo={{ image, alt: '' }}
+                />
+              );
+            })}
+
             <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
           </div>
         </div>
       </div>
@@ -56,27 +56,26 @@ CamperVanPostTemplate.propTypes = {
 };
 
 const CamperVanPost = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark } = data;
+  const { frontmatter: post } = markdownRemark;
 
   console.log('Post', post);
 
   return (
     <Layout>
       <CamperVanPostTemplate
-        content={post.html}
+        content={markdownRemark.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
+        description={post.description}
         helmet={
           <Helmet titleTemplate="%s | Camper vans">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
+            <title>{`${post.title}`}</title>
+            <meta name="description" content={`${post.description}`} />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
+        tags={post.tags}
+        title={post.title}
+        images={post.images}
       />
     </Layout>
   );
