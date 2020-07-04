@@ -1,5 +1,6 @@
 ---
-heroImage: /img/FAQ.jpg
+heroImage:
+  - https://res.cloudinary.com/dypxaqdgb/image/upload/v1593854577/jg-camper/paginas/FAQ/FAQ_h0dev2.jpg
 heading: Preguntas comúnes
 path: /FAQ
 templateKey: FAQ-page
