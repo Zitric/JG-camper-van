@@ -17,12 +17,14 @@ export default class GalleryCamperVan extends React.Component {
     const { isOpen } = this.state;
 
     console.log('images from gallery', images);
-    console.log(
-      'images from gallery',
-      images.map((image) => {
-        return { src: image, w: 200, h: 200, title: 'title' };
-      }),
-    );
+    if (images && images.length > 0) {
+      console.log(
+        'images from gallery',
+        images.map((image) => {
+          return { src: image, w: 200, h: 200, title: 'title' };
+        }),
+      );
+    }
 
     return (
       <>

@@ -30,14 +30,15 @@ export const CamperVanPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
-            {images.map((image) => {
-              return (
-                <PreviewCompatibleImage
-                  key={v4()}
-                  imageInfo={{ image, alt: '' }}
-                />
-              );
-            })}
+            {images &&
+              images.map((image) => {
+                return (
+                  <PreviewCompatibleImage
+                    key={v4()}
+                    imageInfo={{ image, alt: '' }}
+                  />
+                );
+              })}
             Hola
             <GalleryCamperVan images={images} />
             Hola

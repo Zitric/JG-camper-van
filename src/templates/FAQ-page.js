@@ -33,11 +33,12 @@ export const FAQPageTemplate = ({
               <CaretRightOutlined rotate={isActive ? 90 : 0} />
             )}
           >
-            {questions.map((question) => (
-              <Panel header={question.question} key={v4()}>
-                <p>{question.answer}</p>
-              </Panel>
-            ))}
+            {questions &&
+              questions.map((question) => (
+                <Panel header={question.question} key={v4()}>
+                  <p>{question.answer}</p>
+                </Panel>
+              ))}
           </Collapse>
         </div>
       </div>

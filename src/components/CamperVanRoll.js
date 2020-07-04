@@ -8,17 +8,19 @@ const CamperVanRolls = () => {
   console.log('camper-vans', camperVans);
   return (
     <div className="columns">
-      {camperVans.map((camperVan) => {
-        return (
-          <Link className="column" key={camperVan.id} to={camperVan.slug}>
-            <div className="card">
-              <div className="card-content">
-                <p className="title">Camper van</p>
+      {camperVans &&
+        camperVans.length > 0 &&
+        camperVans.map((camperVan) => {
+          return (
+            <Link className="column" key={camperVan.id} to={camperVan.slug}>
+              <div className="card">
+                <div className="card-content">
+                  <p className="title">Camper van</p>
+                </div>
               </div>
-            </div>
-          </Link>
-        );
-      })}
+            </Link>
+          );
+        })}
     </div>
   );
 };
