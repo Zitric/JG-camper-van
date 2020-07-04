@@ -64,6 +64,8 @@ const CamperVanPost = ({ data }) => {
 
   console.log('Post', post);
 
+  console.log('Post', post);
+
   return (
     <Layout>
       <CamperVanPostTemplate
