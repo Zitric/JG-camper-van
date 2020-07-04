@@ -2,7 +2,7 @@
 templateKey: 'FAQ-page'
 path: /FAQ
 title: Preguntas comúnes
-heroImage: /img/FAQ.jpg
+heroImage:
 heading: Preguntas comúnes
 question:
   - question: Hay que entregar fianza?

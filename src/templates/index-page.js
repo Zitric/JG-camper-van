@@ -144,13 +144,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        heroImage {
-          sharp: childImageSharp {
-            fluid(maxWidth: 1024, quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
+        heroImage
         heroHeading
         heroSubHeading
         heading
@@ -165,13 +159,7 @@ export const pageQuery = graphql`
           quote
         }
         carouselImages {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 1024, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
+          image
         }
       }
     }

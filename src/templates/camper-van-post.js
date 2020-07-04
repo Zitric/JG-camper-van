@@ -8,6 +8,7 @@ import Content, { HTMLContent } from '../components/Content';
 
 import Layout from '../components/Layout';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
+import GalleryCamperVan from '../components/GalleryCamperVan';
 
 export const CamperVanPostTemplate = ({
   content,
@@ -37,7 +38,9 @@ export const CamperVanPostTemplate = ({
                 />
               );
             })}
-
+            Hola
+            <GalleryCamperVan images={images} />
+            Hola
             <PostContent content={content} />
           </div>
         </div>
@@ -101,15 +104,7 @@ export const pageQuery = graphql`
         tags
         name
         equipment
-        images {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 1024, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
+        images
       }
     }
   }

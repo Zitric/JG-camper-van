@@ -11,16 +11,6 @@ import Hero from '../components/Hero';
 
 const { Panel } = Collapse;
 
-function callback(key) {
-  console.log(key);
-}
-
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
-
 export const FAQPageTemplate = ({
   title,
   content,
@@ -95,13 +85,7 @@ export const FAQPageQuery = graphql`
         title
         heroHeading
         heading
-        heroImage {
-          sharp: childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
+        heroImage
         questions {
           question
           answer
