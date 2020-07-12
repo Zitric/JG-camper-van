@@ -3,10 +3,10 @@ const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  return graphql(`
+  return await graphql(`
     {
       allMarkdownRemark(limit: 1000) {
         edges {
@@ -25,6 +25,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
   `).then((result) => {
     if (result.errors) {
+      reporter.panic('failed to create pate', result.errors);
       result.errors.forEach((e) => console.error(e.toString()));
       return Promise.reject(result.errors);
     }
@@ -39,7 +40,6 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`,
         ),
-        // additional data can be passed via context
         context: {
           id,
         },

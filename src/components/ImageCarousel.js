@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 import { Carousel } from 'antd';
-import Img from 'gatsby-image';
+
+import PreviewCompatibleImage from './PreviewCompatibleImage';
 
 const settings = {
   infinite: true,
@@ -17,10 +18,12 @@ const ImageCarousel = ({ images }) => {
         images.map(({ image }) => {
           return (
             <figure key={v4()}>
-              <Img
-                class="image"
-                fluid={image.childImageSharp.fluid}
-                alt="Gatsby Docs are awesome"
+              <PreviewCompatibleImage
+                imageInfo={{
+                  image: image,
+                  childImageSharp: image.childImageSharp,
+                  alt: ``,
+                }}
               />
             </figure>
           );

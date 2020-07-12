@@ -11,7 +11,6 @@ const IndexPagePreview = ({ entry, getAsset }) => {
       title={data.title}
       heading={data.heading}
       subheading={data.subheading}
-      mainpitch={data.mainpitch || {}}
     />
   ) : (
     <div>Loading...</div>
