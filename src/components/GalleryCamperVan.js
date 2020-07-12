@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PhotoSwipe } from 'react-photoswipe';
+// import { PhotoSwipe } from 'react-photoswipe';
 // import 'react-photoswipe/lib/photoswipe.css';
 
 export default class GalleryCamperVan extends React.Component {
@@ -29,15 +29,16 @@ export default class GalleryCamperVan extends React.Component {
     return (
       <>
         {images && images.length > 0 && (
-          <PhotoSwipe
-            isOpen={isOpen}
-            items={images}
-            onClose={() => this.isOpen(false)}
-            options={{
-              index: this.state.index,
-              history: false,
-            }}
-          />
+          <div>Hola</div>
+          // <PhotoSwipe
+          //   isOpen={isOpen}
+          //   items={images}
+          //   onClose={() => this.isOpen(false)}
+          //   options={{
+          //     index: this.state.index,
+          //     history: false,
+          //   }}
+          // />
         )}
       </>
     );
