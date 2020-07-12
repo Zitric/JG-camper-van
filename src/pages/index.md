@@ -27,7 +27,7 @@ testimonials:
       the same thing I’ve been drinking every morning.
   - author: Philipp Trommler
     quote: >-
-    Kaldi is the place to go if you want the best quality coffee. I love
+      Kaldi is the place to go if you want the best quality coffee. I love
       their stance on empowering farmers and transparency.
   - author: Julián Palomo
     quote: >-
@@ -36,4 +36,4 @@ testimonials:
       supercómoda de conducir y para vivir en ella una temporada.
 ---
 
-Kaldi is the coffee store for everyone who believes that great coffee shouldn't just taste good, it should do good too. We source all of our beans directly from small scale sustainable farmers and make sure part of the profits are reinvested in their communities.
+Kaldi is the coffee store for everyone who believes that great coffee shouldn't just taste good, it should do good too. We source all of our beans directly from small scale sustainable farmers and make sure part of the profits are reinvested in their communities

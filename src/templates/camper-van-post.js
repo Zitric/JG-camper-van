@@ -103,9 +103,6 @@ export const pageQuery = graphql`
         tags
         name
         equipment
-        images {
-          id
-        }
       }
     }
   }

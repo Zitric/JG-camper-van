@@ -84,8 +84,6 @@ export const FAQPageQuery = graphql`
       html
       frontmatter {
         title
-        heroHeading
-        heading
         heroImage {
           sharp: childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -93,6 +91,8 @@ export const FAQPageQuery = graphql`
             }
           }
         }
+        heroHeading
+        heading
         questions {
           question
           answer

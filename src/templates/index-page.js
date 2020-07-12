@@ -129,12 +129,7 @@ export const pageQuery = graphql`
           }
         }
         heroHeading
-        heroSubHeading
         heading
-        testimonials {
-          author
-          quote
-        }
         carouselImages {
           image {
             childImageSharp {
@@ -143,6 +138,10 @@ export const pageQuery = graphql`
               }
             }
           }
+        }
+        testimonials {
+          author
+          quote
         }
       }
     }
