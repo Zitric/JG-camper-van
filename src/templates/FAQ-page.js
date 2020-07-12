@@ -11,16 +11,6 @@ import Hero from '../components/Hero';
 
 const { Panel } = Collapse;
 
-function callback(key) {
-  console.log(key);
-}
-
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
-
 export const FAQPageTemplate = ({
   title,
   content,
@@ -43,11 +33,12 @@ export const FAQPageTemplate = ({
               <CaretRightOutlined rotate={isActive ? 90 : 0} />
             )}
           >
-            {questions.map((question) => (
-              <Panel header={question.question} key={v4()}>
-                <p>{question.answer}</p>
-              </Panel>
-            ))}
+            {questions &&
+              questions.map((question) => (
+                <Panel header={question.question} key={v4()}>
+                  <p>{question.answer}</p>
+                </Panel>
+              ))}
           </Collapse>
         </div>
       </div>
@@ -93,8 +84,6 @@ export const FAQPageQuery = graphql`
       html
       frontmatter {
         title
-        heroHeading
-        heading
         heroImage {
           sharp: childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -102,6 +91,8 @@ export const FAQPageQuery = graphql`
             }
           }
         }
+        heroHeading
+        heading
         questions {
           question
           answer
