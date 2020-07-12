@@ -28,8 +28,6 @@ const useCamperVanPosts = () => {
 
   const edges = posts.allMarkdownRemark.edges;
 
-  console.log('camper-van edges', edges);
-
   return edges.map((post) => ({
     id: post.node.id,
     templateKey: post.node.frontmatter.templateKey,

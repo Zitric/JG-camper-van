@@ -86,7 +86,13 @@ export const FAQPageQuery = graphql`
         title
         heroHeading
         heading
-        heroImage
+        heroImage {
+          sharp: childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         questions {
           question
           answer
