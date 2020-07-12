@@ -14,8 +14,6 @@ import 'antd/dist/antd.css';
 
 export const IndexPageTemplate = ({
   heading,
-  mainpitch,
-  description,
   heroImage,
   heroHeading,
   heroSubHeading,
@@ -35,22 +33,7 @@ export const IndexPageTemplate = ({
         <section className="section grid">
           <div className="columns">
             <div className="column">
-              <div className="content">
-                <div className="tile">
-                  <h1 className="title">{mainpitch.title}</h1>
-                </div>
-                <div className="tile">
-                  <h3 className="subtitle">{mainpitch.description}</h3>
-                </div>
-              </div>
-              <div className="columns">
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    {heading}
-                  </h3>
-                  <p>{description}</p>
-                </div>
-              </div>
+              <h1>{heading}</h1>
             </div>
           </div>
         </section>
@@ -99,9 +82,6 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
   heroImage: PropTypes.object,
   heroHeading: PropTypes.string,
   heroSubHeading: PropTypes.string,
@@ -115,9 +95,6 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         title={frontmatter.title}
         heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
         heroImage={frontmatter.heroImage}
         heroHeading={frontmatter.heroHeading}
         heroSubHeading={frontmatter.heroSubHeading}
@@ -146,7 +123,7 @@ export const pageQuery = graphql`
         title
         heroImage {
           sharp: childImageSharp {
-            fluid(maxWidth: 1024, quality: 100) {
+            fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -154,12 +131,6 @@ export const pageQuery = graphql`
         heroHeading
         heroSubHeading
         heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
         testimonials {
           author
           quote

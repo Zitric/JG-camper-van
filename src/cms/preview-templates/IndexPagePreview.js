@@ -7,11 +7,13 @@ const IndexPagePreview = ({ entry, getAsset }) => {
 
   return data ? (
     <IndexPageTemplate
-      image={getAsset(data.image)}
       title={data.title}
+      heroImage={getAsset(data.image)}
+      heroHeading={data.heroHeading}
+      heroSubHeading={data.heroSubHeading}
       heading={data.heading}
-      subheading={data.subheading}
-      mainpitch={data.mainpitch || {}}
+      carouselImages={data.carouselImages}
+      testimonials={data.testimonials}
     />
   ) : (
     <div>Loading...</div>
