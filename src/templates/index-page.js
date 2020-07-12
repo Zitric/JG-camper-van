@@ -129,6 +129,7 @@ export const pageQuery = graphql`
           }
         }
         heroHeading
+        heroSubHeading
         heading
         carouselImages {
           image {
