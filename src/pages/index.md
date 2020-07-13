@@ -1,5 +1,6 @@
 ---
 templateKey: index-page
+path: /
 title: JG Camper
 heroImage: /img/home.jpg
 heroHeading: JG Camper
