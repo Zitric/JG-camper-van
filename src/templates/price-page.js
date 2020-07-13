@@ -20,24 +20,54 @@ export const PricePageTemplate = ({ heading, content, contentComponent }) => {
           <div className="columns">
             <div className="column">
               <h2>Mes de Junio</h2>
-              <span>Furgoneta por día son 80 € (mínimo 3 días)</span>
-              <span>El depósito se devuelve tal y como se entrega</span>
-              <span>Límite diario 100 km</span>
-              <span>Fianza 700 €</span>
+              <ul>
+                <li>
+                  <span>Furgoneta por día son 80 € (mínimo 3 días)</span>
+                </li>
+                <li>
+                  <span>El depósito se devuelve tal y como se entrega</span>
+                </li>
+                <li>
+                  <span>Límite diario 100 km</span>
+                </li>
+                <li>
+                  <span>Fianza 700 €</span>
+                </li>
+              </ul>
             </div>
             <div className="column">
               <h2>Julio, Agosto y hasta el 15 de Septiembre</h2>
-              <span>Furgoneta por día son 100 € (mínimo 3 días)</span>
-              <span>El depósito se devuelve tal y como se entrega</span>
-              <span>Límite diario 100 km</span>
-              <span>Fianza 700 €</span>
+              <ul>
+                <li>
+                  <span>Furgoneta por día son 100 € (mínimo 3 días)</span>
+                </li>
+                <li>
+                  <span>El depósito se devuelve tal y como se entrega</span>
+                </li>
+                <li>
+                  <span>Límite diario 100 km</span>
+                </li>
+                <li>
+                  <span>Fianza 700 €</span>
+                </li>
+              </ul>
             </div>
             <div className="column">
               <h2>Oferta de larga estancia</h2>
-              <span>Furgoneta por día son 80 € (mínimo 2 semanas)</span>
-              <span>El depósito se devuelve tal y como se entrega</span>
-              <span>Límite diario 100 km</span>
-              <span>Fianza 700 €</span>
+              <ul>
+                <li>
+                  <span>Furgoneta por día son 80 € (mínimo 2 semanas)</span>
+                </li>
+                <li>
+                  <span>El depósito se devuelve tal y como se entrega</span>
+                </li>
+                <li>
+                  <span>Límite diario 100 km</span>
+                </li>
+                <li>
+                  <span>Fianza 700 €</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

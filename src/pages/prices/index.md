@@ -3,7 +3,7 @@ templateKey: 'price-page'
 path: /prices
 title: Precios
 heroImage: /img/camper-vans.jpg
-heading: Nuestras camper vans
+heading: Precios
 # temporadaBaja: Mes de Junio
 # temporadaBajaPrecio: 80 €
 # temporadaAlta: Julio, agosto y hasta el 15 de Septiembre
