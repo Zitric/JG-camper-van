@@ -1,9 +1,9 @@
 ---
 templateKey: camper-vans-page
 path: /camper-vans
-title: Nuestras campers
-image: /img/camper-vans.jpg
-heading: CARACTERÍSTICAS Y EQUIPAMIENTO
+title: Nuestras campers vans
+heroImage: /img/camper-vans.jpg
+heading: Nuestras camper vans
 ---
 
 ### ¿Porqué nuestras camper?

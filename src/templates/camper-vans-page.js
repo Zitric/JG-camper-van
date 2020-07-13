@@ -8,7 +8,7 @@ import Hero from '../components/Hero';
 import CamperVansRoll from '../components/CamperVanRoll';
 
 export const CamperVansPageTemplate = ({
-  title,
+  heading,
   content,
   contentComponent,
 }) => {
@@ -19,7 +19,7 @@ export const CamperVansPageTemplate = ({
       <div className="columns">
         <div className="column">
           <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-            {title}
+            {heading}
           </h2>
           <CamperVansRoll />
           <PageContent className="content" content={content} />
@@ -30,21 +30,24 @@ export const CamperVansPageTemplate = ({
 };
 
 CamperVansPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
+  heading: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 };
 
 const CamperVansPage = ({ data }) => {
-  const { markdownRemark, heroImage } = data;
+  const { html, frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
-      {heroImage && <Hero image={heroImage} heading={'Nuestras Camper Vans'} />}
+      {frontmatter.heroImage && (
+        <Hero image={frontmatter.heroImage} heading={frontmatter.heading} />
+      )}
       <CamperVansPageTemplate
         contentComponent={HTMLContent}
-        title={markdownRemark.frontmatter.title}
-        content={markdownRemark.frontmatter.html}
+        title={frontmatter.title}
+        heading={frontmatter.heading}
+        content={html}
       />
     </Layout>
   );
@@ -52,7 +55,6 @@ const CamperVansPage = ({ data }) => {
 
 CamperVansPage.propTypes = {
   data: PropTypes.object,
-  heroImage: PropTypes.object,
 };
 
 CamperVansPage.defaultProps = {
@@ -68,13 +70,14 @@ export const camperVansPageQuery = graphql`
       html
       frontmatter {
         title
-      }
-    }
-    heroImage: file(relativePath: { eq: "camper-vans.jpg" }) {
-      sharp: childImageSharp {
-        fluid(maxWidth: 2048, quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+        heroImage {
+          sharp: childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
         }
+        heading
       }
     }
   }
