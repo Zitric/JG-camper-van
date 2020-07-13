@@ -81,7 +81,7 @@ export const pricePageQuery = graphql`
       html
       frontmatter {
         title
-        heroImage: file(relativePath: { eq: "prices.jpg" }) {
+        heroImage {
           sharp: childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
