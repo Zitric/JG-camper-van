@@ -6,7 +6,8 @@ import { PricePageTemplate } from '../../templates/price-page';
 const PricePagePreview = ({ entry, widgetFor, getAsset }) => (
   <PricePageTemplate
     title={entry.getIn(['data', 'title'])}
-    image={getAsset(entry.getIn(['data', 'image']))}
+    heroImage={getAsset(entry.getIn(['data', 'heroImage']))}
+    heading={entry.getIn(['data', 'heading'])}
     content={widgetFor('body')}
   />
 );
