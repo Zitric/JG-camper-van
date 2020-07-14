@@ -13,12 +13,12 @@ export const PricePageTemplate = ({ heading, content, contentComponent }) => {
     <section className="section section--gradient grid">
       <div className="columns">
         <div className="column">
-          <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+          <h1 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
             {heading}
-          </h2>
+          </h1>
           <PageContent className="content" content={content} />
           <div className="columns">
-            <div className="column">
+            <div className="column box">
               <h2>Mes de Junio</h2>
               <ul>
                 <li>
@@ -35,7 +35,7 @@ export const PricePageTemplate = ({ heading, content, contentComponent }) => {
                 </li>
               </ul>
             </div>
-            <div className="column">
+            <div className="column box">
               <h2>Julio, Agosto y hasta el 15 de Septiembre</h2>
               <ul>
                 <li>
@@ -52,7 +52,7 @@ export const PricePageTemplate = ({ heading, content, contentComponent }) => {
                 </li>
               </ul>
             </div>
-            <div className="column">
+            <div className="column box">
               <h2>Oferta de larga estancia</h2>
               <ul>
                 <li>
