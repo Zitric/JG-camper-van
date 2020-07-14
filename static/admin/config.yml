@@ -74,7 +74,6 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "condition-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: HeroImage, name: heroImage, widget: image}
-          - {label: HeroHeading, name: heroHeading, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
 
@@ -85,7 +84,6 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "FAQ-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: HeroImage, name: heroImage, widget: image}
-          - {label: HeroHeading, name: heroHeading, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: Questions, name: questions, widget: list, fields: [{label: Question, name: question, widget: string}, {label: Answer, name: answer, widget: string}]}
