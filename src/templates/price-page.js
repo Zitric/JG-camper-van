@@ -17,8 +17,8 @@ export const PricePageTemplate = ({ heading, content, contentComponent }) => {
             {heading}
           </h1>
           <PageContent className="content" content={content} />
-          <div className="columns">
-            <div className="column box">
+          <div className="columns is-4">
+            <div className="column">
               <h2>Mes de Junio</h2>
               <ul>
                 <li>
@@ -35,7 +35,7 @@ export const PricePageTemplate = ({ heading, content, contentComponent }) => {
                 </li>
               </ul>
             </div>
-            <div className="column box">
+            <div className="column">
               <h2>Julio, Agosto y hasta el 15 de Septiembre</h2>
               <ul>
                 <li>
@@ -52,7 +52,7 @@ export const PricePageTemplate = ({ heading, content, contentComponent }) => {
                 </li>
               </ul>
             </div>
-            <div className="column box">
+            <div className="column">
               <h2>Oferta de larga estancia</h2>
               <ul>
                 <li>
