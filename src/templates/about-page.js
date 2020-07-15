@@ -6,16 +6,16 @@ import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ content, heading, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
     <section className="section section--gradient grid">
       <div className="columns">
         <div className="column">
-          <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-            {title}
-          </h2>
+          <h1 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
+            {heading}
+          </h1>
           <PageContent className="content" content={content} />
         </div>
       </div>
@@ -24,21 +24,24 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 };
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
+  heading: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 };
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark, heroImage } = data;
+  const { html, frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
-      {heroImage && <Hero heading={'Quienes somos'} image={heroImage} />}
+      {frontmatter.heroImage && (
+        <Hero heading={frontmatter.heading} image={frontmatter.heroImage} />
+      )}
       <AboutPageTemplate
         contentComponent={HTMLContent}
-        title={markdownRemark.frontmatter.title}
-        content={markdownRemark.html}
+        title={frontmatter.title}
+        heading={frontmatter.heading}
+        content={html}
       />
     </Layout>
   );
@@ -46,7 +49,6 @@ const AboutPage = ({ data }) => {
 
 AboutPage.propTypes = {
   data: PropTypes.object,
-  image: PropTypes.object,
 };
 
 export default AboutPage;
@@ -57,13 +59,14 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
-      }
-    }
-    heroImage: file(relativePath: { eq: "about-us.jpg" }) {
-      sharp: childImageSharp {
-        fluid(maxWidth: 2048, quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+        heroImage {
+          sharp: childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
         }
+        heading
       }
     }
   }

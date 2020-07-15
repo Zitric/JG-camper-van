@@ -6,16 +6,20 @@ import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 
-export const ConditionPageTemplate = ({ title, content, contentComponent }) => {
+export const ConditionPageTemplate = ({
+  heading,
+  content,
+  contentComponent,
+}) => {
   const PageContent = contentComponent || Content;
 
   return (
     <section className="section section--gradient grid">
       <div className="columns">
         <div className="column">
-          <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-            {title}
-          </h2>
+          <h1 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
+            {heading}
+          </h1>
           <PageContent className="content" content={content} />
         </div>
       </div>
@@ -24,21 +28,23 @@ export const ConditionPageTemplate = ({ title, content, contentComponent }) => {
 };
 
 ConditionPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
+  heading: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 };
 
 const ConditionPage = ({ data }) => {
-  const { markdownRemark, heroImage } = data;
+  const { html, frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
-      {heroImage && <Hero heading={'Condiciones'} image={heroImage} />}
+      {frontmatter.heroImage && (
+        <Hero heading={frontmatter.heading} image={frontmatter.heroImage} />
+      )}
       <ConditionPageTemplate
         contentComponent={HTMLContent}
-        title={markdownRemark.frontmatter.title}
-        content={markdownRemark.html}
+        heading={frontmatter.heading}
+        content={html}
       />
     </Layout>
   );
@@ -46,7 +52,6 @@ const ConditionPage = ({ data }) => {
 
 ConditionPage.propTypes = {
   data: PropTypes.object,
-  image: PropTypes.object,
 };
 
 export default ConditionPage;
@@ -57,13 +62,14 @@ export const conditionPageQuery = graphql`
       html
       frontmatter {
         title
-      }
-    }
-    heroImage: file(relativePath: { eq: "terms.jpg" }) {
-      sharp: childImageSharp {
-        fluid(maxWidth: 2048, quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+        heroImage {
+          sharp: childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
         }
+        heading
       }
     }
   }

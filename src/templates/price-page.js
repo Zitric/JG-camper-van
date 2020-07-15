@@ -6,17 +6,70 @@ import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 
-export const PricePageTemplate = ({ title, content, contentComponent }) => {
+export const PricePageTemplate = ({ heading, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
     <section className="section section--gradient grid">
       <div className="columns">
         <div className="column">
-          <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-            {title}
-          </h2>
+          <h1 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
+            {heading}
+          </h1>
           <PageContent className="content" content={content} />
+          <div className="columns">
+            <div className="column box">
+              <h2>Mes de Junio</h2>
+              <ul>
+                <li>
+                  <span>Furgoneta por día son 80 € (mínimo 3 días)</span>
+                </li>
+                <li>
+                  <span>El depósito se devuelve tal y como se entrega</span>
+                </li>
+                <li>
+                  <span>Límite diario 100 km</span>
+                </li>
+                <li>
+                  <span>Fianza 700 €</span>
+                </li>
+              </ul>
+            </div>
+            <div className="column box">
+              <h2>Julio, Agosto y hasta el 15 de Septiembre</h2>
+              <ul>
+                <li>
+                  <span>Furgoneta por día son 100 € (mínimo 3 días)</span>
+                </li>
+                <li>
+                  <span>El depósito se devuelve tal y como se entrega</span>
+                </li>
+                <li>
+                  <span>Límite diario 100 km</span>
+                </li>
+                <li>
+                  <span>Fianza 700 €</span>
+                </li>
+              </ul>
+            </div>
+            <div className="column box">
+              <h2>Oferta de larga estancia</h2>
+              <ul>
+                <li>
+                  <span>Furgoneta por día son 80 € (mínimo 2 semanas)</span>
+                </li>
+                <li>
+                  <span>El depósito se devuelve tal y como se entrega</span>
+                </li>
+                <li>
+                  <span>Límite diario 100 km</span>
+                </li>
+                <li>
+                  <span>Fianza 700 €</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -24,21 +77,23 @@ export const PricePageTemplate = ({ title, content, contentComponent }) => {
 };
 
 PricePageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 };
 
 const PricePage = ({ data }) => {
-  const { markdownRemark, heroImage } = data;
+  const { frontmatter, html } = data.markdownRemark;
 
   return (
     <Layout>
-      {heroImage && <Hero heading={'Precios'} image={heroImage} />}
+      {frontmatter.heroImage && (
+        <Hero heading={frontmatter.heading} image={frontmatter.heroImage} />
+      )}
       <PricePageTemplate
         contentComponent={HTMLContent}
-        title={markdownRemark.frontmatter.title}
-        content={markdownRemark.html}
+        heading={frontmatter.heading}
+        content={html}
       />
     </Layout>
   );
@@ -46,7 +101,6 @@ const PricePage = ({ data }) => {
 
 PricePage.propTypes = {
   data: PropTypes.object,
-  image: PropTypes.object,
 };
 
 export default PricePage;
@@ -57,13 +111,14 @@ export const pricePageQuery = graphql`
       html
       frontmatter {
         title
-      }
-    }
-    heroImage: file(relativePath: { eq: "prices.jpg" }) {
-      sharp: childImageSharp {
-        fluid(maxWidth: 2048, quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+        heroImage {
+          sharp: childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
         }
+        heading
       }
     }
   }

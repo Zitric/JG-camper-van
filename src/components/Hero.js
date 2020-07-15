@@ -35,7 +35,7 @@ const TextBox = styled('div')`
 
 const Hero = ({ image, heading, subheading }) => {
   return (
-    <header className="hero grid-xl">
+    <header className="hero grid-xl is-hidden-mobile">
       <ImageBackground
         className="hero-body grid height-40vh"
         Tag="section"

@@ -1,95 +1,25 @@
 ---
 templateKey: camper-vans-page
 path: /camper-vans
-title: Nuestras campers
-image: /img/camper-vans.jpg
-heading: CARACTERÍSTICAS Y EQUIPAMIENTO
+title: Nuestras campers vans
+heroImage: /img/camper-vans.jpg
+heading: Nuestras camper vans
 ---
 
-**CARIBEAN:**
+### ¿Porqué nuestras camper?
 
-Aire acondicionado
+Las ventajas de elegir nuestras camper son muchas:
 
-Radio Cd con bluetooth
+Para empezar, la conducción es prácticamente a la de un coche utilitario, fácil y confortable
 
-Instalación doble batería con relé automático
+Legalmente puede pernoctar en cualquier lugar dónde le esté permitido hacerlo un vehículo convencional
 
-Tomas USB
+Gracias a sus dimensiones, tiene acceso a muchos lugares inaccesibles para grandes furgonetas o caravanas/autocaravanas , y tiene cabida en la mayoría de parkings privados ó garajes de hipermercados.
 
-Tomas de mechero
+Fácil de aparcar
 
-Convertidor a 220v
+Su consumo y ruido durante la conducción es muy bajo
 
-Toma de ducha trasera
+Dispone de bola de enganche si quieres llevar carro
 
-Voltímetro medidor carga batería
-
-Fregadero con grifo
-
-Cocina
-
-Depósito de aguas limpias 65 l de capacidad con toma de llenado exterior
-
-Barras luz led
-
-Ventanas con oscurecedores/mosquitera
-
-Oscurecedores a medida para cristales de la cabina
-
-Claraboya con mosquitera
-
-Asiento doble giratorio
-
-Mesa grande portátil
-
-3 armarios
-
-Amplio maletero
-
-Sillón amplio convertible en cama de 115x190
-
-Bola de enganche
-
-**OCEAN**
-
-Aire acondicionado
-
-Radio Cd
-
-Instalación doble batería con relé automático
-
-Tomas USB
-
-Tomas de mechero
-
-Convertidor a 220v
-
-Toma de ducha trasera
-
-Voltímetro medidor carga baterías
-
-Cocina
-
-Depósito de aguas limpias 65 l de capacidad con toma de llenado exterior
-
-2 Barras Led
-
-Oscurecedores a medida de3 cristales para la cabina
-
-Claraboya con mosquitera
-
-Asiento doble giratorio
-
-Mesa grande portátil
-
-3 armarios
-
-Amplio maletero
-
-Sillón amplio convertible en cama de 115x190
-
-Bola de enganche
-
-**AUSTRALIA**
-
-**FOREST**
+Dispone de todas las comodidades necesarias para una magnífica escapada

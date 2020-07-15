@@ -151,6 +151,20 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
             padding: 0 !important;
           }
 
+          .heading-page {
+            display: none;
+            box-shadow: #15b7b9 0.5rem 0px 0px, #15b7b9 -0.5rem 0px 0px;
+            background-color: #15b7b9;
+            color: #f5f5f5;
+            padding: 1rem;
+
+            @media (max-width: 768px) {
+              display: block;
+              width: fit-content;
+              margin: 0 auto;
+            }
+          }
+
           @media (max-width: 672px) {
             :root {
               font-size: 90%;

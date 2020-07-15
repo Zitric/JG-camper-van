@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 import NavbarLink from './NavbarLink';
 
-import logo from '../img/logo-name.png';
+import logoOne from '../img/logo-1.jpeg';
+import logoTwo from '../img/logo-2.jpeg';
 
 class Navbar extends React.Component {
   state = {
@@ -37,9 +38,14 @@ class Navbar extends React.Component {
                 style={{ padding: 0, margin: 0, height: '100%' }}
               >
                 <img
-                  src={logo}
+                  src={logoOne}
                   alt="JG Camper"
-                  style={{ width: '230px', minHeight: '100%' }}
+                  style={{ width: '78px', minHeight: '100%' }}
+                />
+                <img
+                  src={logoTwo}
+                  alt="JG Camper"
+                  style={{ width: '177px', minHeight: '100%' }}
                 />
               </figure>
             </Link>

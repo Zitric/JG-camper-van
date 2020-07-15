@@ -12,7 +12,7 @@ import Hero from '../components/Hero';
 const { Panel } = Collapse;
 
 export const FAQPageTemplate = ({
-  title,
+  heading,
   content,
   contentComponent,
   questions,
@@ -23,9 +23,9 @@ export const FAQPageTemplate = ({
     <section className="section section--gradient grid">
       <div className="columns">
         <div className="column">
-          <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-            {title}
-          </h2>
+          <h1 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
+            {heading}
+          </h1>
           <PageContent className="content" content={content} />
           <Collapse
             className="card"
@@ -47,22 +47,25 @@ export const FAQPageTemplate = ({
 };
 
 FAQPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
+  heading: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 };
 
 const FAQPage = ({ data }) => {
-  const { title, heroImage, html, questions } = data.markdownRemark.frontmatter;
+  const { frontmatter, html } = data.markdownRemark;
 
   return (
     <Layout>
-      {heroImage && <Hero image={heroImage} heading={'Preguntas frecuentes'} />}
+      {frontmatter.heroImage && (
+        <Hero image={frontmatter.heroImage} heading={frontmatter.heading} />
+      )}
       <FAQPageTemplate
         contentComponent={HTMLContent}
-        title={title}
         content={html}
-        questions={questions}
+        title={frontmatter.title}
+        heading={frontmatter.heading}
+        questions={frontmatter.questions}
       />
     </Layout>
   );
@@ -91,18 +94,10 @@ export const FAQPageQuery = graphql`
             }
           }
         }
-        heroHeading
         heading
         questions {
           question
           answer
-        }
-      }
-    }
-    heroImage: file(relativePath: { eq: "FAQ.jpg" }) {
-      sharp: childImageSharp {
-        fluid(maxWidth: 2048, quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
