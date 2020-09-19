@@ -5,8 +5,8 @@ title: Preguntas comúnes
 heroImage: /img/FAQ.jpg
 heading: Preguntas comúnes
 questions:
-  - question: Hay que pagar alguna fianza?
-    answer: Sí hay que pagar una fianza
+  - question: ¿Qué es Yescapa?
+    answer: Yescapa es una plataforma de alquiler de autocaravanas y furgonetas camper entre particulares
   - question: Hay un mínimo de tiempo de alquiler?
     answer: 'Sí, son tres días '
   - question: Precio de una semana

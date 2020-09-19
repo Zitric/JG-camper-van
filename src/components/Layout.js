@@ -81,6 +81,7 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
           h5,
           h6 {
             line-height: 1.1;
+            padding-left: 25px;
 
             + * {
               margin-top: 0.5rem;
@@ -100,7 +101,7 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
             display: grid;
             grid-template-columns:
               [xl-start] 1fr 1.5rem [md-start]
-              minmax(0, 1024px)
+              minmax(0, 800px)
               [md-end] 1.5rem 1fr [xl-end];
           }
 
@@ -151,6 +152,27 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
             padding: 0 !important;
           }
 
+          .content h3 {
+            color: #15b7b9 !important;
+          }
+
+          .price.column {
+            padding: '0 10px';
+            display: flex;
+            flex-direction: column;
+            h3 {
+              padding-left: 0px;
+            }
+          }
+
+          .content ul {
+            list-style: none;
+            margin: 0;
+            li {
+              margin-bottom: 20px;
+            }
+          }
+
           .heading-page {
             display: none;
             box-shadow: #15b7b9 0.5rem 0px 0px, #15b7b9 -0.5rem 0px 0px;
@@ -168,6 +190,9 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
           @media (max-width: 672px) {
             :root {
               font-size: 90%;
+            }
+            h1 {
+              margin-bottom: 3.5rem !important;
             }
           }
         `}

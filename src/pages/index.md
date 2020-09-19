@@ -22,19 +22,16 @@ carouselImages:
   - image: /img/index-carousel-7.jpg
     alt: carousel
 testimonials:
-  - author: Elisabeth Kaurismäki
+  - author: Rafa Campos
     quote: >-
-      The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
-  - author: Philipp Trommler
-    quote: >-
-      Kaldi is the place to go if you want the best quality coffee. I love
-      their stance on empowering farmers and transparency.
+      Jgcamper me ha sorprendido, son persona que se nota que le gusta lo que hacen, te dan muchas facilidades y por supuesto las furgos impecable y muy equipadas. 
+      100% recomendable
   - author: Julián Palomo
     quote: >-
       Estoy encantado con el servicio ofrecido por esta compañía, el trato fue
-      genial y la camper van que alquilamos funcionó perfectamente, es
-      supercómoda de conducir y para vivir en ella una temporada.
+      genial y la camper van que alquilamos funcionó perfectamente. Se conduce bastante fácil y me sorprendió la buena respuesta que tiene en carretera. Por dentro los detalles están muy cuidados y viene muy bien equipada. Un gran acierto.
 ---
 
-Kaldi is the coffee store for everyone who believes that great coffee shouldn't just taste good, it should do good too. We source all of our beans directly from small scale sustainable farmers and make sure part of the profits are reinvested in their communities
+### Vive una aventura diferente
+
+Estamos encantados de ofrecerte una forma genial de disfrutar de unas vacaciones. Básicamente podrás viajar con tu vivienda, descubriendo un nuevo concepto de libertad, podrás disfrutar de sitios y momentos espectaculares. Despierta tu pasión por viajar y descubre un mundo de posibilidades.

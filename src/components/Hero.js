@@ -13,7 +13,7 @@ const ImageBackground = styled(BackgroundImage)`
 `;
 
 const TextBox = styled('div')`
-  height: 150px;
+  height: '150px';
   justify-content: 'space-around';
   display: flex;
   align-items: 'left';
@@ -33,11 +33,15 @@ const TextBox = styled('div')`
   }
 `;
 
-const Hero = ({ image, heading, subheading }) => {
+const Hero = ({ image, heading, subheading, home }) => {
+  console.log('home', home);
+  const ImageBackgroundClasses = home
+    ? 'hero-body grid height-50vh'
+    : 'hero-body grid height-40vh';
   return (
     <header className="hero grid-xl is-hidden-mobile">
       <ImageBackground
-        className="hero-body grid height-40vh"
+        className={ImageBackgroundClasses}
         Tag="section"
         fluid={image.sharp.fluid}
         fadeIn="soft"
@@ -65,6 +69,7 @@ Hero.propTypes = {
   subheading: PropTypes.string,
   firstBackgroundPosition: PropTypes.string,
   secondBackgroundPosition: PropTypes.string,
+  home: PropTypes.bool,
 };
 
 Hero.defaultProp = {
@@ -73,6 +78,7 @@ Hero.defaultProp = {
   subheading: null,
   firstBackgroundPosition: null,
   secondBackgroundPosition: null,
+  home: false,
 };
 
 export default Hero;
