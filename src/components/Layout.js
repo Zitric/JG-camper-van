@@ -160,16 +160,24 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
             padding: '0 10px';
             display: flex;
             flex-direction: column;
+            font-weight: 600;
             h3 {
               padding-left: 0px;
+              text-align: center;
+            }
+            ul {
+              list-style: none;
+              li {
+                margin: 0;
+                margin-bottom: 20px;
+              }
             }
           }
 
           .content ul {
-            list-style: none;
-            margin: 0;
             li {
-              margin-bottom: 20px;
+              margin-bottom: 15px;
+              margin-left: 35px;
             }
           }
 

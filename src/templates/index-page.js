@@ -40,7 +40,7 @@ export const IndexPageTemplate = ({
           <div className="columns">
             <div className="column">
               {/* <h2 className="primary-color">{heading}</h2> */}
-              <PageContent className="content" content={content} />
+              <PageContent className="content is-size-5" content={content} />
             </div>
           </div>
         </section>

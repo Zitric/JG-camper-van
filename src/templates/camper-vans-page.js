@@ -15,17 +15,19 @@ export const CamperVansPageTemplate = ({
   const PageContent = contentComponent || Content;
 
   return (
-    <section className="section section--gradient grid">
-      <div className="columns">
-        <div className="column">
-          <h1 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
-            {heading}
-          </h1>
-          <CamperVansRoll />
-          <PageContent className="content" content={content} />
+    <>
+      <section className="section section--gradient grid">
+        <div className="columns">
+          <div className="column">
+            <h1 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
+              {heading}
+            </h1>
+            <CamperVansRoll />
+            <PageContent className="content" content={content} />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

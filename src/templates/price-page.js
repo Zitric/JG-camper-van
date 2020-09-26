@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 
 export const PricePageTemplate = ({ heading, content, contentComponent }) => {
-  const PageContent = contentComponent || Content;
+  // const PageContent = contentComponent || Content;
 
   return (
     <section className="section section--gradient grid">
@@ -22,7 +22,10 @@ export const PricePageTemplate = ({ heading, content, contentComponent }) => {
               <h3>Mes de Junio</h3>
               <ul>
                 <li>
-                  <span>80 € por día, mínimo 3</span>
+                  <span>Mínimo 3 días</span>
+                </li>
+                <li>
+                  <span>80 € por día</span>
                 </li>
                 <li>
                   <span>Límite diario 100 km</span>
@@ -36,7 +39,10 @@ export const PricePageTemplate = ({ heading, content, contentComponent }) => {
               <h3>De Julio al 15 de Septiembre</h3>
               <ul>
                 <li>
-                  <span>100 € por día, mínimo 3</span>
+                  <span>Mínimo 3 días</span>
+                </li>
+                <li>
+                  <span>100 € por día</span>
                 </li>
                 <li>
                   <span>Límite diario 100 km</span>
@@ -50,7 +56,10 @@ export const PricePageTemplate = ({ heading, content, contentComponent }) => {
               <h3>Larga estancia</h3>
               <ul>
                 <li>
-                  <span>80 € por día, mínimo 2 semanas</span>
+                  <span>Mínimo 2 semanas</span>
+                </li>
+                <li>
+                  <span>80 € por día</span>
                 </li>
                 <li>
                   <span>Límite diario 100 km</span>
