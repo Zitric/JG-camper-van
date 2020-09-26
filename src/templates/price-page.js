@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 
 export const PricePageTemplate = ({ heading, content, contentComponent }) => {
-  const PageContent = contentComponent || Content;
+  // const PageContent = contentComponent || Content;
 
   return (
     <section className="section section--gradient grid">
@@ -16,56 +16,56 @@ export const PricePageTemplate = ({ heading, content, contentComponent }) => {
           <h1 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
             {heading}
           </h1>
-          <PageContent className="content" content={content} />
-          <div className="columns is-4">
-            <div className="column">
-              <h2>Mes de Junio</h2>
+          {/* <PageContent className="content" content={content} /> */}
+          <div className="columns is-4 content">
+            <div className="price column">
+              <h3>Mes de Junio</h3>
               <ul>
                 <li>
-                  <span>Furgoneta por día son 80 € (mínimo 3 días)</span>
+                  <span>Mínimo 3 días</span>
                 </li>
                 <li>
-                  <span>El depósito se devuelve tal y como se entrega</span>
+                  <span>80 € por día</span>
                 </li>
                 <li>
                   <span>Límite diario 100 km</span>
                 </li>
                 <li>
-                  <span>Fianza 700 €</span>
+                  <span>Fianza 900 €</span>
                 </li>
               </ul>
             </div>
-            <div className="column">
-              <h2>Julio, Agosto y hasta el 15 de Septiembre</h2>
+            <div className="price column">
+              <h3>De Julio al 15 de Septiembre</h3>
               <ul>
                 <li>
-                  <span>Furgoneta por día son 100 € (mínimo 3 días)</span>
+                  <span>Mínimo 3 días</span>
                 </li>
                 <li>
-                  <span>El depósito se devuelve tal y como se entrega</span>
+                  <span>100 € por día</span>
                 </li>
                 <li>
                   <span>Límite diario 100 km</span>
                 </li>
                 <li>
-                  <span>Fianza 700 €</span>
+                  <span>Fianza 900 €</span>
                 </li>
               </ul>
             </div>
-            <div className="column">
-              <h2>Oferta de larga estancia</h2>
+            <div className="price column">
+              <h3>Larga estancia</h3>
               <ul>
                 <li>
-                  <span>Furgoneta por día son 80 € (mínimo 2 semanas)</span>
+                  <span>Mínimo 2 semanas</span>
                 </li>
                 <li>
-                  <span>El depósito se devuelve tal y como se entrega</span>
+                  <span>80 € por día</span>
                 </li>
                 <li>
                   <span>Límite diario 100 km</span>
                 </li>
                 <li>
-                  <span>Fianza 700 €</span>
+                  <span>Fianza 900 €</span>
                 </li>
               </ul>
             </div>

@@ -26,7 +26,7 @@ export const FAQPageTemplate = ({
           <h1 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
             {heading}
           </h1>
-          <PageContent className="content" content={content} />
+          {/* <PageContent className="content" content={content} /> */}
           <Collapse
             className="card"
             expandIcon={({ isActive }) => (

@@ -8,9 +8,7 @@ heading: Quienes somos
 
 ### Historia
 
-JG CAMPER surgió por la necesidad de dos hermanos a viajar movidos por su afición al surf y kite surf, puesto que la condiciones meteorológicas necesarias para estos deportes son muy caprichosas y cambiantes. Ambos hermanos siempre tuvimos furgoneta para desplazarnos allí donde estuvieran las olas o el viento, con nuestras cometas y tablas, provistos de una cama, cocina y ducha con las que afrontar los viajes. No necesitábamos nada más para disfrutar de nuestras aficiones.
-
-Ambos hermanos siempre trabajamos felizmente en diferentes empresas, aunque nunca nos llenó del todo, así que con nuestra experiencia, conocimiento y aficiones, nos preguntamos, ¿Y porqué no hacer de nuestro hobby nuestra profesión?.
+Mi hermano y yo siempre hemos tenido la necesidad de viajar. Movidos por la búsqueda de aventura y una gran afición al surf y kite surf. Hemos utilizado furgonetas para desplazarnos allí donde pudiéramos aprovechar el viento y las olas. Íbamos provistos de todo el equipo de tablas y velas, llevando con nosotros nuestro propio alojamiento. A lo largo de los años hemos ido acumulando mucha experiencia. Y al dedicarle tanto tiempo llegó el momento en que decidimos transformar nuestra afición en nuestra profesión. Así fue como surgió JG Camper.
 
 ### Filosofía
 

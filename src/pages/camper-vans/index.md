@@ -8,18 +8,20 @@ heading: Nuestras camper vans
 
 ### ¿Porqué nuestras camper?
 
-Las ventajas de elegir nuestras camper son muchas:
+Hemos decidido confiar en la marca Volkswagen que es sinónimo de calidad. Con estar marca podemos ofrecer un gran rendimiento de motor en carretera. Nosotros nos hemos encargado de cuidar todos los detalles tanto del interior como del exterior para ofrecerle una gran experiencia.
 
-Para empezar, la conducción es prácticamente a la de un coche utilitario, fácil y confortable
+Las principales ventajas de nuestras campervan:
 
-Legalmente puede pernoctar en cualquier lugar dónde le esté permitido hacerlo un vehículo convencional
+- La conducción es prácticamente la de un coche utilitario, fácil y cómoda
 
-Gracias a sus dimensiones, tiene acceso a muchos lugares inaccesibles para grandes furgonetas o caravanas/autocaravanas , y tiene cabida en la mayoría de parkings privados ó garajes de hipermercados.
+* Puede percnoctar en cualquier lugar donde le esté permitido hacerlo con un vehículo convencional
 
-Fácil de aparcar
+* Gracias a sus dimensiones, tiene acceso a lugares donde caravanas o grandes furgonestas no pueden
 
-Su consumo y ruido durante la conducción es muy bajo
+* Tiene facilidad a la hora de aparcar en general, parkings, garajes, hipermercados
 
-Dispone de bola de enganche si quieres llevar carro
+* El consumo y ruido durante la conducción son muy bajos
 
-Dispone de todas las comodidades necesarias para una magnífica escapada
+* Dispone de bola de enganche para acoplar carro
+
+* Vienen equipadas con todas las comodidades necesarias para una magnífica escapada. Como nevera eléctrica, mesas y sillas plegables para el exterior, cocina, ducha, etc..
