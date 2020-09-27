@@ -23,6 +23,12 @@ export const CamperVansPageTemplate = ({
               {heading}
             </h1>
             <CamperVansRoll />
+          </div>
+        </div>
+      </section>
+      <section className="section section--gradient grid">
+        <div className="columns">
+          <div className="column">
             <PageContent className="content" content={content} />
           </div>
         </div>
