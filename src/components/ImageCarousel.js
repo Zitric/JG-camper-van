@@ -12,11 +12,12 @@ const settings = {
 };
 
 const ImageCarousel = ({ images }) => {
+  console.log('images', images);
   return (
     <Carousel autoplay {...settings} draggable={true}>
       {images &&
         images.map(({ image }) => {
-          return (
+          return image ? (
             <figure key={v4()}>
               <PreviewCompatibleImage
                 imageInfo={{
@@ -26,7 +27,7 @@ const ImageCarousel = ({ images }) => {
                 }}
               />
             </figure>
-          );
+          ) : null;
         })}
     </Carousel>
   );

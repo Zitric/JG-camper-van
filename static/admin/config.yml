@@ -115,7 +115,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Equipment", name: "equipment", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {lagel: Images, name: images, widget: image}
+      - {lagel: "images", name: "images", widget: "image"}
 
   - name: "blog"
     label: "Blog"
@@ -129,6 +129,5 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}

@@ -114,7 +114,7 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
           }
 
           .section {
-            padding: 5rem 0;
+            padding: 4rem 0;
           }
 
           .full-height {
@@ -133,13 +133,14 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
             height: 50vh;
           }
 
+          h3.margin-bottom-3rem {
+            margin-bottom: 3rem;
+          }
+
           .testimoniesCarousel .ant-carousel .slick-slide {
             text-align: center;
             height: calc(100% + 0.5rem);
             overflow: hidden;
-            h3 {
-              /* color: $color-primary; */
-            }
           }
 
           .imageCarousel .ant-carousel .slick-slide {

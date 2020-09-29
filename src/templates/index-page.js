@@ -49,11 +49,11 @@ export const IndexPageTemplate = ({
         <ImageCarousel images={carouselImages} />
       </section>
       <section className="section grid content">
-        <h3> Nuestras campervans </h3>
+        <h3 className="margin-bottom-3rem"> Nuestras campervans </h3>
         <CamperVansRoll />
       </section>
       <section className="section grid testimoniesCarousel content">
-        <h3> Opiniones de clientes </h3>
+        <h3 className="margin-bottom-3rem"> Opiniones de clientes </h3>
         <TestimoniesCarousel testimonials={testimonials} />
       </section>
     </>
