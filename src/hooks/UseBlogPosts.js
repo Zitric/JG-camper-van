@@ -19,21 +19,12 @@ const useBlogPosts = () => {
               templateKey
               date(formatString: "MMMM DD, YYYY")
               featuredpost
-              featuredimage {
-                childImageSharp {
-                  fluid(maxWidth: 120, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
             }
           }
         }
       }
     }
   `);
-
-  console.log('posts', posts);
 
   const edges = posts.allMarkdownRemark.edges;
 
@@ -44,7 +35,6 @@ const useBlogPosts = () => {
     date: post.node.frontmatter.date,
     author: post.node.frontmatter.author,
     slug: post.node.fields.slug,
-    image: post.node.frontmatter.featuredimage,
     excerpt: post.node.excerpt,
     featuredpost: post.node.frontmatter.featuredpost,
   }));
