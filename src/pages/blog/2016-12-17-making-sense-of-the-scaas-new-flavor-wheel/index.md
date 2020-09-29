@@ -4,7 +4,6 @@ title: Una escapada a Tarifa
 date: 2016-12-17T15:04:10.000Z
 description: Tarifa is most beautiful beach on the world
 featuredpost: false
-featuredimage: /img/about.jpg
 tags:
   - flavor
   - tasting
