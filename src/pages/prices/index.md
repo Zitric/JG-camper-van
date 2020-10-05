@@ -2,7 +2,7 @@
 templateKey: 'price-page'
 path: /prices
 title: Precios
-heroImage: /img/camper-vans.jpg
+heroImage: /img/prices.jpg
 heading: Precios
 # temporadaBaja: Mes de Junio
 # temporadaBajaPrecio: 80 €

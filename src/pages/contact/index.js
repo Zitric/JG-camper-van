@@ -44,45 +44,49 @@ export default class ContactPage extends React.Component {
                 Contacto
               </h1>
               <p>
+                Estamos en Sevilla capital. Desde aquí es donde alquilamos
+                nuestras Camper-van.
+              </p>
+              <p>
                 Para reservar, preguntar o consultar no dudes en ponerte en
-                contact o nosotros
+                contact o nosotros. Estaremos encantados de echarte una mano
+                para que puedas disfrutar lo antes posible
               </p>
             </div>
           </div>
           <div className="columns is-4 content">
             <div className="price column">
               <h3>Jerónimo</h3>
-              <ul className="contact">
+              <ul
+                className="contact"
+                style={{ textAlign: 'center', marginLeft: '0' }}
+              >
                 <li>
-                  <span>
-                    <a href="https://wa.me/634844943" target="blank">
-                      Whatsapp
-                    </a>
-                  </span>
+                  <span>jalarconlastra@gmail.com</span>
                 </li>
                 <li>
                   <span>634 84 49 43</span>
                 </li>
                 <li>
-                  <span>jalarconlastra@gmail.com</span>
+                  <a href="https://wa.me/34634844943" target="blank">
+                    <button className="button is-success">Whatsapp</button>
+                  </a>
                 </li>
               </ul>
             </div>
             <div className="price column">
               <h3>Gonzalo</h3>
-              <ul>
+              <ul style={{ textAlign: 'center', marginLeft: '0' }}>
                 <li>
-                  <span>
-                    <a href="https://wa.me/617 837305" target="blank">
-                      Whatsapp
-                    </a>
-                  </span>
+                  <span>g.alarconruiz@gmail.com</span>
                 </li>
                 <li>
                   <span>617 83 73 05 </span>
                 </li>
                 <li>
-                  <span>g.alarconruiz@gmail.com</span>
+                  <a href="https://wa.me/34617837305" target="blank">
+                    <button className="button is-success">Whatsapp</button>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -90,22 +94,22 @@ export default class ContactPage extends React.Component {
           <div className="columns is-4 content">
             <div className="price column">
               <p>
-                Sígenos en nuestras
+                Sígenos en nuestras{' '}
                 <a
                   title="facebook"
                   href="https://www.facebook.com/jgcamper"
                   target="blank"
                 >
                   Facebook
-                </a>
-                e
+                </a>{' '}
+                e{' '}
                 <a
                   title="instagram"
                   href="https://www.instagram.com/jgcamper"
                   target="blank"
                 >
                   Instagram
-                </a>
+                </a>{' '}
                 para conocernos mejor!{' '}
               </p>
             </div>
