@@ -21,14 +21,19 @@ export const IndexPageTemplate = ({
   contentComponent,
 }) => {
   const PageContent = contentComponent || Content;
-  const [width, setWidth] = useState(window.innerWidth);
-  const updateWidthAndHeight = () => {
+  const [hasRan, setHasRan] = useState(false);
+  const [width, setWidth] = useState(0);
+  const updateWidth = () => {
     setWidth(window.innerWidth);
   };
 
   useEffect(() => {
-    window.addEventListener('resize', updateWidthAndHeight);
-    return () => window.removeEventListener('resize', updateWidthAndHeight);
+    if (!hasRan) {
+      setHasRan(true);
+      updateWidth();
+    }
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
   });
 
   return (
