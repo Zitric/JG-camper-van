@@ -3,12 +3,19 @@
 @import 'breakpoints';
 @import 'mixins';
 
-.navbar {
+.navbar,
+.navbar-menu > .navbar-end {
   background-color: $body-background-color !important;
 }
 
 .navbar .navbar-menu {
   box-shadow: none !important;
+  padding: 0;
+}
+
+.navbar > .container {
+  max-width: 95% !important;
+  min-height: 72px !important;
 }
 
 .content .taglist {
@@ -83,6 +90,10 @@
   width: 1.5rem;
   height: 1.5rem;
   fill: currentColor;
+}
+
+.navbar-brand {
+  min-height: 72px !important;
 }
 
 .navbar-brand .navbar-item.logo {

@@ -7,8 +7,10 @@ import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 
 const NavLink = styled(Link)`
-  font-weight: 500;
   color: #15b7b9;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 16px;
   &.isActive,
   :hover {
     color: #10ddc2 !important;

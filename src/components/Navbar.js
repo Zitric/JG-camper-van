@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import styled from '@emotion/styled';
+
 import NavbarLink from './NavbarLink';
 
-import logoOne from '../img/logo-1.jpeg';
-import logoTwo from '../img/logo-2.jpeg';
+import logoOne from '../img/logo-camper-van.jpeg';
+import logoTwo from '../img/logo-title-new.png';
+
+const NavbarTag = styled('nav')`
+  min-height: 4rem;
+`;
 
 class Navbar extends React.Component {
   state = {
@@ -20,7 +26,7 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <nav
+      <NavbarTag
         className="navbar is-transparent is-fixed-top"
         role="navigation"
         aria-label="main-navigation"
@@ -45,7 +51,7 @@ class Navbar extends React.Component {
                 <img
                   src={logoTwo}
                   alt="JG Camper"
-                  style={{ width: '177px', minHeight: '100%' }}
+                  style={{ width: '171px', minHeight: '100%' }}
                 />
               </figure>
             </Link>
@@ -78,7 +84,7 @@ class Navbar extends React.Component {
             </div>
           </div>
         </div>
-      </nav>
+      </NavbarTag>
     );
   }
 }
