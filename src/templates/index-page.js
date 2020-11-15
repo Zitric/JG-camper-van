@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
@@ -9,12 +9,9 @@ import TestimoniesCarousel from '../components/TestimoniesCarousel';
 import ImageCarousel from '../components/ImageCarousel';
 import CamperVansRoll from '../components/CamperVanRoll';
 
-// import BlogRoll from '../components/BlogRoll';
-
 import 'antd/dist/antd.css';
 
 export const IndexPageTemplate = ({
-  // heading,
   heroImage,
   heroHeading,
   heroSubHeading,
@@ -24,6 +21,20 @@ export const IndexPageTemplate = ({
   contentComponent,
 }) => {
   const PageContent = contentComponent || Content;
+  const [hasRan, setHasRan] = useState(false);
+  const [width, setWidth] = useState(0);
+  const updateWidth = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    if (!hasRan) {
+      setHasRan(true);
+      updateWidth();
+    }
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
+  });
 
   return (
     <>
@@ -54,7 +65,7 @@ export const IndexPageTemplate = ({
         </section>
       </div>
       <section className="section grid-xl height-50vh imageCarousel padding-less">
-        <ImageCarousel images={carouselImages} />
+        {width >= 900 ? <ImageCarousel images={carouselImages} /> : null}
       </section>
       <section className="section grid content">
         <h3 className="margin-bottom-3rem"> Nuestras campervans </h3>

@@ -85,6 +85,7 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
 
             + * {
               margin-top: 0.5rem;
+              background-color: #f5f5f5;
             }
           }
 

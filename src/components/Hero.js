@@ -34,7 +34,6 @@ const TextBox = styled('div')`
 `;
 
 const Hero = ({ image, heading, subheading, home }) => {
-  console.log('home', home);
   const ImageBackgroundClasses = home
     ? 'hero-body grid height-50vh'
     : 'hero-body grid height-40vh';
