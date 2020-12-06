@@ -21,6 +21,16 @@ carouselImages:
     alt: carousel
   - image: /img/index-carousel-7.jpg
     alt: carousel
+  - image: /img/index-carousel-8.jpg
+    alt: carousel
+  - image: /img/index-carousel-9.jpg
+    alt: carousel
+  - image: /img/index-carousel-10.jpg
+    alt: carousel
+  - image: /img/index-carousel-11.jpg
+    alt: carousel
+  - image: /img/index-carousel-12.jpg
+    alt: carousel
 testimonials:
   - author: Rafa Campos
     quote: >-
