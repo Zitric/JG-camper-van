@@ -4,29 +4,32 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { Global, css, jsx } from '@emotion/core';
+import { ThemeProvider } from '@emotion/react';
 // import { withPrefix } from 'gatsby';
 
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
+import { theme } from '../styles/theme';
+
+import Footer from './Footer';
+import Navbar from './Navbar';
 import SEO from './SEO';
 import JsonLd from './JsonLd';
 
+import GlobalStyles from '../styles/GlobalStyles.jsx';
 import '../styles/base.scss';
 
-const Layout = ({ children, title, description, image, article, keywords }) => {
-  return (
-    <>
-      <SEO
-        title={title}
-        description={description}
-        image={image}
-        article={article}
-        keywords={keywords}
-      />
-      <JsonLd></JsonLd>
-      <Helmet>
-        <meta name="theme-color" content="#fff" />
-        {/* <link
+const Layout = ({ children, title, description, image, article, keywords }) => (
+  <>
+    <SEO
+      title={title}
+      description={description}
+      image={image}
+      article={article}
+      keywords={keywords}
+    />
+    <JsonLd></JsonLd>
+    <Helmet>
+      <meta name="theme-color" content={theme.color.white} />
+      {/* <link
           rel="apple-touch-icon"
           sizes="180x180"
           href={`${withPrefix('/')}img/apple-touch-icon.png`}
@@ -53,168 +56,97 @@ const Layout = ({ children, title, description, image, article, keywords }) => {
           property="og:image"
           content={`${withPrefix('/')}img/og-image.jpg`}
         /> */}
-        <body className="has-navbar-fixed-top" />
-      </Helmet>
-      <Global
-        styles={css`
-          * {
-            box-sizing: border-box;
-            margin: 0;
-          }
+      <body className="has-navbar-fixed-top" />
+    </Helmet>
+    <Global
+      styles={css`
+        .testimoniesCarousel .ant-carousel .slick-slide {
+          text-align: center;
+          height: calc(100% + 0.5rem);
+          overflow: hidden;
+        }
 
-          html,
-          body {
-            background-color: #f5f5f5;
-            margin: 0;
-            font-size: 18px;
-            line-height: 1.4;
-            /* Remove margin for the main div that Gatsby mounts into */
-            > div {
-              margin-top: 0;
-            }
-          }
+        .imageCarousel .ant-carousel .slick-slide {
+          text-align: center;
+          overflow: hidden;
+        }
 
-          h1,
-          h2,
-          h3,
-          h4,
-          h5,
-          h6 {
-            line-height: 1.1;
-            padding-left: 25px;
+        .height-50vh .imageCarousel .ant-carousel .slick-slide {
+          height: 50vh;
+        }
 
-            + * {
-              margin-top: 0.5rem;
-              background-color: #f5f5f5;
-            }
-          }
+        .height-80vh .imageCarousel .ant-carousel .slick-slide {
+          height: 80vh;
+        }
 
-          strong,
-          span.anticon.anticon-caret-right.ant-collapse-arrow {
-            color: #10ddc2 !important;
-          }
+        .padding-less {
+          padding: 0 !important;
+        }
 
-          li {
-            margin-top: 0.25rem;
-          }
+        .content h3 {
+          color: ${theme.color.primary} !important;
+        }
 
-          .grid {
-            display: grid;
-            grid-template-columns:
-              [xl-start] 1fr 1.5rem [md-start]
-              minmax(0, 800px)
-              [md-end] 1.5rem 1fr [xl-end];
-          }
-
-          .grid * {
-            grid-column: md;
-          }
-
-          .grid-xl {
-            grid-column: xl;
-          }
-
-          .section {
-            padding: 4rem 0;
-          }
-
-          .full-height {
-            height: calc(100vh - 3.25rem);
-          }
-
-          .height-30vh {
-            height: 30vh;
-          }
-
-          .height-40vh {
-            height: 40vh;
-          }
-
-          .height-50vh {
-            height: 50vh;
-          }
-
-          h3.margin-bottom-3rem {
-            margin-bottom: 3rem;
-          }
-
-          .testimoniesCarousel .ant-carousel .slick-slide {
+        .price.column {
+          padding: '0 10px';
+          display: flex;
+          flex-direction: column;
+          font-weight: 600;
+          h3 {
+            padding-left: 0px;
             text-align: center;
-            height: calc(100% + 0.5rem);
-            overflow: hidden;
           }
-
-          .imageCarousel .ant-carousel .slick-slide {
-            text-align: center;
-            height: 50vh;
-            overflow: hidden;
-          }
-
-          .padding-less {
-            padding: 0 !important;
-          }
-
-          .content h3 {
-            color: #15b7b9 !important;
-          }
-
-          .price.column {
-            padding: '0 10px';
-            display: flex;
-            flex-direction: column;
-            font-weight: 600;
-            h3 {
-              padding-left: 0px;
-              text-align: center;
-            }
-            ul {
-              list-style: none;
-              li {
-                margin: 0;
-                margin-bottom: 20px;
-              }
-            }
-          }
-
-          .content ul {
+          ul {
+            list-style: none;
             li {
-              margin-bottom: 15px;
-              margin-left: 35px;
+              margin: 0;
+              margin-bottom: 20px;
             }
           }
+        }
 
-          .heading-page {
-            display: none;
-            box-shadow: #15b7b9 0.5rem 0px 0px, #15b7b9 -0.5rem 0px 0px;
-            background-color: #15b7b9;
-            color: #f5f5f5;
-            padding: 1rem;
-
-            @media (max-width: 768px) {
-              display: block;
-              width: fit-content;
-              margin: 0 auto;
-            }
+        .content ul {
+          li {
+            margin-bottom: 15px;
+            margin-left: 35px;
           }
+        }
 
-          @media (max-width: 672px) {
-            :root {
-              font-size: 90%;
-            }
-            h1 {
-              margin-bottom: 3.5rem !important;
-            }
+        .heading-page {
+          display: none;
+          box-shadow: ${theme.color.primary} 0.5rem 0px 0px,
+            ${theme.color.primary} -0.5rem 0px 0px;
+          background-color: ${theme.color.primary};
+          color: ${theme.color.white};
+          padding: 1rem;
+
+          @media (max-width: 768px) {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
           }
-        `}
-      />
+        }
+
+        @media (max-width: 672px) {
+          :root {
+            font-size: 90%;
+          }
+          h1 {
+            margin-bottom: 3.5rem !important;
+          }
+        }
+      `}
+    />
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <Navbar />
-      <main className={''} css={css``}>
+      <main>
         {children}
-        <Footer />
       </main>
-    </>
-  );
-};
+      <Footer />
+    </ThemeProvider>
+  </>
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

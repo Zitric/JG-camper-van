@@ -25,4 +25,9 @@ export const theme = {
       headings: 'bold', // instead of browser default, bold
     },
   },
+  media: {
+    small: '@media(min-width: 0px)',
+    medium: '@media(min-width: 600px)',
+    large: '@media(min-width: 900px)',
+  },
 };

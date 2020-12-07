@@ -4,6 +4,7 @@ import { v4 } from 'uuid';
 import { Carousel } from 'antd';
 
 import PreviewCompatibleImage from './PreviewCompatibleImage';
+import WindowSize from '../utils/window-size';
 
 const settings = {
   infinite: true,
@@ -12,7 +13,8 @@ const settings = {
 };
 
 const ImageCarousel = ({ images }) => {
-  console.log('images', images);
+  const { width } = WindowSize();
+
   return (
     <Carousel autoplay {...settings} draggable={true}>
       {images &&
