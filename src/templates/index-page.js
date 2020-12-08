@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
@@ -21,20 +21,6 @@ export const IndexPageTemplate = ({
   contentComponent,
 }) => {
   const PageContent = contentComponent || Content;
-  const [hasRan, setHasRan] = useState(false);
-  const [width, setWidth] = useState(0);
-  const updateWidth = () => {
-    setWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    if (!hasRan) {
-      setHasRan(true);
-      updateWidth();
-    }
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
-  });
 
   return (
     <>
@@ -64,9 +50,8 @@ export const IndexPageTemplate = ({
           </div>
         </section>
       </div>
-      <section className="section grid-xl height-50vh imageCarousel padding-less">
-        {width >= 900 ? <ImageCarousel images={carouselImages} /> : null}
-      </section>
+
+      <ImageCarousel images={carouselImages} />
       <section className="section grid content">
         <h3 className="margin-bottom-3rem"> Nuestras campervans </h3>
         <CamperVansRoll />
