@@ -66,19 +66,6 @@ const Layout = ({ children, title, description, image, article, keywords }) => (
           overflow: hidden;
         }
 
-        .imageCarousel .ant-carousel .slick-slide {
-          text-align: center;
-          overflow: hidden;
-        }
-
-        .height-50vh .imageCarousel .ant-carousel .slick-slide {
-          height: 50vh;
-        }
-
-        .height-80vh .imageCarousel .ant-carousel .slick-slide {
-          height: 80vh;
-        }
-
         .padding-less {
           padding: 0 !important;
         }
@@ -140,9 +127,7 @@ const Layout = ({ children, title, description, image, article, keywords }) => (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Navbar />
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
       <Footer />
     </ThemeProvider>
   </>

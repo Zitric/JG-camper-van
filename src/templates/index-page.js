@@ -50,14 +50,8 @@ export const IndexPageTemplate = ({
           </div>
         </section>
       </div>
-      <section
-        className={`section grid-xl imageCarousel padding-less  `}
-        // ${
-        // width >= 900 ? 'height-50vh' : 'height-80vh'
-        // }
-      >
-        <ImageCarousel images={carouselImages} />
-      </section>
+
+      <ImageCarousel images={carouselImages} />
       <section className="section grid content">
         <h3 className="margin-bottom-3rem"> Nuestras campervans </h3>
         <CamperVansRoll />
