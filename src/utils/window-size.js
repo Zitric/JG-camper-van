@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WindowSize = () => {
-  const [[windowWidth, windowHeight], setWindowSize] = React.useState([
+  const [[width, height], setWindowSize] = React.useState([
     typeof window !== 'undefined' ? window.innerWidth : 0,
     typeof window !== 'undefined' ? window.innerHeight : 0,
   ]);
@@ -14,7 +14,7 @@ const WindowSize = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  return { width: windowWidth, height: windowHeight };
+  return { width, height };
 };
 
 export default WindowSize;
