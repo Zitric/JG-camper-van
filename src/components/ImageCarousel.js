@@ -8,7 +8,6 @@ import { Carousel } from 'antd';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
 import WindowSize from '../utils/window-size';
 
-// const ImageCarousel = ({ images, theme }) => {
 const ImageCarousel = ({ images }) => {
   const theme = useTheme();
   const { width } = WindowSize();

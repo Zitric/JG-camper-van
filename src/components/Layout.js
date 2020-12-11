@@ -13,6 +13,7 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 import SEO from './SEO';
 import JsonLd from './JsonLd';
+import FadeIn from '../utils/FadeIn';
 
 import GlobalStyles from '../styles/GlobalStyles.jsx';
 import '../styles/base.scss';
@@ -127,7 +128,9 @@ const Layout = ({ children, title, description, image, article, keywords }) => (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Navbar />
-      <main>{children}</main>
+      <FadeIn>
+        <main>{children}</main>
+      </FadeIn>
       <Footer />
     </ThemeProvider>
   </>
