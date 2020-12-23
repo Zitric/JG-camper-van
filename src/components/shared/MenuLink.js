@@ -9,28 +9,48 @@ const MenuLink = ({ to, variant, children }) => {
 
   const base = css`
     font-size: ${theme.font.size.s};
-    font-weight: 500;
     padding: 16px;
+    ::selection {
+      color: ${theme.color.white};
+      background: ${theme.color.primary};
+    }
   `;
 
   const footer = css`
-    color: ${theme.color.white} !important;
-    border: 1px solid ${theme.color.black};
-    border-radius: 5px;
-    padding: 0.5em 0.75em;
+    color: ${theme.color.white};
+    position: relative;
+    padding: 0 0 16px;
+    &:before,
+    &:after {
+      transition: all 0.3s ease-in-out;
+      content: '';
+      position: absolute;
+      bottom: 14px;
+      width: 0px;
+      height: 2px;
+      margin: 5px 0 0;
+      opacity: 0;
+      background-color: ${theme.color.primary};
+      left: 0;
+    }
     &.isActive,
     &.isFocus,
     :hover {
-      color: ${theme.color.primary} !important;
+      color: ${theme.color.primary};
     }
     :hover {
-      border: 1px solid ${theme.color.primary};
+      &:before,
+      &:after {
+        width: 100%;
+        opacity: 1;
+      }
     }
   `;
 
   const navbar = css`
     background-color: ${theme.color.white};
     color: ${theme.color.primary};
+    font-weight: 500;
     &.isActive,
     &.isFocus,
     :hover {

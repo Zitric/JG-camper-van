@@ -1,4 +1,8 @@
+/** @jsx jsx */
 import React from 'react';
+import { jsx } from '@emotion/core';
+import { useTheme } from '@emotion/react';
+import styled from '@emotion/styled';
 import UseAnimations from 'react-useanimations';
 import facebookIcon from 'react-useanimations/lib/facebook';
 import instagramIcon from 'react-useanimations/lib/instagram';
@@ -7,11 +11,22 @@ import MenuLink from '../shared/MenuLink';
 import IconAnchor from './IconAnchor';
 
 const Footer = () => {
+  const theme = useTheme();
+  const StyledFooter = styled('footer')`
+    background-color: ${theme.color.black};
+    padding: 3rem;
+  `;
+
   return (
     <React.Fragment>
-      <footer>
+      <StyledFooter>
         <section>
           <ul>
+            <li>
+              <MenuLink variant="footer" to="/">
+                Home
+              </MenuLink>
+            </li>
             <li>
               <MenuLink variant="footer" to="/about">
                 Quienes somos
@@ -58,7 +73,7 @@ const Footer = () => {
             </li>
           </ul>
         </section>
-      </footer>
+      </StyledFooter>
 
       <footer className="footer has-background-black has-text-white-ter">
         <div className="content has-text-centered has-background-black has-text-white-ter">

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 import UseAnimations from 'react-useanimations';
