@@ -7,7 +7,7 @@ export const theme = {
     white: '#f5f5f5',
   },
   font: {
-    sizes: {
+    size: {
       xs: '16px',
       s: '20px',
       base: '30px',

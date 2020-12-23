@@ -49,7 +49,6 @@ export const ProductPageTemplate = ({
                 </div>
               </div>
               <Testimonials testimonials={testimonials} />
-              <div className="full-width-image-container" />
               <h2 className="has-text-weight-semibold is-size-2">
                 {pricing.heading}
               </h2>
