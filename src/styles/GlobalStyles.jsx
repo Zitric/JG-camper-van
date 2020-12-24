@@ -13,6 +13,10 @@ const GlobalStyles = () => {
           box-sizing: border-box;
           margin: 0;
         }
+        ::selection {
+          color: ${theme.color.white};
+          background: ${theme.color.primary};
+        }
 
         html,
         body {

@@ -10,10 +10,6 @@ const MenuLink = ({ to, variant, children }) => {
   const base = css`
     font-size: ${theme.font.size.s};
     padding: 16px;
-    ::selection {
-      color: ${theme.color.white};
-      background: ${theme.color.primary};
-    }
   `;
 
   const footer = css`
