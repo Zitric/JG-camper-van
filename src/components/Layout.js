@@ -127,9 +127,9 @@ const Layout = ({ children, title, description, image, article, keywords }) => (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Navbar />
-      {/* <FadeIn> */}
+      <FadeIn>
       <main>{children}</main>
-      {/* </FadeIn> */}
+      </FadeIn>
       <Footer />
     </ThemeProvider>
   </>
