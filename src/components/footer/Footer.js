@@ -20,19 +20,27 @@ const Footer = () => {
   const StyledFooter = styled.footer(
     mediaQuery({
       backgroundColor: theme.color.black,
-      padding: '3rem',
+      section: {
+        margin: ['2rem auto', '2rem 6rem', '2rem 3rem'],
+      },
       ul: {
         display: 'grid',
-        gridTemplateColumns: ['1fr', '1fr 1fr', '1fr 1fr 100px'],
+        whiteSpace: 'noWrap',
+        gridTemplateColumns: ['1fr', '2fr 1fr', '1fr 1fr 100px'],
+        margin: 0,
       },
       'ul > *': {
         gridColumn: 'auto',
       },
       'li:last-child': {
-        gridArea: ['', '', '1 / 3 / 4 / 4'],
+        gridArea: ['', '5 / 1 / 6 / 3', '1 / 3 / 4 / 4'],
         display: 'flex',
         alignItems: 'flexStart',
         justifyContent: 'spaceEvenly',
+        margin: ['1.5rem auto 0', '2rem auto 0', '0 auto auto'],
+        a: {
+          margin: ['0 2rem', '0 1rem', '0 0.2rem'],
+        },
       },
     }),
   );
