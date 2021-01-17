@@ -1,43 +1,50 @@
 /** @jsx jsx */
+import React from 'react';
 import { jsx, css } from '@emotion/core';
 import PropTypes from 'prop-types';
+import { useSpring, animated } from 'react-spring';
 import styled from '@emotion/styled';
 
 import MenuLink from '../shared/MenuLink';
 
 const Menu = ({ isOpen, isBurger }) => {
+  const [isOpenHere, setIsOpenHere] = React.useState(isOpen);
+  const props = useSpring({
+    transform: isOpenHere ? 'translateY(0%)' : 'translateY(-130%)',
+  });
+
+  React.useEffect(() => {
+    setIsOpenHere(isOpen);
+  }, [isOpen]);
+
+  console.log('is open', isOpen, 'transform', props);
+
+  // transition: ${dinamicStyle.transition};
   const burgerMenu = css`
     width: 100%;
     position: fixed;
     position: absolute;
     overflow: hidden;
-    top: ${(isOpen) => (isOpen ? '4rem' : '-20rem')};
     left: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
+    transform: translateY(-130%);
   `;
 
   const inLineMenu = css``;
 
-  const StyledMenu = styled.div`
-    /* transform: ${isOpen ? `translateY(0)` : `translateY(-130%)`};
-    transform: ${(props) =>
-      props.isOpen ? `translateY(0)` : `translateY(-130%)`}; */
-    /* transform: translateY(-130%); */
-    /* transition: all 0.3s ease-in-out !important; */
-
+  const styles = styled.div`
     ${isBurger ? burgerMenu : inLineMenu}
-    
-    transition: ${(isOpen) =>
-      isOpen ? 'all 0.25s ease-out' : 'all 0.6s ease-out'};
-    transition-duration: .5s;
     left: 0;
     z-index: 1;
+    transition: all 0.3s linear;
   `;
 
+  const MenuWrapper = animated(styles);
+
   return (
-    <StyledMenu isOpen={isOpen}>
+    <MenuWrapper style={props}>
       <MenuLink variant="navbar" to="/about">
         Quienes somos
       </MenuLink>
@@ -59,7 +66,7 @@ const Menu = ({ isOpen, isBurger }) => {
       <MenuLink variant="navbar" to="/contact">
         Contacto
       </MenuLink>
-    </StyledMenu>
+    </MenuWrapper>
   );
 };
 
