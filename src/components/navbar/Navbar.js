@@ -22,20 +22,20 @@ const Navbar = () => {
   const NavbarTag = styled('nav')`
     position: fixed;
     width: 100%;
-    z-index: 3;
+    z-index: 1;
     background-color: ${theme.color.white};
 
     min-height: 4rem;
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
 
     .nav-brand {
       background-color: ${theme.color.white};
       display: flex;
       justify-content: space-between;
       min-height: 4rem;
-      z-index: 2;
+      z-index: 1;
     }
   `;
 
@@ -45,7 +45,6 @@ const Navbar = () => {
 
   const burgerMenu = css`
     width: 100%;
-    position: fixed;
     position: absolute;
     overflow: hidden;
     top: 4.7rem;
@@ -77,7 +76,7 @@ const Navbar = () => {
       <div className="nav-brand">
         <LogoLink />
       </div>
-      {isBurger && <Burger toggleMenu={toggleMenu} />}
+      {isBurger && <Burger toggleMenu={toggleMenu} isOpen={isOpen} />}
       <MenuWrapper style={props}>
         <MenuLink variant="navbar" to="/about">
           Quienes somos

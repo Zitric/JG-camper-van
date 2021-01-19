@@ -8,7 +8,13 @@ import logoTwo from '../../img/logo-title-new.png';
 
 const LogoLink = () => {
   return (
-    <Link to="/" title="Logo" style={{ padding: 0 }}>
+    <Link
+      to="/"
+      title="Logo"
+      css={css`
+        padding: 0 0 0 1rem;
+      `}
+    >
       <StyledFigure>
         <img
           src={logoOne}

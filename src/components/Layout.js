@@ -128,7 +128,13 @@ const Layout = ({ children, title, description, image, article, keywords }) => (
       <GlobalStyles />
       <Navbar />
       <FadeIn>
-      <main>{children}</main>
+        <main
+          css={css`
+            /* margin-top: 4.7rem;   */
+          `}
+        >
+          {children}
+        </main>
       </FadeIn>
       <Footer />
     </ThemeProvider>
