@@ -65,4 +65,4 @@ Burger.defaultProps = {
   toggleMenu: () => null,
 };
 
-export default Burger;
+export default React.memo(Burger);

@@ -9,6 +9,7 @@ import MenuLink from '../shared/MenuLink';
 
 const Menu = ({ isOpen, isBurger }) => {
   const [isOpenHere, setIsOpenHere] = React.useState(isOpen);
+
   const props = useSpring({
     transform: isOpenHere ? 'translateY(0%)' : 'translateY(-130%)',
   });
@@ -17,7 +18,7 @@ const Menu = ({ isOpen, isBurger }) => {
     setIsOpenHere(isOpen);
   }, [isOpen]);
 
-  console.log('is open', isOpen, 'transform', props);
+  // console.log('is open', isOpen, 'transform', props);
 
   // transition: ${dinamicStyle.transition};
   const burgerMenu = css`
