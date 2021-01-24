@@ -7,7 +7,7 @@ export const theme = {
     white: '#f5f5f5',
   },
   font: {
-    sizes: {
+    size: {
       xs: '16px',
       s: '20px',
       base: '30px',
@@ -25,10 +25,11 @@ export const theme = {
       headings: 'bold', // instead of browser default, bold
     },
   },
-  mediaQuery: {
-    small: '@media(min-width: 0px)',
-    medium: '@media(min-width: 600px)',
-    large: '@media(min-width: 900px)',
+  breakPoints: {
+    small: '@media(min-width: 576px)',
+    medium: '@media(min-width: 768px)',
+    large: '@media(min-width: 992px)',
+    xtraLarge: '@media(min-width: 1200px)',
   },
   mediaNumber: {
     phone: 600,

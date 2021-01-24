@@ -1,16 +1,16 @@
-/** @jsx jsx */
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+/** @jsx jsx */
+import { jsx, Global, css } from '@emotion/core';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
-import { Global, css, jsx } from '@emotion/core';
 import { ThemeProvider } from '@emotion/react';
 // import { withPrefix } from 'gatsby';
 
 import { theme } from '../styles/theme';
 
-import Footer from './Footer';
-import Navbar from './Navbar';
+import Footer from './footer/Footer';
+import Navbar from './navbar/Navbar';
 import SEO from './SEO';
 import JsonLd from './JsonLd';
 import FadeIn from '../utils/FadeIn';
@@ -57,7 +57,6 @@ const Layout = ({ children, title, description, image, article, keywords }) => (
           property="og:image"
           content={`${withPrefix('/')}img/og-image.jpg`}
         /> */}
-      <body className="has-navbar-fixed-top" />
     </Helmet>
     <Global
       styles={css`
@@ -129,7 +128,13 @@ const Layout = ({ children, title, description, image, article, keywords }) => (
       <GlobalStyles />
       <Navbar />
       <FadeIn>
-        <main>{children}</main>
+        <main
+          css={css`
+            /* margin-top: 4.7rem;   */
+          `}
+        >
+          {children}
+        </main>
       </FadeIn>
       <Footer />
     </ThemeProvider>

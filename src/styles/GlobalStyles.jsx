@@ -7,17 +7,25 @@ const GlobalStyles = () => {
   return (
     <Global
       styles={css`
-        * {
+        *,
+        *::after,
+        *::before {
           box-sizing: border-box;
           margin: 0;
+        }
+        ::selection {
+          color: ${theme.color.white};
+          background: ${theme.color.primary};
         }
 
         html,
         body {
           background-color: ${theme.color.white};
           margin: 0;
+          padding: 0;
           font-size: 18px;
           line-height: 1.4;
+
           > div {
             margin-top: 0;
           }

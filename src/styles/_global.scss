@@ -13,11 +13,6 @@
   padding: 0;
 }
 
-.navbar > .container {
-  max-width: 95% !important;
-  min-height: 72px !important;
-}
-
 .content .taglist {
   list-style: none;
   margin-bottom: 0;
@@ -37,28 +32,6 @@
 }
 
 // Helper Classes
-.full-width-image-container {
-  width: 100vw;
-  height: 400px;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin: 2em -50vw;
-  background-size: cover;
-  background-position: bottom;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.full-width-image {
-  width: 100vw;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .btn {
   display: inline-block;
   padding: 12px 16px 10px;
@@ -81,10 +54,6 @@
   margin-top: 0 !important;
 }
 
-.navbar-item .icon {
-  color: $primary-color;
-}
-
 // Override for use of svg's from https://simpleicons.org/
 .icon svg {
   width: 1.5rem;
@@ -94,10 +63,6 @@
 
 .navbar-brand {
   min-height: 72px !important;
-}
-
-.navbar-brand .navbar-item.logo {
-  padding: 0 1rem;
 }
 
 footer.footer {

@@ -24,6 +24,7 @@ const TestimoniesCarousel = ({ testimonials }) => {
   const Container = styled('div')`
     border-color: ${theme.color.primary};
   `;
+
   return (
     <Wrapper className="section grid testimoniesCarousel content">
       <h3 className="margin-bottom-3rem"> Opiniones de clientes </h3>
