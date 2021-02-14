@@ -6,59 +6,68 @@ import styled from '@emotion/styled';
 import { jsx } from '@emotion/core';
 import BackgroundImage from 'gatsby-background-image';
 
-const ImageBackground = styled(BackgroundImage)`
-  background-size: contain;
-  background-attachment: fixed;
-  background-position: top;
-`;
-
-const TextBox = styled('div')`
-  height: '150px';
-  justify-content: 'space-around';
-  display: flex;
-  align-items: 'left';
-  flex-direction: column;
-  margin: auto auto auto 0;
-
-  h1,
-  h2 {
-    box-shadow: #15b7b9 0.5rem 0px 0px, #15b7b9 -0.5rem 0px 0px;
-    background-color: #15b7b9;
-    color: #f5f5f5;
-    padding: 1rem;
-  }
-  h2 {
-    margin-top: 1.5rem;
-    padding: 0.5rem;
-  }
-`;
+import { theme } from '../styles/theme';
 
 const Hero = ({ image, heading, subheading, home }) => {
-  const ImageBackgroundClasses = home
-    ? 'hero-body grid height-50vh'
-    : 'hero-body grid height-40vh';
+  const ImageBackgroundClasses = home ? 'grid height-50vh' : 'grid height-40vh';
+
+  const Header = styled('header')`
+    padding-top: 4.7rem;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  `;
+
+  const ImageBackground = styled(BackgroundImage)`
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: top;
+    padding: 3rem 1.5rem;
+  `;
+
+  const TextBox = styled('div')`
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    margin: auto auto auto 0;
+
+    h1,
+    h2 {
+      background-color: ${theme.color.primary};
+      color: ${theme.color.white};
+      padding: 1rem 1.5rem;
+      word-break: break-word;
+      margin-bottom: 0;
+    }
+    h2 {
+      padding: 0.5rem 1rem;
+    }
+  `;
+
   return (
-    <header className="hero grid-xl is-hidden-mobile">
+    <Header className="grid-xl is-hidden-mobile">
       <ImageBackground
         className={ImageBackgroundClasses}
         Tag="section"
         fluid={image.sharp.fluid}
         fadeIn="soft"
       >
-        <TextBox className="grid">
+        <TextBox>
           {heading && (
-            <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen title">
+            <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
               {heading}
             </h1>
           )}
           {subheading && (
-            <h2 className="has-text-weight-bold is-size-1 is-size-5-mobile is-size-5-tablet is-size-4-widescreen subtitle">
+            <h2 className="has-text-weight-bold is-size-1 is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
               {subheading}
             </h2>
           )}
         </TextBox>
       </ImageBackground>
-    </header>
+    </Header>
   );
 };
 
