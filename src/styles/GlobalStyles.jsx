@@ -76,7 +76,7 @@ const GlobalStyles = () => {
         }
 
         .full-height {
-          height: calc(100vh - 3.25rem);
+          height: calc(100vh);
         }
 
         .height-30vh {
