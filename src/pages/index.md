@@ -1,11 +1,11 @@
 ---
-templateKey: index-page
-path: /
-title: JG Camper
 heroImage: /img/home.jpg
-heroHeading: JG Camper
-heroSubHeading: Alquiler de camper vans en Sevilla
 heading: Vive una aventura diferente
+path: /
+templateKey: index-page
+title: JG Camper
+heroHeading: JG CAMPER
+heroSubHeading: Alquiler de camper vans en Sevilla
 carouselImages:
   - image: /img/index-carousel-1.jpg
     alt: carousel
@@ -33,13 +33,15 @@ carouselImages:
     alt: carousel
 testimonials:
   - author: Rafa Campos
-    quote: >-
-      Jgcamper me ha sorprendido, son persona que se nota que le gusta lo que hacen, te dan muchas facilidades y por supuesto las furgos impecable y muy equipadas. 
-      100% recomendable
+    quote: Jgcamper me ha sorprendido, son persona que se nota que le gusta lo que
+      hacen, te dan muchas facilidades y por supuesto las furgos impecable y muy
+      equipadas.  100% recomendable
   - author: Julián Palomo
-    quote: >-
-      Estoy encantado con el servicio ofrecido por esta compañía, el trato fue
-      genial y la camper van que alquilamos funcionó perfectamente. Se conduce bastante fácil y me sorprendió la buena respuesta que tiene en carretera. Por dentro los detalles están muy cuidados y viene muy bien equipada. Un gran acierto.
+    quote: Estoy encantado con el servicio ofrecido por esta compañía, el trato fue
+      genial y la camper van que alquilamos funcionó perfectamente. Se conduce
+      bastante fácil y me sorprendió la buena respuesta que tiene en carretera.
+      Por dentro los detalles están muy cuidados y viene muy bien equipada. Un
+      gran acierto.
 ---
 
 ### Vive una aventura diferente
