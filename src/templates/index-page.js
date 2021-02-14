@@ -34,20 +34,7 @@ export const IndexPageTemplate = ({
           />
         )}
         <section className="section grid">
-          <div className="columns">
-            <div className="column">
-              {/* <h1 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
-                {heroHeading}
-              </h1> */}
-              <h1 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
-                {heroSubHeading}
-              </h1>
-              {/* <h2 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
-                {heroSubHeading}
-              </h2> */}
-              <PageContent className="content is-size-5" content={content} />
-            </div>
-          </div>
+          <PageContent className="content is-size-5" content={content} />
         </section>
       </div>
       <ImageCarousel images={carouselImages} />
@@ -62,8 +49,6 @@ export const IndexPageTemplate = ({
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
   heroImage: PropTypes.object,
   heroHeading: PropTypes.string,
   heroSubHeading: PropTypes.string,
@@ -78,7 +63,6 @@ const IndexPage = ({ data }) => {
     <Layout keywords={['Aquiler', 'Camper-van', 'Sevilla']}>
       <IndexPageTemplate
         title={frontmatter.title}
-        heading={frontmatter.heading}
         heroImage={frontmatter.heroImage}
         heroHeading={frontmatter.heroHeading}
         heroSubHeading={frontmatter.heroSubHeading}
@@ -118,7 +102,6 @@ export const pageQuery = graphql`
         }
         heroHeading
         heroSubHeading
-        heading
         carouselImages {
           image {
             childImageSharp {
