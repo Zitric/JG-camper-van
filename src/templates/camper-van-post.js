@@ -54,7 +54,6 @@ CamperVanPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
-  tags: PropTypes.arrayOf(),
 };
 
 const CamperVanPost = ({ data }) => {
@@ -100,7 +99,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
-        tags
         name
         equipment
       }

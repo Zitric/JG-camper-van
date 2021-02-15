@@ -62,7 +62,7 @@ export default class ContactPage extends React.Component {
                 style={{ textAlign: 'center', marginLeft: '0' }}
               >
                 <li>
-                  <span>jalarconlastra@gmail.com</span>
+                  <span>jgcampervan@gmail.com</span>
                 </li>
                 <li>
                   <span>634 84 49 43</span>
@@ -78,7 +78,7 @@ export default class ContactPage extends React.Component {
               <h3>Gonzalo</h3>
               <ul style={{ textAlign: 'center', marginLeft: '0' }}>
                 <li>
-                  <span>g.alarconruiz@gmail.com</span>
+                  <span>jgcampervan@gmail.com</span>
                 </li>
                 <li>
                   <span>617 83 73 05 </span>

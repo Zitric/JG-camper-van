@@ -14,14 +14,14 @@ Las principales ventajas de nuestras campervan:
 
 - La conducción es prácticamente la de un coche utilitario, fácil y cómoda
 
-* Puede percnoctar en cualquier lugar donde le esté permitido hacerlo con un vehículo convencional
+- Puede percnoctar en cualquier lugar donde le esté permitido hacerlo con un vehículo convencional
 
-* Gracias a sus dimensiones, tiene acceso a lugares donde caravanas o grandes furgonestas no pueden
+- Gracias a sus dimensiones, tiene acceso a lugares donde caravanas o grandes furgonestas no pueden
 
-* Tiene facilidad a la hora de aparcar en general, parkings, garajes, hipermercados
+- Tiene facilidad a la hora de aparcar en general, parkings, garajes, hipermercados
 
-* El consumo y ruido durante la conducción son muy bajos
+- El consumo y ruido durante la conducción son muy bajos
 
-* Dispone de bola de enganche para acoplar carro
+- Dispone de bola de enganche para acoplar carro
 
-* Vienen equipadas con todas las comodidades necesarias para una magnífica escapada. Como nevera eléctrica, mesas y sillas plegables para el exterior, cocina, ducha, etc..
+- Vienen equipadas con todas las comodidades necesarias para una magnífica escapada. Como nevera eléctrica, mesas y sillas plegables para el exterior, cocina, ducha, etc..

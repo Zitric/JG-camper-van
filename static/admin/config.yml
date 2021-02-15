@@ -8,12 +8,12 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: dypxaqdgb
-    api_key: 339985235411373
-    multiple: true
+#media_library:
+#  name: cloudinary
+#  config:
+#    cloud_name: dypxaqdgb
+#    api_key: 339985235411373
+#    multiple: true
 
 media_folder: static/img
 public_folder: /img
@@ -105,16 +105,24 @@ collections:
     create: true
     media_folder: '/images'
     public_folder: '/images'
-    path: "{{year}}-{{month}}-{{day}}-{{slug}}/index"
+    path: "{{year}}-{{name}}-{{slug}}/index"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "camper-van-post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
       - {label: "Name", name: "name", widget: "string"}
+      - {label: "Avatar", name: "avatar", widget: image}
+      - {label: "Description", name: "description", widget: "text"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Equipment", name: "equipment", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {lagel: "images", name: "images", widget: "image"}
+      - label: "Media"
+        name: "media"
+        widget: "image"
+        allow_multiple: true
+        media_library:
+          config:
+            multiple: true
 
   - name: "blog"
     label: "Blog"
