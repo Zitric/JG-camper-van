@@ -30,7 +30,7 @@ export const CamperVanPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
-            {images &&
+            {/* {images &&
               images.map((image) => {
                 return (
                   <PreviewCompatibleImage
@@ -38,7 +38,7 @@ export const CamperVanPostTemplate = ({
                     imageInfo={{ image, alt: '' }}
                   />
                 );
-              })}
+              })} */}
             <GalleryCamperVan images={images} />
             <PostContent content={content} />
           </div>
@@ -76,7 +76,7 @@ const CamperVanPost = ({ data }) => {
         }
         tags={post.tags}
         title={post.title}
-        images={post.images}
+        // images={post.images}
       />
     </Layout>
   );

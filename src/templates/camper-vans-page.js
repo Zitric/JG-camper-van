@@ -17,21 +17,13 @@ export const CamperVansPageTemplate = ({
   return (
     <>
       <section className="section section--gradient grid">
-        <div className="columns">
-          <div className="column">
-            <h1 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
-              {heading}
-            </h1>
-            <CamperVansRoll />
-          </div>
-        </div>
+        <h1 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
+          {heading}
+        </h1>
+        <CamperVansRoll />
       </section>
       <section className="section section--gradient grid">
-        <div className="columns">
-          <div className="column">
-            <PageContent className="content" content={content} />
-          </div>
-        </div>
+        <PageContent className="content" content={content} />
       </section>
     </>
   );

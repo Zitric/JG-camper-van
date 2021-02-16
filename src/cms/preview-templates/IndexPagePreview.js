@@ -5,6 +5,11 @@ import { IndexPageTemplate } from '../../templates/index-page';
 const IndexPagePreview = ({ entry, widgetFor, getAsset }) => {
   const data = entry.getIn(['data']).toJS();
 
+  console.log('===> entry', entry);
+  console.log('===> widgetFor', widgetFor);
+  console.log('===> getAsset', getAsset);
+  console.log('===> data', data);
+
   return data ? (
     <IndexPageTemplate
       title={data.title}
