@@ -8,12 +8,12 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: dypxaqdgb
-    api_key: 339985235411373
-    multiple: true
+#media_library:
+#  name: cloudinary
+#  config:
+#    cloud_name: dypxaqdgb
+#    api_key: 339985235411373
+#    multiple: true
 
 media_folder: static/img
 public_folder: /img
@@ -31,10 +31,9 @@ collections:
           - {label: HeroImage, name: heroImage, widget: image}
           - {label: HeroHeading, name: heroHeading, widget: string}
           - {label: HeroSubHeading, name: heroSubHeading, widget: string}
-          - {label: Heading, name: heading, widget: string}
+          - {label: "Body", name: "body", widget: "markdown"}
           - {label: CaroueselImages, name: carouselImages, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: "Body", name: "body", widget: "markdown"}
 
 
       - file: "src/pages/about/index.md"
@@ -85,8 +84,8 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: HeroImage, name: heroImage, widget: image}
           - {label: Heading, name: heading, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
           - {label: Questions, name: questions, widget: list, fields: [{label: Question, name: question, widget: string}, {label: Answer, name: answer, widget: string}]}
+          - {label: "Body", name: "body", widget: "markdown"}
 
 
       - file: "src/pages/contact/index.md"
@@ -106,16 +105,21 @@ collections:
     create: true
     media_folder: '/images'
     public_folder: '/images'
-    path: "{{year}}-{{month}}-{{day}}-{{slug}}/index"
+    path: "{{year}}-{{name}}-{{slug}}/index"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "camper-van-post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
       - {label: "Name", name: "name", widget: "string"}
+      - {label: "Avatar", name: "avatar", widget: image}
+      - {label: "Description", name: "description", widget: "text"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Equipment", name: "equipment", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {lagel: "images", name: "images", widget: "image"}
+      - label: "Gallery"
+        name: "images"
+        widget: "list"
+        summary: '{{fields.image}}'
+        field: {label: Image, name: image, widget: image}
 
   - name: "blog"
     label: "Blog"
@@ -130,4 +134,3 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
