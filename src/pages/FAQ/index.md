@@ -2,7 +2,7 @@
 templateKey: FAQ-page
 path: /FAQ
 title: Preguntas comúnes
-heroImage: /img/FAQ.jpg
+heroImage: /img/faq/FAQ.jpg
 heading: Preguntas comúnes
 questions:
   - question: ¿Qué es Yescapa?

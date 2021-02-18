@@ -2,7 +2,7 @@
 templateKey: camper-vans-page
 path: /camper-vans
 title: Nuestras campers vans
-heroImage: /img/camper-vans.jpg
+heroImage: /img/camper-vans/camper-vans.jpg
 heading: Nuestras camper vans
 ---
 
