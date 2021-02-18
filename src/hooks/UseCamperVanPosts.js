@@ -21,6 +21,7 @@ const useCamperVanPosts = () => {
               equipment
               templateKey
               date(formatString: "MMMM DD, YYYY")
+              images
             }
           }
         }
@@ -30,7 +31,7 @@ const useCamperVanPosts = () => {
 
   const edges = posts.allMarkdownRemark.edges;
 
-  console.log('edges', edges);
+  // console.log('edges', edges);
 
   return edges.map((post) => ({
     id: post.node.id,
@@ -40,6 +41,7 @@ const useCamperVanPosts = () => {
     date: post.node.frontmatter.date,
     slug: post.node.fields.slug,
     excerpt: post.node.excerpt,
+    images: post.node.frontmatter.images,
   }));
 };
 
