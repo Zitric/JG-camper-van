@@ -17,10 +17,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             }
             frontmatter {
               templateKey
-              avatar
-              images
-              equipment
-              description
+              tag
             }
           }
         }
