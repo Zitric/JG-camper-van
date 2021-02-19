@@ -2,7 +2,7 @@
 templateKey: about-page
 path: /about
 title: Quienes somos
-heroImage: /img/about-us.jpg
+heroImage: /img/about/about-us.jpg
 heading: Quienes somos
 ---
 

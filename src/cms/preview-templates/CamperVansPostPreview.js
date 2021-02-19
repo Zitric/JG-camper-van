@@ -10,7 +10,7 @@ const CamperVanPostPreview = ({ entry, widgetFor, getAsset }) => {
     <CamperVanPostTemplate
       title={entry.getIn(['data', 'title'])}
       name={entry.getIn(['data', 'name'])}
-      avatar={entry.getIn(['data', 'avatar'])}
+      avatar={getAsset(entry.getIn(['data', 'avatar']))}
       description={entry.getIn(['data', 'description'])}
       equipment={entry.getIn(['data', 'equipment'])}
       content={widgetFor('body')}

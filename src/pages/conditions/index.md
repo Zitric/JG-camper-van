@@ -2,7 +2,7 @@
 templateKey: 'condition-page'
 path: /conditions
 title: Condiciones
-heroImage: /img/terms.jpg
+heroImage: /img/conditions/terms.jpg
 heading: Condiciones
 ---
 

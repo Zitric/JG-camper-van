@@ -43,6 +43,8 @@
     "react-dom": "^16.8.4",
     "react-helmet": "^6.0.0",
     "react-helmet-async": "^1.0.6",
+    "react-images": "^1.2.0-beta.5",
+    "react-photo-gallery": "^8.0.0",
     "react-spring": "^8.0.27",
     "react-useanimations": "^2.0.6",
     "uuid": "^8.1.0"

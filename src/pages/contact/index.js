@@ -122,7 +122,7 @@ export default class ContactPage extends React.Component {
 
 export const ContactPageQuery = graphql`
   query ContactPage {
-    heroImage: file(relativePath: { eq: "contact.jpg" }) {
+    heroImage: file(relativePath: { eq: "contact/contact.jpg" }) {
       sharp: childImageSharp {
         fluid(maxWidth: 2048, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp

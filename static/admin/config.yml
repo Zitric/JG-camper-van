@@ -8,12 +8,12 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
-#media_library:
-#  name: cloudinary
-#  config:
-#    cloud_name: dypxaqdgb
-#    api_key: 339985235411373
-#    multiple: true
+media_library:
+ name: cloudinary
+ config:
+   cloud_name: dypxaqdgb
+   api_key: 339985235411373
+   multiple: true
 
 media_folder: static/img
 public_folder: /img
@@ -103,9 +103,9 @@ collections:
     label: "Camper vans"
     folder: "src/pages/camper-vans"
     create: true
-    media_folder: '/images'
-    public_folder: '/images'
-    path: "{{year}}-{{name}}-{{slug}}/index"
+    media_folder: 'src/pages/camper-vans/{{year}}-{{month}}-{{slug}}/images'
+    public_folder: 'src/pages/camper-vans/{{year}}-{{month}}-{{slug}}/images'
+    path: "{{year}}-{{month}}-{{slug}}/index"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "camper-van-post"}
       - {label: "Title", name: "title", widget: "string"}

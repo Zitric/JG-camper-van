@@ -1,49 +1,68 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import { v4 } from 'uuid';
+
+import Gallery from 'react-photo-gallery';
+import Carousel, { Modal, ModalGateway } from 'react-images';
 
 import Content, { HTMLContent } from '../components/Content';
 
 import Layout from '../components/Layout';
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
-import GalleryCamperVan from '../components/GalleryCamperVan';
 
 export const CamperVanPostTemplate = ({
   content,
   contentComponent,
   description,
+  equipment,
   title,
-  helmet,
   images,
 }) => {
   const PostContent = contentComponent || Content;
 
+  const [currentImage, setCurrentImage] = useState(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState(true);
+
+  const photos = images.map((image) => ({ src: image, width: 1, height: 1 }));
+
+  const openLightbox = useCallback((event, { photo, index }) => {
+    console.log('event', event);
+    console.log('photo', photo);
+    console.log('index', index);
+    setCurrentImage(index);
+    setViewerIsOpen(false);
+  }, []);
+
+  const closeLightbox = () => {
+    setCurrentImage(0);
+    setViewerIsOpen(false);
+  };
+
+  console.log('images', images);
+
   return (
     <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            {/* {images &&
-              images.map((image) => {
-                return (
-                  <PreviewCompatibleImage
-                    key={v4()}
-                    imageInfo={{ image, alt: '' }}
-                  />
-                );
-              })} */}
-            <GalleryCamperVan images={images} />
-            <PostContent content={content} />
-          </div>
-        </div>
-      </div>
+      <header>
+        <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+          {title}
+        </h1>
+      </header>
+      <p>{description}</p>
+      <p>{equipment}</p>
+      <PostContent content={content} />
+      <Gallery
+        photos={photos}
+        key={v4()}
+        direction={'column'}
+        onClick={openLightbox}
+      />
+      {/* <ModalGateway>
+        {viewerIsOpen ? (
+          <Modal onClose={closeLightbox}>
+            <Carousel currentIndex={currentImage} views={photos} />
+          </Modal>
+        ) : null}
+      </ModalGateway> */}
     </section>
   );
 };
@@ -68,15 +87,9 @@ const CamperVanPost = ({ data }) => {
         content={markdownRemark.html}
         contentComponent={HTMLContent}
         description={post.description}
-        helmet={
-          <Helmet titleTemplate="%s | Camper vans">
-            <title>{`${post.title}`}</title>
-            <meta name="description" content={`${post.description}`} />
-          </Helmet>
-        }
-        tags={post.tags}
+        equipment={post.equipment}
         title={post.title}
-        // images={post.images}
+        images={post.images}
       />
     </Layout>
   );
@@ -101,6 +114,7 @@ export const pageQuery = graphql`
         description
         name
         equipment
+        images
       }
     }
   }
