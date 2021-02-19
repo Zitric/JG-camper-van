@@ -16,8 +16,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               slug
             }
             frontmatter {
-              tags
               templateKey
+              avatar
+              images
+              equipment
+              description
             }
           }
         }
