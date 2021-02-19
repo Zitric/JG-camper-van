@@ -8,12 +8,12 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
-#media_library:
-#  name: cloudinary
-#  config:
-#    cloud_name: dypxaqdgb
-#    api_key: 339985235411373
-#    multiple: true
+media_library:
+ name: cloudinary
+ config:
+   cloud_name: dypxaqdgb
+   api_key: 339985235411373
+   multiple: true
 
 media_folder: static/img
 public_folder: /img
