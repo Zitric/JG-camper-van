@@ -103,8 +103,6 @@ collections:
     label: "Camper vans"
     folder: "src/pages/camper-vans"
     create: true
-    media_folder: 'src/pages/camper-vans/{{year}}-{{month}}-{{slug}}/images'
-    public_folder: 'src/pages/camper-vans/{{year}}-{{month}}-{{slug}}/images'
     path: "{{year}}-{{month}}-{{slug}}/index"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "camper-van-post"}
@@ -115,11 +113,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Equipment", name: "equipment", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Gallery"
-        name: "images"
-        widget: "list"
-        summary: '{{fields.image}}'
-        field: {label: Image, name: image, widget: image}
+      - {label: Image, name: image, widget: image}
 
   - name: "blog"
     label: "Blog"
