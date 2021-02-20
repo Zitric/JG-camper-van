@@ -114,6 +114,11 @@ collections:
       - {label: "Equipment", name: "equipment", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: Image, name: image, widget: image}
+      - label: "Gallery"
+        name: "galleryImages"
+        widget: "list"
+        summary: '{{fields.image}}'
+        field: {label: Image, name: image, widget: image}
 
   - name: "blog"
     label: "Blog"
