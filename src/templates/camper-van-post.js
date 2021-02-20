@@ -23,7 +23,9 @@ export const CamperVanPostTemplate = ({
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(true);
 
-  const photos = images.map((image) => ({ src: image, width: 1, height: 1 }));
+  const photos = images
+    ? images.map((image) => ({ src: image, width: 1, height: 1 }))
+    : {};
 
   const openLightbox = useCallback((event, { photo, index }) => {
     console.log('event', event);
