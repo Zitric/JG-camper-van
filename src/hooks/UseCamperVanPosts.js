@@ -21,7 +21,6 @@ const useCamperVanPosts = () => {
               equipment
               templateKey
               date(formatString: "MMMM DD, YYYY")
-              images
             }
           }
         }
