@@ -11,9 +11,9 @@ backend:
 media_library:
   name: cloudinary
   config:
-  cloud_name: dypxaqdgb
-  api_key: 339985235411373
-  multiple: true
+    cloud_name: dypxaqdgb
+    api_key: 339985235411373
+    multiple: true
 
 media_folder: static/img
 public_folder: /img
