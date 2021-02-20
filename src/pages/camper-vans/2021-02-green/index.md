@@ -10,7 +10,6 @@ equipment: |-
   * Cocina
   * Ducha
   * Doble batería
-images: []
 image:
   - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848499/jg-camper/camper-vans/Green/IMG_8768_u4ltqd.jpg
   - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848498/jg-camper/camper-vans/Green/IMG_1127_efbkyy.heic
@@ -32,5 +31,49 @@ image:
   - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848465/jg-camper/camper-vans/Green/IMG_5270_nz2wz8.jpg
   - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848464/jg-camper/camper-vans/Green/IMG_4767_mfc1va.jpg
   - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848463/jg-camper/camper-vans/Green/IMG_4594_pczcvn.jpg
+galleryImages:
+  - - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848499/jg-camper/camper-vans/Green/IMG_8768_u4ltqd.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848499/jg-camper/camper-vans/Green/IMG_8916_diqaya.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848498/jg-camper/camper-vans/Green/IMG_1127_efbkyy.heic
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848496/jg-camper/camper-vans/Green/IMG_9784_nysrom.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848489/jg-camper/camper-vans/Green/IMG_7744_loa7nz.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848488/jg-camper/camper-vans/Green/IMG_8121_ggmeo5.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848487/jg-camper/camper-vans/Green/IMG_8207_fwqgh2.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848485/jg-camper/camper-vans/Green/IMG_8236_qa2v1k.heic
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848484/jg-camper/camper-vans/Green/IMG_7665_m0vdmg.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848483/jg-camper/camper-vans/Green/IMG_8173_zfaipb.heic
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848481/jg-camper/camper-vans/Green/IMG_7042_ydh7t2.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848476/jg-camper/camper-vans/Green/IMG_6209_moq6if.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848475/jg-camper/camper-vans/Green/IMG_6154_dp4zg6.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848475/jg-camper/camper-vans/Green/IMG_4491_fyite1.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848475/jg-camper/camper-vans/Green/IMG_5793_uyupll.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848470/jg-camper/camper-vans/Green/IMG_4608_alau71.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848470/jg-camper/camper-vans/Green/IMG_5289_ojfzzd.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848465/jg-camper/camper-vans/Green/IMG_5270_nz2wz8.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848464/jg-camper/camper-vans/Green/IMG_4767_mfc1va.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848463/jg-camper/camper-vans/Green/IMG_4594_pczcvn.jpg
+  - - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848425/jg-camper/camper-vans/Green/IMG_0967_kqfpqh.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848421/jg-camper/camper-vans/Green/IMG_1607_erxzvd.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848420/jg-camper/camper-vans/Green/IMG_0577_pfjyiz.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848419/jg-camper/camper-vans/Green/IMG_1606_putuzi.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848419/jg-camper/camper-vans/Green/IMG_1608_yu6l0s.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848441/jg-camper/camper-vans/Green/IMG_2188_dvhbhm.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848437/jg-camper/camper-vans/Green/IMG_1608_lsseor.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848436/jg-camper/camper-vans/Green/IMG_1610_mpc2tl.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848430/jg-camper/camper-vans/Green/IMG_1760_dtecp2.heic
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848430/jg-camper/camper-vans/Green/IMG_1740_tyxclz.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848426/jg-camper/camper-vans/Green/IMG_1609_ogfal3.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848459/jg-camper/camper-vans/Green/IMG_4907_qb1pys.heic
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848455/jg-camper/camper-vans/Green/IMG_2317_rzyygo.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848454/jg-camper/camper-vans/Green/IMG_3907_xbquiw.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848451/jg-camper/camper-vans/Green/IMG_4074_usj88i.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848447/jg-camper/camper-vans/Green/IMG_2375_qdgntl.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848446/jg-camper/camper-vans/Green/IMG_4398_ktwbmc.heic
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848445/jg-camper/camper-vans/Green/IMG_3012_a2vj7e.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848442/jg-camper/camper-vans/Green/IMG_1611_kfi4ot.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848442/jg-camper/camper-vans/Green/IMG_2158_nsvmzx.jpg
+  - - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848418/jg-camper/camper-vans/Green/IMG_1583_f4hnbz.jpg
+    - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848412/jg-camper/camper-vans/Green/IMG_0578_aoctdc.heic
+images: []
 ---
 Body de la camper van verde
