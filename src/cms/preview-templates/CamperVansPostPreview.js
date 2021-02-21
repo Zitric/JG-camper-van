@@ -14,7 +14,6 @@ const CamperVanPostPreview = ({ entry, widgetFor, getAsset }) => {
       description={entry.getIn(['data', 'description'])}
       equipment={entry.getIn(['data', 'equipment'])}
       content={widgetFor('body')}
-      images={getAsset(entry.getIn(['data', 'images']))}
       galleryImages={getAsset(entry.getIn(['data', 'galleryImages']))}
     />
   );
