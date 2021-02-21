@@ -21,8 +21,6 @@ export const CamperVansPageTemplate = ({
           {heading}
         </h1>
         <CamperVansRoll />
-      </section>
-      <section className="section section--gradient grid">
         <PageContent className="content" content={content} />
       </section>
     </>

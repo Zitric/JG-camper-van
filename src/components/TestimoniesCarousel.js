@@ -26,7 +26,7 @@ const TestimoniesCarousel = ({ testimonials }) => {
   `;
 
   return (
-    <Wrapper className="section grid testimoniesCarousel content">
+    <Wrapper className="next-section grid testimoniesCarousel content">
       <h3 className="margin-bottom-3rem"> Opiniones de clientes </h3>
       <Carousel autoplay dots={false} draggable={true} {...settings}>
         {testimonials &&

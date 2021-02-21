@@ -75,6 +75,10 @@ const GlobalStyles = () => {
           padding: 4rem 0;
         }
 
+        .next-section {
+          padding: 0 0 4rem 0;
+        }
+
         .full-height {
           height: calc(100vh);
         }

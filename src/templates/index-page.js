@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import TestimoniesCarousel from '../components/TestimoniesCarousel';
 import ImageCarousel from '../components/ImageCarousel';
-import CamperVansRoll from '../components/CamperVanRoll';
+import CamperVanRolls from '../components/CamperVanRoll';
 
 import 'antd/dist/antd.css';
 
@@ -40,7 +40,7 @@ export const IndexPageTemplate = ({
       <ImageCarousel images={carouselImages} />
       <section className="section grid content">
         <h3 className="margin-bottom-3rem"> Nuestras campervans </h3>
-        <CamperVansRoll />
+        <CamperVanRolls />
       </section>
       <TestimoniesCarousel testimonials={testimonials} />
     </>
