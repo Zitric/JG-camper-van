@@ -17,15 +17,23 @@ export const CamperVanPostTemplate = ({
   equipment,
   title,
   images,
+  galleryImages,
 }) => {
   const PostContent = contentComponent || Content;
 
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(true);
 
-  const photos = images
-    ? images.map((image) => ({ src: image, width: 1, height: 1 }))
-    : {};
+  const photos = [];
+
+  if (galleryImages)
+    galleryImages.forEach((gallery) => {
+      gallery.forEach((image) => {
+        photos.push({ src: image, width: 1, height: 1 });
+      });
+    });
+
+  console.log('photos', photos);
 
   const openLightbox = useCallback((event, { photo, index }) => {
     console.log('event', event);
@@ -52,12 +60,14 @@ export const CamperVanPostTemplate = ({
       <p>{description}</p>
       <p>{equipment}</p>
       <PostContent content={content} />
-      <Gallery
-        photos={photos}
-        key={v4()}
-        direction={'column'}
-        onClick={openLightbox}
-      />
+      {photos && (
+        <Gallery
+          photos={photos}
+          key={v4()}
+          direction={'column'}
+          onClick={openLightbox}
+        />
+      )}
       {/* <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
@@ -92,6 +102,7 @@ const CamperVanPost = ({ data }) => {
         equipment={post.equipment}
         title={post.title}
         images={post.images}
+        galleryImages={post.galleryImages}
       />
     </Layout>
   );
@@ -115,6 +126,8 @@ export const pageQuery = graphql`
         description
         name
         equipment
+        image
+        galleryImages
       }
     }
   }

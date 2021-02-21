@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import UseCamperVanPosts from '../hooks/UseCamperVanPosts';
+import PreviewCompatibleImage from './PreviewCompatibleImage';
 
 const CamperVanRolls = () => {
   const camperVans = UseCamperVanPosts();
@@ -15,7 +16,12 @@ const CamperVanRolls = () => {
             <Link className="column" key={camperVan.id} to={camperVan.slug}>
               <div className="card">
                 <div className="card-content">
-                  <p className="title">Camper van</p>
+                  <PreviewCompatibleImage
+                    imageInfo={{
+                      image: camperVan.avatar[0],
+                      alt: `Camper-van-avatar`,
+                    }}
+                  />
                 </div>
               </div>
             </Link>
