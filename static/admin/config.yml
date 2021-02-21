@@ -117,7 +117,10 @@ collections:
         name: "galleryImages"
         widget: "list"
         summary: '{{fields.image}}'
-        field: [{label: Image, name: image, widget: image}, {label: Width, name: width, widget: number}, {label: Height, name: height, widget: number}]
+        field: 
+          - {label: Image, name: image, widget: image}
+          - {label: Width, name: width, widget: number}
+          - {label: Height, name: height, widget: number}
 
   - name: "blog"
     label: "Blog"
