@@ -15,14 +15,12 @@ const CamperVanRolls = () => {
           return (
             <Link className="column" key={camperVan.id} to={camperVan.slug}>
               <div className="card">
-                <div className="card-content">
-                  <PreviewCompatibleImage
-                    imageInfo={{
-                      image: camperVan.avatar[0],
-                      alt: `Camper-van-avatar`,
-                    }}
-                  />
-                </div>
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    image: camperVan.avatar[0],
+                    alt: `Camper-van-avatar`,
+                  }}
+                />
               </div>
             </Link>
           );

@@ -1,81 +1,89 @@
-import React, { useState, useCallback } from 'react';
+/** @jsx jsx */
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
+import { jsx, useTheme } from '@emotion/react';
+import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { v4 } from 'uuid';
 
 import Gallery from 'react-photo-gallery';
-import Carousel, { Modal, ModalGateway } from 'react-images';
 
 import Content, { HTMLContent } from '../components/Content';
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
 import Layout from '../components/Layout';
 
 export const CamperVanPostTemplate = ({
-  content,
-  contentComponent,
+  // content,
+  // contentComponent,
   description,
   equipment,
   title,
-  images,
+  avatar,
   galleryImages,
 }) => {
-  const PostContent = contentComponent || Content;
-
-  const [currentImage, setCurrentImage] = useState(0);
-  const [viewerIsOpen, setViewerIsOpen] = useState(true);
+  // const PostContent = contentComponent || Content;
+  const theme = useTheme();
 
   const photos = [];
 
   if (galleryImages)
     galleryImages.forEach((gallery) => {
       gallery.forEach((image) => {
-        photos.push({ src: image, width: 1, height: 1 });
+        photos.push({
+          src: image,
+          width: 4032,
+          height: 3024,
+        });
       });
     });
 
-  console.log('photos', photos);
+  const Header = styled('header')`
+    padding-top: 4.7rem;
+  `;
 
-  const openLightbox = useCallback((event, { photo, index }) => {
-    console.log('event', event);
-    console.log('photo', photo);
-    console.log('index', index);
-    setCurrentImage(index);
-    setViewerIsOpen(false);
-  }, []);
+  const Heading = styled('h1')`
+    background-color: ${theme.color.primary};
+    color: ${theme.color.white};
+    padding: 1rem 1.5rem;
+    word-break: break-word;
+  `;
 
-  const closeLightbox = () => {
-    setCurrentImage(0);
-    setViewerIsOpen(false);
-  };
+  const CamperInfo = styled('div')`
+    display: flex;
+  `;
 
-  console.log('images', images);
+  const Content = styled('div')`
+    padding: 1rem;
+  `;
 
   return (
-    <section className="section">
-      <header>
-        <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-          {title}
-        </h1>
-      </header>
-      <p>{description}</p>
-      <p>{equipment}</p>
-      <PostContent content={content} />
-      {photos && (
-        <Gallery
-          photos={photos}
-          key={v4()}
-          direction={'column'}
-          onClick={openLightbox}
-        />
-      )}
-      {/* <ModalGateway>
-        {viewerIsOpen ? (
-          <Modal onClose={closeLightbox}>
-            <Carousel currentIndex={currentImage} views={photos} />
-          </Modal>
-        ) : null}
-      </ModalGateway> */}
-    </section>
+    <>
+      <section className="section grid">
+        <Header>
+          <Heading className="title is-size-2 has-text-weight-bold is-bold-light">
+            {`${title} camper-van`}
+          </Heading>
+        </Header>
+        <CamperInfo>
+          <PreviewCompatibleImage
+            styles={{ width: '50%', margin: '1rem' }}
+            imageInfo={{
+              image: avatar[0],
+              alt: `Camper-van-avatar`,
+            }}
+          />
+          <Content className="content">
+            <p>{description}</p>
+          </Content>
+        </CamperInfo>
+        <p>{equipment}</p>
+      </section>
+      <section className="next-section grid-xl" style={{ padding: '0 2rem' }}>
+        {photos && <Gallery photos={photos} key={v4()} direction={'column'} />}
+      </section>
+    </>
   );
 };
 
@@ -101,6 +109,7 @@ const CamperVanPost = ({ data }) => {
         description={post.description}
         equipment={post.equipment}
         title={post.title}
+        avatar={post.avatar}
         images={post.images}
         galleryImages={post.galleryImages}
       />
@@ -126,7 +135,7 @@ export const pageQuery = graphql`
         description
         name
         equipment
-        image
+        avatar
         galleryImages
       }
     }
