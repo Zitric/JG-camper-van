@@ -9,9 +9,9 @@ import { v4 } from 'uuid';
 
 import Gallery from 'react-photo-gallery';
 
-import Content, { HTMLContent } from '../components/Content';
+// import Content, { HTMLContent } from '../components/Content';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
-
+import FadeIn from '../utils/FadeIn';
 import Layout from '../components/Layout';
 
 export const CamperVanPostTemplate = ({
@@ -26,18 +26,11 @@ export const CamperVanPostTemplate = ({
   // const PostContent = contentComponent || Content;
   const theme = useTheme();
 
-  const photos = [];
-
-  if (galleryImages)
-    galleryImages.forEach((gallery) => {
-      gallery.forEach((image) => {
-        photos.push({
-          src: image,
-          width: 4032,
-          height: 3024,
-        });
-      });
-    });
+  const photos = galleryImages.map((element) => ({
+    src: element.image[0],
+    height: element.height,
+    width: element.width,
+  }));
 
   const Header = styled('header')`
     padding-top: 4.7rem;
@@ -80,9 +73,21 @@ export const CamperVanPostTemplate = ({
         </CamperInfo>
         <p>{equipment}</p>
       </section>
-      <section className="next-section grid-xl" style={{ padding: '0 2rem' }}>
-        {photos && <Gallery photos={photos} key={v4()} direction={'column'} />}
-      </section>
+      <FadeIn duration={3000}>
+        <section
+          className="next-section grid-xl"
+          style={{ padding: '0 2rem 2rem 2rem' }}
+        >
+          {photos && (
+            <Gallery
+              photos={photos}
+              key={v4()}
+              direction={'column'}
+              margin="5"
+            />
+          )}
+        </section>
+      </FadeIn>
     </>
   );
 };
@@ -99,13 +104,11 @@ const CamperVanPost = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter: post } = markdownRemark;
 
-  console.log('Post', post);
-
   return (
     <Layout>
       <CamperVanPostTemplate
         content={markdownRemark.html}
-        contentComponent={HTMLContent}
+        // contentComponent={HTMLContent}
         description={post.description}
         equipment={post.equipment}
         title={post.title}
@@ -136,7 +139,11 @@ export const pageQuery = graphql`
         name
         equipment
         avatar
-        galleryImages
+        galleryImages {
+          image
+          height
+          width
+        }
       }
     }
   }
