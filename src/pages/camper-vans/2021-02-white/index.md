@@ -4,9 +4,15 @@ title: White
 name: White
 avatar:
   - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848649/jg-camper/camper-vans/White/avatar/d72134a0-692d-4563-bbef-e1584c07fc5e_eoa1qd.jpg
-description: Descripción de la white campervan
+description: VOLKSWAGEN T6
 date: 2021-02-20T23:37:55.515Z
-equipment: Equipamiento de la white campervan
+equipment: |-
+  * Plazas para viajar: 3
+  * Plazas para dormir: 2
+  * Asiento doble giratorio
+  * Mesa interior plegable
+  * Ducha exterior
+  * Cocina portátil
 galleryImages:
   - image:
       - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848811/jg-camper/camper-vans/White/1ce373be-bc15-406a-9c63-9e7223602e29_wgex2s.jpg
