@@ -4,9 +4,16 @@ title: Red White
 name: Red White
 avatar:
   - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613904280/jg-camper/camper-vans/Red%20White/avatar/IMG_7302_ivktep.jpg
-description: Descripcion de la Red White
+description: VOLKSWAGEN T5
 date: 2021-02-20T23:35:59.867Z
-equipment: Equipamiento de la red White
+equipment: |-
+  * Plazas para viajar: 3
+  * Plazas para dormir: 2
+  * Asiento doble giratorio
+  * Mesa interior plegable
+  * Ducha exterior
+  * Fregadero
+  * Cocina portátil
 galleryImages:
   - image:
       - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613950649/jg-camper/camper-vans/Red%20White/IMG_7257_dqhlgf.png
