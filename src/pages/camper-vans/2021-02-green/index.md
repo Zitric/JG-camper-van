@@ -4,25 +4,19 @@ title: Green
 name: Green
 avatar:
   - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613848392/jg-camper/camper-vans/Green/avatar/IMG_1607_vqvj6p.jpg
-description: |-
+description: |
   VOLKSWAGEN T5
-  Plazas para viajar: 2
-  Plazas para dormir: 2
 date: 2021-02-20T22:23:53.277Z
 equipment: |-
-  Sensores de aparcamiento
-
-  Asientos giratorios
-
-  Mesa interior plegable
-
-  Calefacción estacionaria
-
-  Ducha exterior
-
-  Fregadero
-
-  Cocina portátil
+  * Plazas para viajar: 2
+  * Plazas para dormir: 2
+  * Sensores de aparcamiento
+  * Asientos giratorios
+  * Mesa interior plegable
+  * Calefacción estacionaria
+  * Ducha exterior
+  * Fregadero
+  * Cocina portátil
 galleryImages:
   - image:
       - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613904209/jg-camper/camper-vans/Green/IMG_8236_maxpeh.jpg
