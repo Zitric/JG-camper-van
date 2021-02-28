@@ -4,9 +4,15 @@ title: Red Ocean
 name: Red Ocean
 avatar:
   - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613904560/jg-camper/camper-vans/Red%20Ocean/avatar/IMG_7310_whiqff.jpg
-description: Descripcion de la Red Ocean
+description: VOLKSWAGEN T5
 date: 2021-02-20T23:32:28.554Z
-equipment: Equipamiento de la Red Ocean
+equipment: |-
+  * Plazas para viajar: 3
+  * Plazas para dormir: 2
+  * Asiento doble giratorio
+  * Mesa interior plegable
+  * Ducha exterior
+  * Cocina portátil
 galleryImages:
   - image:
       - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613904678/jg-camper/camper-vans/Red%20Ocean/IMG_7318_fnn1sw.jpg
