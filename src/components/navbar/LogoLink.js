@@ -22,12 +22,14 @@ const LogoLink = () => {
           css={css`
             max-width: 4.875rem;
             min-height: 100%;
+            max-height: 4.7rem;
           `}
         />
         <img
           src={logoTwo}
           alt="JG Camper"
           css={css`
+            max-height: 4.7rem;
             max-width: 10.6875rem;
             min-height: 100%;
           `}

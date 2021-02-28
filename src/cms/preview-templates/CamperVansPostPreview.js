@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { CamperVanPostTemplate } from '../../templates/camper-van-post';
 
 const CamperVanPostPreview = ({ entry, widgetFor, getAsset }) => {
-  const data = entry.getIn(['data']).toJS();
-  console.log('data from campervan post', data);
+  // const data = entry.getIn(['data']).toJS();
 
   return (
     <CamperVanPostTemplate

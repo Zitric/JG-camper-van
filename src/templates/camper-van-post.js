@@ -61,7 +61,12 @@ export const CamperVanPostTemplate = ({
         </Header>
         <CamperInfo>
           <PreviewCompatibleImage
-            styles={{ width: '50%', margin: '1rem' }}
+            styles={{
+              width: '50%',
+              margin: '1rem',
+              height: 'auto',
+              maxHeight: '245px',
+            }}
             imageInfo={{
               image: avatar[0],
               alt: `Camper-van-avatar`,
