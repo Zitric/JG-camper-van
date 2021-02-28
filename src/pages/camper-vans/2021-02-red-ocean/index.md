@@ -71,4 +71,5 @@ galleryImages:
 image:
   - https://res.cloudinary.com/dypxaqdgb/image/upload/v1613904560/jg-camper/camper-vans/Red%20Ocean/avatar/IMG_7310_whiqff.jpg
 ---
+
 Cuerpo de la red Ocean

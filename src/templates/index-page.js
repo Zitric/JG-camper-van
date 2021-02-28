@@ -34,6 +34,14 @@ export const IndexPageTemplate = ({
           />
         )}
         <section className="section grid">
+          <h1 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
+            {heroHeading}
+          </h1>
+          <h2 className="title is-size-3 has-text-weight-bold is-bold-light heading-page">
+            {heroSubHeading}
+          </h2>
+        </section>
+        <section className="next-section grid">
           <PageContent className="content is-size-5" content={content} />
         </section>
       </div>

@@ -6,7 +6,6 @@ import PreviewCompatibleImage from './PreviewCompatibleImage';
 const CamperVanRolls = () => {
   const camperVans = UseCamperVanPosts();
 
-  console.log('camper-vans', camperVans);
   return (
     <div className="columns">
       {camperVans &&

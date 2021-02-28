@@ -110,16 +110,13 @@ const Layout = ({ children, title, description, image, article, keywords }) => (
           @media (max-width: 768px) {
             display: block;
             width: fit-content;
-            margin: 0 auto;
+            margin: 3.5rem auto !important;
           }
         }
 
         @media (max-width: 672px) {
           :root {
             font-size: 90%;
-          }
-          h1 {
-            margin-bottom: 3.5rem !important;
           }
         }
       `}
