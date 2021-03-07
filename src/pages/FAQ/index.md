@@ -59,7 +59,7 @@ questions:
       siguiente:  Toma fotos de los daños y envía un correo electrónico con un
       informe de los daños a jgcampervan@gmail.com. En caso de accidente,
       rellena el parte de accidente (se encuentra en la guantera) y envíalo a
-      jalarconlastra@gmail.com. También debes informar a la policía local (¡Es
+      jgcampervan@gmail.com. También debes informar a la policía local (¡Es
       obligatorio, de lo contrario no pagará el seguro!)"
   - question: ¿Cuál es la franquicia en caso de siniestro?
     answer: "En caso de siniestro, utilizaremos la TOTALIDAD de la fianza. Además,
