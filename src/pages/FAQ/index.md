@@ -19,7 +19,7 @@ questions:
       por teléfono o en la dirección de correo que aparece en nuestra webcorreo
   - question: ¿Debo depositar fianza?
     answer: Sí. En cada alquiler deberá abonarse una fianza de 900 € que se
-      devolverá 2 días hábiles desde la entrega
+      devolverá 3 días hábiles tras la devolución
   - question: ¿Cuándo debo pagar? ¿Puedo cancelar mi reserva?
     answer: Para que tu camper esté reservada y lista para tu viaje, es importante
       que recibamos 50% del pago una semana tras tu reserva. JG CAMPER se guarda
