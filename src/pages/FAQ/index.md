@@ -56,7 +56,7 @@ questions:
     answer: "¿MAL FUNCIONAMIENTO, AVERÍA O DAÑOS DURANTE EL VIAJE?  Si tienes algún
       PROBLEMA, avería o daño durante el viaje, por favor considera lo
       siguiente:  Toma fotos de los daños y envía un correo electrónico con un
-      informe de los daños a jalarconlastra@gmail.com. En caso de accidente,
+      informe de los daños a jgcampervan@gmail.com. En caso de accidente,
       rellena el parte de accidente (se encuentra en la guantera) y envíalo a
       jalarconlastra@gmail.com. También debes informar a la policía local (¡Es
       obligatorio, de lo contrario no pagará el seguro!)"
