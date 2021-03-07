@@ -73,7 +73,7 @@ questions:
       a largo plazo.
   - question: ¿Hay servicio de recogida?
     answer: Sí. Te recogeremos encantados en cualquier estación de tren o aeropuerto
-      de Sevilla. El precio del servicio es de 50 €
+      de Sevilla. Sólo te cobraremos 50 €
   - question: ¿Puedo llevar conmigo mi perro o mascota?
     answer: "Sí, pero insistimos: cuando se te entrega la Camper, está impecable, es
       decir, recién limpiada y aspirada. El acolchado no tiene manchas. Así nos
