@@ -84,5 +84,9 @@ questions:
     answer: ¡Entonces estás en el lugar correcto! Vendemos furgonetas de nuestra
       flota durante todo el año en condiciones favorables. Contacta con nosotros
       por teléfono o en la dirección de correo que aparece en nuestra webcorreo
+  - question: ¿Cuántos kilómetros puedo recorrer al día?
+    answer: "Podrás elegir entre 2 opciones: Recorrer 200 kilómetros diarios. Si
+      superas esta cantidad, pagarás 0,20 € cada kilómetro de más. Pero si
+      quieres tener kilómetros ilimitados, pagarás 5€ por cada día contratado  "
 ---
 body
