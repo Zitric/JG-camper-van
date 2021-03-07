@@ -87,6 +87,7 @@ questions:
   - question: ¿Cuántos kilómetros puedo recorrer al día?
     answer: "Podrás elegir entre 2 opciones: Recorrer 200 kilómetros diarios. Si
       superas esta cantidad, pagarás 0,20 € cada kilómetro de más. Pero si
-      quieres tener kilómetros ilimitados, pagarás 5€ por cada día contratado  "
+      quieres tener kilómetros ilimitados, sólo deberás pagar 5€ por cada día
+      contratado  "
 ---
 body
