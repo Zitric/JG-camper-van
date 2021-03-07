@@ -43,7 +43,7 @@ questions:
       100 € de costes de limpieza de tu fianza.
   - question: ¿Cómo puedo pagar?
     answer: "Aceptamos tres formas de pago: mediante transferencia bancaria, Bizum,
-      y en metálico"
+      y efectivo"
   - question: ¿Cuándo puedo recoger mi Camper?
     answer: El horario de recogida siempre es entre las 14 y las 17 horas del día
       del alquiler, en función de la limpieza que necesite y de si el taller
