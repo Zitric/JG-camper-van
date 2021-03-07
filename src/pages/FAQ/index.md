@@ -17,7 +17,7 @@ questions:
     answer: ¡Entonces estás en el lugar correcto! Vendemos furgonetas de nuestra
       flota durante todo el año en condiciones favorables.
   - question: ¿Debo depositar fianza?
-    answer: Sí. En cada alquiler deberá abonarse una fianza de 1000 € que se
+    answer: Sí. En cada alquiler deberá abonarse una fianza de 900 € que se
       devolverá 2 días hábiles desde la entrega
   - question: ¿Cuándo debo pagar? ¿Puedo cancelar mi reserva?
     answer: Para que tu camper esté reservada y lista para tu viaje, es importante
