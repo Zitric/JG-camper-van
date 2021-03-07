@@ -13,10 +13,6 @@ questions:
       tiempo para enseñártelo todo con calma.
   - question: ¿Hay un período mínimo de tiempo de alquiler?
     answer: "Sí, son tres días "
-  - question: ¿Quieres comprar una Volkswagen Camper?
-    answer: ¡Entonces estás en el lugar correcto! Vendemos furgonetas de nuestra
-      flota durante todo el año en condiciones favorables. Contacta con nosotros
-      por teléfono o en la dirección de correo que aparece en nuestra webcorreo
   - question: ¿Debo depositar fianza?
     answer: Sí. En cada alquiler deberá abonarse una fianza de 900 € que se
       devolverá 3 días hábiles tras la devolución
@@ -81,5 +77,12 @@ questions:
       viaje simplemente tienes que limpiarla y así no se te cargarán los costes
       de limpieza. Si no lo hicieras con la mejor voluntad, tendremos que
       cobrarte 100 € de costes de limpieza de tu fianza."
+  - question: ¿Quieres comprar una Volkswagen Camper?
+    answer: ¡Entonces estás en el lugar correcto! Vendemos furgonetas de nuestra
+      flota durante todo el año en condiciones favorables. Contacta con nosotros
+      por teléfono o en la dirección de correo que aparece en nuestra webcorreo
+  - question: ¿Me explicaréis cómo funciona?
+    answer: Te explicaremos la furgo en detalle y personalmente en el momento de la
+      recogida
 ---
 body
