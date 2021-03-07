@@ -61,7 +61,9 @@ questions:
       jalarconlastra@gmail.com. También debes informar a la policía local (¡Es
       obligatorio, de lo contrario no pagará el seguro!)"
   - question: ¿Cuál es la franquicia en caso de siniestro?
-    answer: En caso de siniestro, utilizaremos la totalidad de la fianza.
+    answer: "En caso de siniestro, utilizaremos la TOTALIDAD de la fianza. Además,
+      deberás hacerte cargo de la totalidad de las reparaciones si estas superan
+      el importe de la fianza "
   - question: ¿Hay descuentos por alquiler a largo plazo?
     answer: ¡Naturalmente! Cuanto más tiempo alquiles, más rentable será. A partir
       del 16.º día de alquiler, obtendrás un descuento del 10 % sobre el precio
