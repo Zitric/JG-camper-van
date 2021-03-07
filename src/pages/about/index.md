@@ -5,10 +5,9 @@ title: Quienes somos
 heroImage: /img/about/about-us.jpg
 heading: Quienes somos
 ---
-
 ### Historia
 
-Mi hermano y yo siempre hemos tenido la necesidad de viajar. Movidos por la búsqueda de aventura y una gran afición al surf y kite surf. Hemos utilizado furgonetas para desplazarnos allí donde pudiéramos aprovechar el viento y las olas. Íbamos provistos de todo el equipo de tablas y velas, llevando con nosotros nuestro propio alojamiento. A lo largo de los años hemos ido acumulando mucha experiencia. Y al dedicarle tanto tiempo llegó el momento en que decidimos transformar nuestra afición en nuestra profesión. Así fue como surgió JG Camper.
+Somos dos hermanos que siempre hemos tenido la necesidad de viajar movidos por una gran afición al surf y al kitesurf. Hemos utilizado furgonetas para desplazarnos allí donde hubiera viento y las olas. Cargados con todo el equipo de tablas y cometas, llevando con nosotros nuestro propio alojamiento . A lo largo de los años hemos ido acumulando mucha experiencia,  y al dedicarle tanto tiempo, llegó el momento en que decidimos transformar esa afición en nuestro trabajo. Así surgió JG Camper.
 
 ### Filosofía
 
