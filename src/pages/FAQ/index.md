@@ -6,11 +6,11 @@ heroImage: /img/faq/FAQ.jpg
 heading: Preguntas comúnes
 questions:
   - question: ¿Puedo ver la furgoneta antes de reservarla?
-    answer: Antes de alquilar una nuestra camper, por supuesto que puedes verla
-      antes en nuestras instalaciones en persona o por vídeo. Para ello,
-      contacta con tiempo suficiente con nosotros en los teléfonos que
-      encontrarás en en nuestra web. Avísanos al menos dos días laborables antes
-      para que tengamos tiempo para enseñártelo todo con calma.
+    answer: Antes de alquilar nuestra camper, por supuesto que puedes verla antes en
+      nuestras instalaciones en persona o por vídeo. Para ello, contacta con
+      tiempo suficiente con nosotros en los teléfonos que encontrarás en en
+      nuestra web. Avísanos al menos dos días laborables antes para que tengamos
+      tiempo para enseñártelo todo con calma.
   - question: ¿Hay un período mínimo de tiempo de alquiler?
     answer: "Sí, son tres días "
   - question: ¿Quieres comprar una Volkswagen Camper?
