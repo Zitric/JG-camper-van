@@ -5,14 +5,78 @@ title: Preguntas comúnes
 heroImage: /img/faq/FAQ.jpg
 heading: Preguntas comúnes
 questions:
-  - question: ¿Qué es Yescapa?
-    answer: Yescapa es una plataforma de alquiler de autocaravanas y furgonetas
-      camper entre particulares
-  - question: Hay un mínimo de tiempo de alquiler?
+  - question: ¿Puedo ver la furgoneta antes de reservarla?
+    answer: Antes de alquilar una nuestra camper, por supuesto que puedes verla
+      antes en nuestras instalaciones en persona o por vídeo. Para ello,
+      contacta con tiempo suficiente con nosotros en los teléfonos que
+      encontrarás en en nuestra web. Avísanos al menos dos días laborables antes
+      para que tengamos tiempo para enseñártelo todo con calma.
+  - question: ¿Hay un período mínimo de tiempo de alquiler?
     answer: "Sí, son tres días "
-  - question: Precio de una semana
-    answer: pues 80 por 7
-  - question: Cuanto es el tiempo mínimo de alquiler
-    answer: Pues nuestro tiempo mínimo es...
+  - question: ¿Quieres comprar una Volkswagen Camper?
+    answer: ¡Entonces estás en el lugar correcto! Vendemos furgonetas de nuestra
+      flota durante todo el año en condiciones favorables.
+  - question: ¿Debo depositar fianza?
+    answer: Sí. En cada alquiler deberá abonarse una fianza de 1000 € que se
+      devolverá 2 días hábiles desde la entrega
+  - question: ¿Cuándo debo pagar? ¿Puedo cancelar mi reserva?
+    answer: Para que tu camper esté reservada y lista para tu viaje, es importante
+      que recibamos 50% del pago una semana tras tu reserva. JG CAMPER se guarda
+      el derecho de cancelación de tu reserva vinculante por falta de pago del
+      depósito. Todos los alquileres con un período de viaje en 2021 pueden ser
+      aplazados o cancelados sin cargo hasta 48 horas antes del comienzo del
+      viaje. En caso de cancelación, el depósito o la cantidad total se
+      acreditará inmediatamente en forma de un vale para un nuevo alquiler.  El
+      arrendatario puede anular sin costes la reserva en un plazo de hasta 60
+      días antes del primer día de alquiler. En caso de anulación entre 59 y 15
+      días antes del inicio del periodo de alquiler, se deberá abonar el 50 %
+      del precio total (se retendrá el depósito). En caso de anulación entre 14
+      y 0 días antes del primer día de alquiler, se deberá abonar el precio
+      total del alquiler
+  - question: ¿Cómo debo limpiar mi Camper cuando la devuelva?
+    answer: Cuando se te entrega la Camper, está impecable, es decir, recién
+      limpiada y aspirada. El acolchado no tiene manchas. Así nos gustaría
+      recibir también nuestra furgoneta. Es decir, que después de tu viaje
+      simplemente tienes que limpiarla y así no se te cargarán los costes de
+      limpieza. Si no lo hicieras con la mejor voluntad, tendremos que cobrarte
+      100 € de costes de limpieza de tu fianza.
+  - question: ¿Cómo puedo pagar?
+    answer: "Aceptamos dos formas de pago: mediante transferencia bancaria, y en
+      metálico"
+  - question: ¿Cuándo puedo recoger mi Camper?
+    answer: El horario de recogida siempre es entre las 14 y las 17 horas del día
+      del alquiler, en función de la limpieza que necesite y de si el taller
+      debe comprobarla de nuevo. La entrega se realizará el último día de
+      alquiler entre las 9 y las 11 de la mañana. ¡Por eso solo pagas la mitad
+      por el día de recogida y entrega!
+  - question: ¿Qué accesorios de acampada incluye cada Camper?
+    answer: Todas nuestras Camper incluyen mesa y sillas para exterior, almohada, y
+      menaje de cocina para el número de pasajeros habilitados en la misma
+  - question: ¿Con quién me me comunico en caso de siniestro?
+    answer: "¿MAL FUNCIONAMIENTO, AVERÍA O DAÑOS DURANTE EL VIAJE?  Si tienes algún
+      PROBLEMA, avería o daño durante el viaje, por favor considera lo
+      siguiente:  Toma fotos de los daños y envía un correo electrónico con un
+      informe de los daños a jalarconlastra@gmail.com. En caso de accidente,
+      rellena el parte de accidente (se encuentra en la guantera) y envíalo a
+      jalarconlastra@gmail.com. También debes informar a la policía local (¡Es
+      obligatorio, de lo contrario no pagará el seguro!)"
+  - question: ¿Cuál es la franquicia en caso de siniestro?
+    answer: En caso de siniestro, utilizaremos la totalidad de la fianza.
+  - question: ¿Hay descuentos por alquiler a largo plazo?
+    answer: ¡Naturalmente! Cuanto más tiempo alquiles, más rentable será. A partir
+      del 16.º día de alquiler, obtendrás un descuento del 10 % sobre el precio
+      de alquiler, a partir del 23.º día de alquiler un 15 % y a partir del 37.º
+      día incluso un 20 % de descuento. Así que merece la pena irse de acampada
+      a largo plazo.
+  - question: ¿Hay servicio de recogida?
+    answer: Sí. Te recogeremos encantados en cualquier estación de tren o aeropuerto
+      de Sevilla. El precio del servicio es de 50 €
+  - question: ¿Puedo llevar conmigo mi perro o mascota?
+    answer: "Sí, pero insistimos: cuando se te entrega la Camper, está impecable, es
+      decir, recién limpiada y aspirada. El acolchado no tiene manchas. Así nos
+      gustaría recibir también nuestra furgoneta. Es decir, que después de tu
+      viaje simplemente tienes que limpiarla y así no se te cargarán los costes
+      de limpieza. Si no lo hicieras con la mejor voluntad, tendremos que
+      cobrarte 100 € de costes de limpieza de tu fianza."
 ---
 body
