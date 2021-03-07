@@ -15,7 +15,8 @@ questions:
     answer: "Sí, son tres días "
   - question: ¿Quieres comprar una Volkswagen Camper?
     answer: ¡Entonces estás en el lugar correcto! Vendemos furgonetas de nuestra
-      flota durante todo el año en condiciones favorables.
+      flota durante todo el año en condiciones favorables. Contacta con nosotros
+      por teléfono o en la dirección de correo que aparece en nuestra webcorreo
   - question: ¿Debo depositar fianza?
     answer: Sí. En cada alquiler deberá abonarse una fianza de 900 € que se
       devolverá 2 días hábiles desde la entrega
