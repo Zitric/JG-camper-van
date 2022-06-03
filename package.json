@@ -16,7 +16,7 @@
     "gatsby-background-image": "^1.1.1",
     "gatsby-image": "^2.3.5",
     "gatsby-plugin-emotion": "^4.3.4",
-    "gatsby-plugin-mdx": "^1.2.15",
+    "gatsby-plugin-mdx": "^2.14.1",
     "gatsby-plugin-netlify": "^2.2.4",
     "gatsby-plugin-netlify-cms": "^4.2.5",
     "gatsby-plugin-purgecss": "^5.0.0",
